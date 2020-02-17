@@ -1,0 +1,29 @@
+body
+{
+    background-color: white;
+}
+.js-clock
+{
+    text-align: center;
+}
+.js-form
+{
+    text-align: center;
+}
+.js-greetings
+{
+    text-align: center;
+}
+.js-toDoForm
+{
+    text-align: center;
+}
+.form,
+.greetings
+{
+    display: none;
+}
+.showing
+{
+  display: block;
+}
