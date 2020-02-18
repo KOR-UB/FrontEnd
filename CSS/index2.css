@@ -1,3 +1,5 @@
+@media(min-width: 1000px)
+{
 body
 {
     background-color: white;
@@ -5,10 +7,37 @@ body
 .js-clock
 {
     text-align: center;
+    font-size: 4em;
 }
 .js-form
 {
     text-align: center;
+}
+.inputToDo
+{
+    width: 300px;
+    border: 0px;
+    background-color: rgba(42, 131, 134, 0.534);
+    padding: 10px 0 10px 0;
+    margin: 5px;
+    text-align: center;
+    outline-style: none;
+}
+.inputToDo::placeholder
+{
+    color: rgb(0, 0, 0);
+}
+.inputToDo:focus
+{
+    color:transparent;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    outline-style: double;
+    outline-width: 5px;
+    outline-color: rgba(42, 131, 134, 0.534);
+}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
+{ 
+  color:transparent;
 }
 .js-greetings
 {
@@ -26,4 +55,11 @@ body
 .showing
 {
   display: block;
+}
+.js-toDoList
+{
+    color: black;
+    text-align: center;
+    list-style:none;
+}
 }
