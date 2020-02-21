@@ -1,0 +1,248 @@
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    z-index: 1000;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    border-bottom: 1px solid white;
+    margin-right: 25px;
+    position: relative;
+    list-style: none;
+    font-size: 22px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+section:nth-child(odd) a {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+
+section:nth-child(even) a {
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 150px;
+}
+
+section .container img {
+    z-index: -1;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 900px;
+}
+
+section .container h1 {
+    color: #333;
+    font-size: 6em;
+    position: relative;
+    left: 550px;
+    text-shadow: 5px -5px 3px rgb(184, 184, 184);
+}
+
+section .container .ward {
+    color: maroon;
+    text-shadow: -5px 5px 3px rgba(128, 0, 0, 0.3);
+    font-size: 4em;
+    position: relative;
+    margin: 50px 0;
+    left: 550px;
+}
+
+section .container i {
+    color: black;
+    font-size: 4em;
+    position: relative;
+    left: 550px;
+    text-shadow: 5px 5px 3px rgba(117, 117, 117, 0.3);
+}
+
+section .container p {
+    margin: 50px 0;
+    position: relative;
+    left: 550px;
+    font-size: 45px;
+}
+
+section:nth-child(3) {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    color: #fff;
+}
+
+section:nth-child(3) div {
+    margin: auto;
+}
+
+section:nth-child(3) h1 {
+    text-decoration: none;
+    border-bottom: 1px solid #40caa5;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 50px;
+}
+
+section:nth-child(3) p {
+    margin: 20px 0;
+    font-size: 25px;
+    text-align: center;
+}
+
+section:nth-child(3) ul {
+    text-align: left;
+    list-style: square;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+section:nth-child(3) ul li {
+    margin-top: 25px;
+}
+
+section:nth-child(3) ul .circlestyle {
+    text-align: left;
+    list-style: circle;
+    font-size: 30px;
+    padding: 5px 0 0 20px;
+    margin: 0;
+}
+
+section:nth-child(4) {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+section:nth-child(4) h1 {
+    font-size: 4em;
+}
+
+section:nth-child(4) ol {
+    position: relative;
+    top: 0;
+    display: block;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section:nth-child(4) ol li {
+    margin-top: 20px;
+}
+
+section:nth-child(5) {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    color: #fff;
+}
+
+section:nth-child(5) div {
+    margin: auto;
+    text-align: center;
+}
+
+table {
+    font-size: 50px;
+    border-collapse: collapse;
+}
+
+table caption {
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 20px;
+    font-size: 30px;
+    border: 1px white solid;
+}
+
+section:nth-child(6) .formTest {
+    font-size: 100px;
+    text-shadow: 10px 10px 5px slategray;
+}
+
+section:nth-child(6) .userdata {
+    height: 50px;
+    background-color: rgb(132, 207, 209);
+    border: 2px solid black;
+}
+
+section:nth-child(6) .userdata::placeholder {
+    text-align: center;
+    color: teal;
+}
+
+section:nth-child(6) .submitBtn {
+    margin-top: 8px;
+    width: 572px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+section:nth-child(6) h1 {
+    font-size: 3em;
+}
+
+section:nth-child(6) ul {
+    list-style: none;
+    font-size: 35px;
+}
+section:nth-child(6) .field
+{
+    font-size: 3em;
+    padding: 40px;
+}
+section:nth-child(6) .field ul li input
+{
+    padding: 10px;
+}
+section:nth-child(6) .field ul li input::placeholder
+{   
+    text-align: center;
+}
