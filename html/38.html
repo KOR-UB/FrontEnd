@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Clip-path Slide on Cursor Hold</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #000;
+        }
+        .container
+        {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+        }
+        .container .circle
+        {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            transition: 2s;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .circle:hover
+        {
+            z-index: 1;
+        }
+        .container .circle.circle1
+        {
+            background: url(../img/1.jpg);
+            background-size: cover;
+            clip-path: circle(200px at 25% center);
+        }
+        .container .circle.circle2
+        {
+            background: url(../img/2.jpg);
+            background-size: cover;
+            clip-path: circle(200px at center);
+        }
+        .container .circle.circle3
+        {
+            background: url(../img/3.jpg);
+            background-size: cover;
+            clip-path: circle(200px at 75% center);
+        }
+        .container .circle:active
+        {
+            clip-path: circle(1700px at center);
+        }
+        .container .circle .content
+        {
+            max-width: 800px;
+            box-sizing: border-box;
+            padding: 40px;
+            font-family: consolas;
+            background: rgba(0,0,0,.8);
+            opacity: 0;
+            transition: 1s;
+        }
+        .container .circle:active .content
+        {
+            opacity: 1;
+            transition: 2.5s;
+        }
+        .container .circle .content h2
+        {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 4em;
+        }
+        .container .circle .content p
+        {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle circle1">
+            <div class="content">
+                <h2>Slide One</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo laboriosam eos recusandae animi consectetur, perspiciatis natus aperiam repellat. Iure quis illum modi omnis molestiae ratione, quos mollitia veritatis quo voluptatibus.</p>
+            </div>
+        </div>
+        <div class="circle circle2">
+            <div class="content">
+                <h2>Slide Two</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo laboriosam eos recusandae animi consectetur, perspiciatis natus aperiam repellat. Iure quis illum modi omnis molestiae ratione, quos mollitia veritatis quo voluptatibus.</p>
+            </div>
+        </div>
+        <div class="circle circle3">
+            <div class="content">
+                <h2>Slide Three</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo laboriosam eos recusandae animi consectetur, perspiciatis natus aperiam repellat. Iure quis illum modi omnis molestiae ratione, quos mollitia veritatis quo voluptatibus.</p>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
