@@ -35,7 +35,7 @@ header ul li {
     margin-right: 25px;
     position: relative;
     list-style: none;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 header ul li a {
@@ -67,41 +67,41 @@ section {
 section .container img {
     z-index: -1;
     position: absolute;
-    top: 200px;
+    top: 100px;
     left: 100px;
     width: 900px;
 }
 
 section .container h1 {
     color: #333;
-    font-size: 6em;
+    font-size: 3em;
     position: relative;
-    left: 550px;
+    left: 400px;
     text-shadow: 5px -5px 3px rgb(184, 184, 184);
 }
 
 section .container .ward {
     color: maroon;
     text-shadow: -5px 5px 3px rgba(128, 0, 0, 0.3);
-    font-size: 4em;
+    font-size: 3em;
     position: relative;
     margin: 50px 0;
-    left: 550px;
+    left: 400px;
 }
 
 section .container i {
     color: black;
-    font-size: 4em;
+    font-size: 2em;
     position: relative;
-    left: 550px;
+    left: 400px;
     text-shadow: 5px 5px 3px rgba(117, 117, 117, 0.3);
 }
 
 section .container p {
     margin: 50px 0;
     position: relative;
-    left: 550px;
-    font-size: 45px;
+    left: 400px;
+    font-size: 30px;
 }
 
 section:nth-child(3) {
