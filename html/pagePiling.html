@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagePiling</title>
+    <link rel="stylesheet" href="../CSS/jquery.pagepiling.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        #pagepiling
+        {
+            text-align: center;
+        }
+        #pagepiling .section h2
+        {
+            color: #fff;
+            font-size: 10em;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        #pagepiling .section.sec1
+        {
+            background: url(../img/norway.jpg);
+            background-size: cover;
+            background-position: center bottom;
+        }
+        #pagepiling .section.sec2
+        {
+            background: url(../img/switzerland.jpg);
+            background-size: cover;
+            background-position: center bottom;
+        }
+        #pagepiling .section.sec3
+        {
+            background: url(../img/austria.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        #pagepiling .section.sec4
+        {
+            background: url(../img/italy.jpg);
+            background-size: cover;
+            background-position: center bottom;
+        }
+    </style>
+</head>
+<body>
+    <div id="pagepiling">
+        <div class="section sec1"><h2>Norway</h2></div>
+        <div class="section sec2"><h2>Switzerland</h2></div>
+        <div class="section sec3"><h2>Austria</h2></div>
+        <div class="section sec4"><h2>Italy</h2></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../js/jquery.pagepiling.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling();
+        });
+    </script>
+</body>
+</html>
