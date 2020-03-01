@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Card UI</title>
     <style>
-       @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-        *
-        {
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
-            font-family: "Poppins",sans-serif;
+            font-family: "Poppins", sans-serif;
             box-sizing: border-box;
         }
-        body
-        {
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
-        .container
-        {
+
+        .container {
             position: relative;
             display: flex;
             width: 1100px;
             justify-content: center;
             align-items: center;
         }
-        .container .card
-        {
+
+        .container .card {
             position: relative;
             width: 300px;
             cursor: pointer;
             margin: 40px;
         }
-        .container .card .name
-        {
+
+        .container .card .name {
             position: relative;
             padding: 10px 0;
             border: 2px solid #000;
@@ -44,13 +45,13 @@
             background: #fff;
             z-index: 1;
         }
-        .container .card .name h3
-        {
+
+        .container .card .name h3 {
             font-weight: 500;
             font-size: 1.5em;
         }
-        .container .card .details
-        {
+
+        .container .card .details {
             position: relative;
             top: -2px;
             text-align: center;
@@ -60,67 +61,113 @@
             margin-top: -2px;
             overflow: hidden;
         }
-        .container .card:hover .details
-        {
+
+        .container .card.active:hover .details {
             height: 416px;
         }
-        .container .card .details .content
-        {
+
+        .container .card .details .content {
             position: relative;
             padding: 20px 20px;
         }
-        .container .card .details .content h2
-        {
+
+        .container .card .details .content h2 {
             font-size: 3em;
             font-weight: 500;
         }
-        .container .card .details .content h2 span
-        {
+
+        .container .card .details .content h2 span {
             font-size: 0.4em;
         }
-        .container .card .details .content a
-        {
+
+        .container .card .details .content a {
             position: relative;
             display: inline-block;
             padding: 10px 20px;
             margin-top: 15px;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0, 0, 0, 0.9);
             color: #fff;
             text-decoration: none;
         }
-        .container .card:nth-child(1) .name
-        {
+
+        .container .card:nth-child(1) .name {
             background: #d2fff2;
 
         }
-        .container .card:nth-child(1) .details
-        {
+
+        .container .card:nth-child(1) .details {
             background: #f1fffb;
         }
-        .container .card:nth-child(2) .name
-        {
+
+        .container .card:nth-child(2) .name {
             background: #fcffd2;
 
         }
-        .container .card:nth-child(2) .details
-        {
+
+        .container .card:nth-child(2) .details {
             background: #ffffe2;
         }
-        .container .card:nth-child(3) .name
-        {
+
+        .container .card:nth-child(3) .name {
             background: #fed2ff;
 
         }
-        .container .card:nth-child(3) .details
-        {
+
+        .container .card:nth-child(3) .details {
             background: #ffeeff;
         }
 
+        .toggle {
+            width: 150px;
+            height: 40px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            box-sizing: border-box;
+            border: 2px solid #000;
+            overflow: hidden;
+        }
+
+        .toggle span {
+            font-size: 20px;
+            transition: .5s;
+            background: #fff;
+            color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toggle span:nth-child(2) {
+            transform: translateY(100%);
+            background: #000;
+            color: #fff;
+        }
+
+        .toggle.active span:nth-child(2) {
+            transform: translateY(0);
+        }
+
+        .toggle.active span:nth-child(1) {
+            transform: translateY(-100%);
+        }
     </style>
 </head>
+
 <body>
+    <div class="toggle">
+        <span>Hover</span>
+        <span>Click</span>
+    </div>
     <div class="container">
-        <div class="card">
+        <div class="card" onclick="clickEvent()">
             <div class="name">
                 <h3>Free</h3>
             </div>
@@ -134,7 +181,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" onclick="clickEvent()">
             <div class="name">
                 <h3>Basic</h3>
             </div>
@@ -148,7 +195,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" onclick="clickEvent()">
             <div class="name">
                 <h3>Premium</h3>
             </div>
@@ -163,5 +210,33 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        let bol = false;
+
+        function clickEvent() {
+            if (!bol) {
+                $(".toggle").toggleClass("active");
+                $(".card").toggleClass("active");
+                console.log("?")
+            }
+        }
+
+        $(document).ready(function () {
+            $(".toggle").click(function () {
+                if (!bol) {
+                bol = true;
+                console.log("호버 킴");
+                } else {
+                bol = false;
+                console.log("호버 끔");
+                }
+                $(".toggle").toggleClass("active")
+                $(".card").toggleClass("active")
+            })
+        })
+    </script>
 </body>
+
 </html>
