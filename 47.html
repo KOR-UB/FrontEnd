@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2 id="number">0</h2>
+        <button id="increase">+1</button>
+        <button id="decrease">-1</button>
+        <button id="modal-open"><h1>MODAL OPEN</h1></button>
+    </div>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="modal-title">안녕하세요</div>
+            <p>모달 내용</p>
+            <div class="close-wrapper">
+                <button id="modal-close">닫기</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal-wrapper");
+        const number = document.getElementById("number");
+        const [increase, decrease, modalOpen,modalClose] = document.querySelectorAll("button");
+        increase.onclick = () =>
+        {
+            const current = parseInt(number.innerText,10);
+            number.innerText = current + 1;
+        }
+        decrease.onclick = () =>
+        {
+            const current = parseInt(number.innerText,10);
+            number.innerText = current - 1;
+        }
+        modalOpen.onclick = () =>
+        {
+            modal.style.display = "flex";
+        }
+        modalClose.onclick = () =>
+        {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
