@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <title>CSS연습</title>
+        <style>
+        h2.bluetext{ color:blue; }
+        .redtext { color: red;}
+        #container{background: #ffa600bb; width: 400px; height: 200px; margin:0 auto; text-align: justify;}
+        .underline{text-decoration: underline}
+        .box:hover {
+            -webkit-transform: rotate(-3deg);
+            -moz-transform: rotate(-3deg);
+            -o-transform: rotate(-3deg);
+            -ms-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+            border: 1px solid black;
+        }
+        .box {border: 1px solid black;}
+        p.txt {
+            font: italic 12px/24px 돋움;
+        }
+        a {text-decoration: none;}
+        .edited {text-decoration: line-through;}
+        .shadow1 {
+            color: orange;
+            text-shadow: 1px 1px;
+            letter-spacing: 0.2em
+        }
+        .shadow2 {text-shadow: 5px 5px 3px #f00; letter-spacing: 0.5em}
+        .shadow3 {color: #000; text-shadow: 0 0 4px #ccc,0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;}
+        .content{
+            border: 1px solid #ccc;
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .content:hover {overflow:visible}
+        .onetime{line-height: 30px; font-size: 20px; text-align: center; width: 450px; border: 1px solid #000;}
+        h2.sh {color:#ff0000; font-size: 1.2em; text-align: center;}
+        p.sh{font-size: 1.5em; line-height: 2em; font-weight: bold; text-align: center;}
+        span.accent {color: blue;}
+        h1.Sel{color: white; font-size: 1em; background-color:#222; margin: 0; padding: 10px;}
+        .smalltext {font-size: 0.7em} 
+        .center {text-align: center;}
+        .new- {font-size: 1.1em; font-weight: 700; line-height: 2.2em; color: #ad3000; margin-left: 50px}
+        .new-2 {background-color: dimgrey; text-align: center; color: white; text-shadow: 3px 2px 5px black;}
+        .testComend {color: rgba(60, 232, 255, 0.932)}
+        .bg {
+            background-image: url(https://post-phinf.pstatic.net/MjAxNzA1MzBfMjQy/MDAxNDk2MTQ3NzAyMzY2.cNnwCcy13tb-Syn05FeMJpUHODgBHY9P9k3bSsRD77Eg.nnXs7S-meLYNB5sn-qjpZIJo7DtdIjRzfwFg9V8c0iQg.JPEG/Bright_red_tomato_and_cross_section02.jpg?type=w1200);
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-attachment: fixed;
+        }
+        </style>
+   </head>
+   <body>
+       <div class="bg">
+       <h1>블루베리에 관한 연구</h1>
+       <h2 class="bluetext">블루베리와 항산화 효능</h2>
+       <p class="bluetext">블루베리는 항산화제인 안토시아닌과 폴리페놀을 다량 포함하고 있습니다.</p>
+       <p>매사츄세츠 보스톤에 있는<span class="redtext">USDA 노화에 관한 인류 영양 연구센터 (the USㄴDA Human Nutrition Research Center on Aging)</span>의 자료에 의하면 블루베리는 과일 중에서 가장 항산화 작용이 뛰어난 과일이라고 합니다.</p>
+       <h2>블루베리와 노화</h2>
+       <p><span class="redtext">USDA 인류 영양 연구센터(the USDA Human Nutrition Research Center)</span> 신경 과학자들은 쥐들에게 블루베리를 먹임으로써 노화에 의한 인지능력의 손실을 예방해 준다는 사실을 발견하였습니다.</p>
+       <div id="container">안촉촉한 초코칩 나라에 살던 안촉촉한 초코칩이 촉촉한 초코칩 나라의 촉촉한 초코칩을 보고 촉촉한 초코칩이 되고 싶어서 촉촉한 초코칩 나라에 갔는데 촉촉한 초코칩 나라의 촉촉한 초코칩 문지기가 "넌 촉촉한 초코칩이 아니고 안촉촉한 초코칩이니까 안촉촉한 초코칩나라에서 살아"라고해서 안촉촉한 초코칩은 촉촉한 초코칩이 되는것을 포기하고 안촉촉한 초코칩 나라로 돌아갔다.</div>
+       <p>문서의 특정 부분에 스타일을 적용할 떄는
+           <span class="underline">클래스 선택자</span>와
+           <span class="underline">id 선택자</span>를 사용합니다.
+       </p>
+       <hr>
+       <div class="box">Mouse Over</div>
+       <p class="txt">여러 요소가 함께 사용된 웹 문서 안에서 텍스트가 눈에 뜨게 하려면 내용에 맞는 골꼴과 글자 크기, 그리고 글자색을 선택하는 것이 중요합니다.</p>
+       <p>이럴 때 사용할 수 있는 것이 글꼴 속성입니다.</p>
+       <p style="font:caption"> [font:caption] 캡션에 어울리는 글꼴 스타일</p>
+       <p style="font:icon"> [font:icon] 아이콘에 어울리는 글꼴 스타일 </p>
+       <p style="font:menu"> [font:menu] 드롭다운 메뉴에 어울리는 글꼴 스타일</p>
+       <p style="font:message-box"> [font:message-box] 대화 상자에 어울리는 글꼴 스타일</p>
+       <p style="font:small-caption"> [font:small-caption] 작은 캡션에 어울리는 글꼴 스타일</p>
+       <p style="font:status-bar"> [font:status-bar] 상태 표시줄에 어울리는 글꼴 스타일</p>
+       <hr>
+       <h2>토마토(Tomato)</h2>
+       <p>[<a href="https://namu.wiki/w/%ED%86%A0%EB%A7%88%ED%86%A0" target="_blank">외부 링크</a>]</p>
+       <p">토마토는 비타민 A, C가 풍부한 <span class="edited">과일이다.</span> 채소다. 칼륩과 같은 각종 미네랄은 혈액의 산성도를 낮추는 역할을 해주며 혈압을 내리고 혈관을 튼튼하게 해준다.
+       <br> 토마토에 들어있는 피코팬이라는 성분은 뛰어난 항암 작용을 보이며 잘 알려져 있듯이 블루베리와 함께 대표적인 항산화 음식이기도 하다.</p>
+       <hr>
+       <h1 class="shadow1">HTML5</h1>
+       <h1 class="shadow2">HTML5</h1>
+       <h1 class="shadow3">HTML5</h1>
+       <hr>
+       <h1>귀리(Oat)</h1>
+       <p class="content">귀리는 베타글루칸(항암 및 면역증강작용을 가지고 있는 불소화성 다당류) 성분을 포함하고 있다.</p>
+       <hr>
+       <p class="onetime">웹 문서에서 가장 많이 사용하는 요소인 텍스트는 문단 형태로 많이 쓰이므로 텍스트 정렬이나 들여쓰기, 줄 간격처럼 문단에 영향을 주는 스타일들이 많이 사용됩니다.</p>
+       <hr>
+       <div class="center">
+       <img src="http://cfile204.uf.daum.net/image/277DDA5054083AED262B46" alt="apple">
+       </div>
+       <h1 class="Sel">확인하세요.</h1>
+       <h2 class="sh">주문 및 배송</h2>
+       <p class="sh"><span class="accent">오후 2시 이전</span>주문건은 당일 발송합니다<br>
+    2시 이후 주문건은 다음날 발송합니다(주말 제외)</p><hr>
+       <h2 class="sh">교환 및 환불</h2>
+       <p class="sh">불만족시<span class="accent">100% 환불</span>해 드립니다<br>
+    고객센터로 전화주세요</p><hr>
+       <h2 class="sh">고객센터</h2>
+       <p class="sh">0000-0000<br>
+    <small class="smalltext">상담시간 : 오전 9시 ~ 오후 6시 (토/일, 공휴일 휴무)</small></p>
+    <hr>
+    <h1 class="new-2">최신 웹 디자인 트렌드</h1>
+    <p><small class="new-">반응형 웹 디자인</small> - 다양한 화면 크기에 최적화하다</p>
+    <p><small class="new-">플랫 디자인</small> - 입체에서 평면으로</p>
+    <p><small class="new-">풀스크린 배경</small> - 콘텐츠에 집중</p>
+    <p><small class="new-">원 페이지 사이트</small> - 한 페이지에 모든 내용을 담다</p>
+    <p><small class="new-">패럴랙스 스크롤링</small> - 동적인 효과로 강한 인상을!</p>
+    <p><small class="new-">웹 폰트</small> - 웹 타이포그래피를 받쳐주는 기술</p>
+    <hr>
+    <p class="testComend">색상 테스트</p>
+    </div>
+   </body>
+</html>
