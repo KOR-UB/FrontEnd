@@ -1,82 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brands | Responsive Website Design</title>
     <link rel="stylesheet" href="../CSS/BrandsResponsive.css">
+    <style>
+        @keyframes yourAnimation{
+        0%{
+            transform: translateX(100px) translateY(-20px);
+            }
+        20%{
+            transform: translateX(200px) translateY(-20px);
+            }
+        40%{
+            transform: translateX(200px) translateY(50px);
+            }
+        60%{
+            transform: translateX(0px) translateY(50px);
+            }
+        80%{
+            transform: translateX(0px) translateY(-20px);
+            }
+        100%{
+            transform: translateX(100px) translateY(-20px);
+            }
+        }
+
+    .box{
+        animation: yourAnimation 3s infinite 0s linear;
+        }
+    </style>
 </head>
+
 <body>
     <header id="header">
-        <a href="#" class="logo">Logo</a>
+        <a href="#" class="logo">LOGO</a>
         <ul>
             <li><a href="#home" onclick="toggle()">Home</a></li>
             <li><a href="#about" onclick="toggle()">About</a></li>
-            <li><a href="#services" onclick="toggle()">Service</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
             <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
             <li><a href="#team" onclick="toggle()">Team</a></li>
             <li><a href="#contact" onclick="toggle()">Contact</a></li>
         </ul>
         <div class="toggle" onclick="toggle()"></div>
     </header>
-    <!-- Banner -->
     <section class="banner" id="home">
         <h2>We Make<br><span>Brands</span> Matter</h2>
     </section>
-    <!-- About -->
     <section class="sec" id="about">
         <div class="content">
             <div class="mxw800p">
                 <h3>Who We Are</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ullam consequuntur nisi nihil magni esse pariatur in minus quaerat maxime modi quibusdam temporibus labore laboriosam, dignissimos aut inventore eius consectetur?</p>
                 <a href="#" class="btn">Read Our Story</a>
+                
             </div>
         </div>
     </section>
-    <!-- Services -->
     <section class="sec" id="services">
         <div class="content">
             <div class="mxw800p">
                 <h3>Who We Do</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque ullam consequuntur nisi nihil magni esse pariatur in minus quaerat maxime modi quibusdam temporibus labore laboriosam, dignissimos aut inventore eius consectetur?</p>
             </div>
             <div class="services">
                 <div class="box">
                     <div class="iconBx">
-                        <img src="../img/icon1.png" alt="icon1">
+                        <img src="../img/icon1.png" alt="아이콘1">
                     </div>
                     <div class="content">
                         <h2>Design</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident consectetur ratione ducimus tempora est atque in saepe quod dignissimos quae esse doloribus facilis iste debitis eaque, fuga vitae voluptate mollitia.</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="iconBx">
-                        <img src="../img/icon2.png" alt="icon2">
+                        <img src="../img/icon2.png" alt="아이콘2">
                     </div>
                     <div class="content">
                         <h2>Development</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, inventore exercitationem architecto unde odit voluptas, deserunt harum libero ut commodi porro iste omnis vero hic debitis aliquid molestiae soluta incidunt?</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="iconBx">
-                        <img src="../img/icon3.png" alt="icon3">
+                        <img src="../img/icon3.png" alt="아이콘3">
                     </div>
                     <div class="content">
                         <h2>Branding</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, inventore exercitationem architecto unde odit voluptas, deserunt harum libero ut commodi porro iste omnis vero hic debitis aliquid molestiae soluta incidunt?</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Stats -->
     <section class="sec stats">
         <div class="content">
             <div class="mxw800p">
                 <h3>Our Achievements</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, animi. Deserunt porro, cumque reiciendis aliquid beatae eos nam rem, ratione sed esse architecto? Earum doloremque temporibus illum. Iure, distinctio ducimus.</p>
             </div>
             <div class="statsBox">
                 <div class="box">
@@ -98,12 +123,11 @@
             </div>
         </div>
     </section>
-    <!-- Portfolio -->
     <section class="sec work" id="portfolio">
         <div class="content">
             <div class="mxw800p">
                 <h3>Recent Work</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur esse at, eaque eius ratione perferendis officiis! A minus quidem eos earum? Ullam accusantium, eligendi officiis error incidunt expedita ab.</p>
             </div>
             <div class="workBx">
                 <div class="brand">
@@ -133,65 +157,61 @@
             </div>
         </div>
     </section>
-    <!-- Team -->
     <section class="sec" id="team">
         <div class="content">
             <div class="mxw800p">
                 <h3>Meet Our Expert</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore sed, earum sit reprehenderit facere quasi nisi. Dignissimos incidunt maiores, fuga aliquid distinctio maxime aperiam error sint, debitis laboriosam rem cupiditate?</p>
             </div>
             <div class="teamBx">
                 <div class="member">
                     <div class="imgBx">
-                        <img src="../img/brand1.jpg" alt="1">
+                        <img src="../img/brand1.jpg" alt="인물1">
                     </div>
                     <div class="details">
                         <div>
-                            <h2>John Doe<br><span>Creative Director</span></h2>
+                            <h2>John Doe<Br><span>Creative Director</span></h2>
                         </div>
                     </div>
                 </div>
                 <div class="member">
                     <div class="imgBx">
-                        <img src="../img/brand2.jpg" alt="2">
+                        <img src="../img/brand2.jpg" alt="인물2">
                     </div>
                     <div class="details">
                         <div>
-                            <h2>John Doe<br><span>Creative Director</span></h2>
+                            <h2>John Doe<Br><span>Creative Director</span></h2>
                         </div>
                     </div>
                 </div>
                 <div class="member">
                     <div class="imgBx">
-                        <img src="../img/brand3.jpg" alt="3">
+                        <img src="../img/brand3.jpg" alt="인물3">
                     </div>
                     <div class="details">
                         <div>
-                            <h2>John Doe<br><span>Creative Director</span></h2>
+                            <h2>John Doe<Br><span>Creative Director</span></h2>
                         </div>
                     </div>
                 </div>
                 <div class="member">
                     <div class="imgBx">
-                        <img src="../img/brand4.jpg" alt="4">
+                        <img src="../img/brand4.jpg" alt="인물4">
                     </div>
                     <div class="details">
                         <div>
-                            <h2>John Doe<br><span>Creative Director</span></h2>
+                            <h2>John Doe<Br><span>Creative Director</span></h2>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact -->
     <section class="sec contact" id="contact">
         <div class="content">
             <div class="mxw800p">
                 <h3>Send Us A Message</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam,
-                    dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam
-                    doloribus accusamus ratione quos fugit expedita?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur itaque ipsam eligendi velit quos, deserunt voluptas fugiat deleniti fuga inventore totam consequatur perferendis. Impedit sequi repellendus cumque voluptatibus asperiores sit!</p>
             </div>
             <div class="contactForm">
                 <form>
@@ -217,25 +237,25 @@
             </div>
             <div class="sci">
                 <ul>
-                    <li><a href="#"><img src="../img/facebook.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="../img/twitter.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="../img/linkedin.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../img/facebook.png" alt="페북"></a></li>
+                    <li><a href="#"><img src="../img/twitter.png" alt="트윗"></a></li>
+                    <li><a href="#"><img src="../img/linkedin.png" alt="링크"></a></li>
                 </ul>
             </div>
             <p class="copyright">Design & Developed By <a href="#">Online Tutorials</a></p>
         </div>
     </section>
-    <script type="text/javascript">
-        window.addEventListener("scroll", function()
-        {
+    <script>
+        window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
+            header.classList.toggle("sticky", window.scrollY > 0)
         })
-        function toggle()
-        {
+
+        function toggle() {
             var header = document.querySelector("header");
             header.classList.toggle("active");
         }
     </script>
 </body>
+
 </html>
