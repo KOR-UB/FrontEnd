@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <title>HTML+CSS+JS</title>
+    </head>
+    <style>
+        .nav{
+            height: 70px;
+            border-bottom: 1px solid black;
+            display: flex;
+            align-items: center;
+        }
+        .nav-left-item
+        {
+            display: flex;
+            margin-right: auto;
+        }
+        .nav-right-item
+        {
+            display: flex;
+            margin-left: auto;
+        }
+        .nav-item
+        {
+            margin-left: 10px;
+        }
+        .nav-box
+        {
+            clear: both;
+            position: relative;
+            top: 540px;
+            left: 150px;
+            color: rgb(36, 35, 35);
+            margin-bottom: 20px;
+            margin: -10px;
+
+            width: 0;
+            height: 5px;
+            background-color: #273e82;
+            animation-name: anitest;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        .nav-box2
+        {
+            clear: both;
+            position: relative;
+            top: 150px;
+            left: 150px;
+            color: rgb(36, 35, 35);
+            margin-bottom: 20px;
+            margin: -10px;
+            width: 0;
+            height: 5px;
+            background-color: #273e82;
+            animation-name: anitest2;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        .nav-box3
+        {
+            clear: both;
+            position: relative;
+            top: 250px;
+            left: 550px;
+            color: rgb(36, 35, 35);
+            margin-bottom: 20px;
+            margin: -10px;
+            width: 0;
+            height: 10px;
+            background-color: #273e82;
+            animation-name: anitest3;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+        .nav-box4
+        {
+            clear: both;
+            position: relative;
+            top: -630px;
+            left: 150px;
+            color: rgb(36, 35, 35);
+            margin-bottom: 20px;
+            margin: -10px;
+            width: 0;
+            height: 10px;
+            background-color: #273e82;
+            animation-name: anitest4;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+            animation-play-state: running;
+        }
+
+
+        @keyframes anitest
+        {
+           0%{ width: 0; height: 5px;}
+           100% {width: 400px; height: 5px;}
+        }
+        @keyframes anitest2
+        {
+           0%{ width: 5px; height: 0;}
+           100% {width: 5px; height: 400px;}
+        }
+        @keyframes anitest3
+        {
+           0%{ width: 5px; height: 0px; top: 50px;}
+           100% {width: 5px; height: 400px; top: -240px;}
+        }
+        @keyframes anitest4
+        {
+           0%{ width: 0; height: 5px;}
+           100% {width: 400px; height: 5px;}
+        }
+    </style>
+
+    <body>
+        <div class="nav" id="main">
+            <div class="nav-left-item">
+            </div>
+            <div class="nav-right-item">
+                <!-- <div class="nav-item">메뉴1</div>
+                <div class="nav-item">메뉴2</div>
+                <div class="nav-item">메뉴3</div>
+                <div class="nav-item">메뉴4</div> -->
+            </div>
+        </div>   
+
+        <div class="nav-box"></div>
+        <div class="nav-box2"></div>
+        <div class="nav-box3"></div>
+        <div class="nav-box4"></div>
+    </body>
+
+</html>

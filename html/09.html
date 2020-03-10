@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+            <meta charset="utf-8">
+            <meta name="format-detection" content="telephone=no"/>
+            <title>HPstudio</title>
+    </head>
+    <style type="text/css">
+        A:link {text-decoration: none; color: rgba(219, 213, 213, 0.829);}
+        A:visited {text-decoration: none; color: white;}
+        A:active {text-decoration: none; color: white;}
+        A:hover {text-decoration: none;
+        text-shadow: 2px 2px 3px #72cad4, 3px 3px 4px white }
+    </style>
+    <style>
+    @-webkit-keyframes loader7{
+    0%{left: -12px; top: -12px;}
+    25%{left:42px; top:-12px;}
+    50%{left: 42px; top: 42px;}
+    75%{left: -12px; top: 42px;}
+    100%{left:-12px; top:-12px;}
+}
+
+@keyframes loader7{
+    0%{left: -12px; top: -12px;}
+    25%{left:242px; top:-12px;}
+    50%{left: 242px; top: 42px;}
+    75%{left: -12px; top: 42px;}
+    100%{left:-12px; top:-12px;}
+}
+
+@-webkit-keyframes loader72{
+    0%{width: 0px;}
+    70%{width: 240px; opacity: 1;}
+    90%{opacity: 0; width: 240px;}
+    100%{opacity: 0;width: 0px;}
+}
+
+@keyframes loader72{
+    0%{width: 0px;}
+    70%{width: 240px; opacity: 1;}
+    90%{opacity: 0; width: 240px;}
+    100%{opacity: 0;width: 0px;}
+}
+.loader{
+    border: 2px double rgb(255, 230, 0);
+    position: absolute;
+    width: 240px;
+    height: 40px;
+    z-index: 1;
+    top: 14%;
+    /*top: -webkit-calc(50% - 20px);
+    top: calc(50% - 20px);
+    */
+    left: 15%;
+    /* left: -webkit-calc(50% - 20px);
+    left: calc(50% - 20px);
+    */
+
+    background-color: rgba(255, 255, 255, .2);
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+}
+.loader:before{
+    content: "";
+    position: absolute;
+    background-color: rgb(255, 174, 0);
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    -webkit-animation: loader7 2s ease-in-out infinite;
+            animation: loader7 2s ease-in-out infinite;
+}
+
+.loader:after{
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
+    border-bottom-right-radius: 20px 20px;
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.589);
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 0px;
+    z-index: 0;
+    opacity: 1;
+    -webkit-animation: loader72 2s ease-in-out infinite;
+            animation: loader72 2s ease-in-out infinite;
+}
+
+        body {
+            background: black;
+            color: white;
+        }
+        .main {
+            background-color: rgba(73, 62, 62, 0.664);
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            top: 0;
+            left: 0;
+            z-index: 5;
+        }
+        .hText {
+            float: left;
+            width: 200px;
+            height: 130px;
+            text-shadow: 0px 1px red, 1px 0px red, 0 -1px red, -1px 0 red;
+            font-size: 3em;
+            margin: -5px 0 10px 50px;
+        }
+        .hText small {
+            margin-left: 10px;
+            text-shadow: 0px 1px rgb(72, 255, 0), 1px 0px  rgb(72, 255, 0), 0 -1px  rgb(72, 255, 0), -1px 0 rgb(72, 255, 0);
+        }
+        .main ul{
+            color: rgb(236, 228, 228);
+            position: fixed;
+            top: 5px;
+            right: 40px;
+            list-style-type: none;
+        }
+        .main ul li{
+            text-shadow: 2px 2px 4px rgb(246, 250, 13), 4px 4px 6px white;;
+            display: inline;
+            text-decoration: none;
+            padding-bottom: 5px;
+            border-bottom: 1.2px solid rgba(229, 255, 0, 0.815);
+            margin-right: 30px;
+        }
+        button {
+            background: 0 none;
+            border: 0 none;
+            outline: 0 none;
+        }
+       .site img{
+            padding: 5px 10px 5px 10px;
+            display: block;
+            width: 100px;
+            height: 50px;
+        }
+        .site {
+            color: black;
+            clear: both;
+            position: fixed;
+            top: 10%;
+            left: 1%;
+            width: 200px;
+            height: 100px auto;
+            background: rgba(0, 0, 0, 0.856);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid rgb(56, 50, 150);
+            z-index: 3;
+            text-align: right;
+        }
+        .main2 
+        {
+            z-index: 0;
+            position: relative;
+            top: 10%;
+            right: -41.3%;
+            width: 59%;
+            height: 1200px;
+            background-image: url(http://db1qjvpyf4hse.cloudfront.net/2ef5449f5af6779b93b8b75f6171358a);
+            background-repeat: no-repeat left top fixed;
+            background-size: cover;
+        }
+        .stopimg {
+            position: fixed;
+            width: 50%;
+            top : 6.3%;
+            right: 0%;
+            z-index: 2;
+            mix-blend-mode: color-dodge;
+        }
+        .box
+        {
+            z-index: 3;
+            border: 1px solid black;
+            display: block;
+            margin: 0 5px 20px 5px;
+            background: white;
+            width: 120px;
+            height: 60px;
+        }
+        form {
+            color: black;
+            position: fixed;
+            top: 7%;
+            left: 3.8%;
+            z-index: 2;
+        }
+        .contents 
+        {
+            border: 3px solid  black;
+            position: fixed;
+            top: 6.3%;
+            left:0%;
+            background: rgb(255, 255, 255);
+            float: left;
+            width: 49.8%;
+            height: 720px;
+        }
+        .contents2 
+        {
+            border: 3px solid  black;
+            position: fixed;
+            top: 6.3%;
+            left:0%;
+            background: white;
+            float: left;
+            width: 50%;
+            height: 720px;
+        }
+    </style>
+    <body id="home">
+        <div class="main">
+               <p class="hText">HP<small>Studio</small></p>
+                <nav>
+                        <div class="loader"></div>
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#home">NEWS</a></li>
+                        <li><a href="#home">Yeeee~</a></li>
+                    </ul>
+                </nav>
+        </div>
+    <div class="stopimg">
+        <img src="C:\Users\yyaa\Documents\vs\img\temp.png">
+    </div>
+    <div class="site">
+        <div class="box">
+            <a href="https://www.google.com/webhp?hl=ko&ictx=2&sa=X&ved=0ahUKEwjFzKDTnOPiAhWzIaYKHc8ICDQQPQgH" target="_blank"><img src="https://cdn.pixabay.com/photo/2014/08/02/10/07/google-408194_960_720.png"></a>
+        </div>
+        <div class="box">
+            <a href="https://www.naver.com/" target="_blank"><img src="http://mblogthumb2.phinf.naver.net/20160622_73/hhtthh82_1466581509899OrBaG_PNG/%B3%D7%C0%CC%B9%F6-%B7%CE%B0%ED-%B0%ED%C8%AD%C1%FA.png?type=w800"></a>
+        </div>
+        <div class="box">
+            <a href="https://www.youtube.com/" target="_blank"><img src="http://mblogthumb2.phinf.naver.net/20160718_229/ebadatv_1468815841063TIkJ4_PNG/YouTube-logo-full_color.png?type=w800"></a>
+        </div>
+        <div class="box">
+            <a href="https://store.steampowered.com/?l=koreana" target="_blank"><img src="https://i2.wp.com/lh3.googleusercontent.com/-7vVdI_4t4bk/V2wZDlzP6gI/AAAAAAAAEXI/u2dhgMnr_U8zYlImTMfp27VTLnAS2dYxACHM/s0/Logo%2BSteam.png?ssl=1" style="transform:scale(1.4)"></a>
+        </div>
+    </div>
+    <form>
+            <legend style=" border: 2px solid rgb(56, 50, 150);">자주 사용하는 웹</legend>
+    </form>
+    <div class="main2">
+        <div class="contents">
+        </div>
+    </div>
+    </body>
+</html>

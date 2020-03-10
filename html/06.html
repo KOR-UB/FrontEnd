@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <title>CSS</title>
+    </head>
+    <style>
+        .bg1 {
+            background-color: rgba(255, 255, 255, 0.63);
+            background-origin: padding-box;
+            background-repeat: no-repeat left top fixed;
+            background-size: cover;
+            width: 500px;
+            height: 500px;
+            margin: 3%;
+            border: 3px solid black;
+            }
+        .bg2 {
+            background-color: rgba(0, 0, 0, 0.63);
+            background-origin: padding-box;
+            background-repeat: no-repeat left top fixed;
+            background-size: cover;
+            float: left;
+            margin: -5%;
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            }
+        .gradient1{
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.726), white 80%, rgba(0, 0, 0, 0.726));
+            width: 100%;
+            margin-left: -8px;
+            height: 100px;
+        }
+        .gradient2{
+            background-color: #06f;
+            background: radial-gradient(circle closest-side at 50% 50%,  white, blue);
+            width: 1000px;
+            height: 1000px;
+        }
+        .gradient3{
+            background-color: #06f;
+            background: repeating-linear-gradient( red ,red 20px, blue 20px, blue 40px);
+            width: 1000px;
+            height: 1000px;
+        }
+        .gradient4{
+            background-color: #06f;
+            background: repeating-radial-gradient(circle, red ,red 20px, blue 20px, blue 40px);
+            width: 1000px;
+            height: 1000px;
+        }
+        body.bg {
+            background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3d733837-eae3-48b0-883b-955ce7172d8a/d84d9ka-4ff2c22d-b453-4f80-b169-c89374a4cb75.png/v1/fill/w_1024,h_640,q_80,strp/basar_entrance_by_frankatt_d84d9ka-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjQwIiwicGF0aCI6IlwvZlwvM2Q3MzM4MzctZWFlMy00OGIwLTg4M2ItOTU1Y2U3MTcyZDhhXC9kODRkOWthLTRmZjJjMjJkLWI0NTMtNGY4MC1iMTY5LWM4OTM3NGE0Y2I3NS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.DKdDm0GaGDs1KQAgCiOUdQEeeOAGs2b_MoXFiE0YJTU);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right bottom;
+        }
+        .main {
+            color:white;
+            margin: 2%;
+        }
+        div.content {
+            float: right;
+            width: 310px;
+            height: 170px;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: left;
+        }
+        div.content2 {
+            float: left;
+            width: 490px;
+            height: 320px;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: left;
+            padding: 1%;
+        }
+        p.textstyle {
+            font-size: 0.75em;
+            margin: 0 auto;
+        }
+        div.content3 {
+            background-color: rgba(255, 255, 255, 0.63);
+            float: left;
+            width: 490px;
+            height: 320px;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: left;
+            padding: 1%;
+            border: 3px solid black;
+        }
+        div.content4 {
+            background-color: rgba(255, 255, 255, 0.63);
+            float: right;
+            width: 490px;
+            height: 320px;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: left;
+            padding: 1%;
+            border: 3px solid black;
+        }
+        div.wrapper {
+        float: left;
+        width: 100%;
+        padding: 10px;
+        margin-left: 10px;
+        position: absolute;
+        top: 10px;
+        margin-left: -10px;
+        overflow: hidden;
+        }
+        #block img{
+            display: block;
+            margin: 10px;
+            border-radius: 50px;
+            box-shadow: 30px 20px 20px 0px rgba(0, 0, 0, 0.712);
+        }
+        div.bg3 {
+            background-color: rgba(27, 97, 189, 0.808);
+            border: 5px double yellow;
+            border-width: 10px;
+            height: 0 auto;
+            width: 490px;
+            border-top-left-radius: 60px 50px;
+            border-top-right-radius: 60px 50px;
+        }
+        div.bg4 {
+            background-color: rgba(0, 0, 0, 0.808);
+            border: 5px solid black;
+            border-width: 10px;
+            height: 0 auto;
+            width: 490px;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .textdeco {
+            text-decoration: none;
+            color: white;
+            margin-left: -50px;
+            padding: 10px 20px 10px 20px;
+            border-right: 1px solid black;
+        }
+        .radius {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 0, 0.705);
+            border: 3px solid red;
+            border-radius: 50%;
+            float: left;
+            margin-right: 15px;
+        }
+        .box1 {
+            padding: 20px;
+            margin-right: 10px;
+            background: #ffd800;
+            float: left;
+        }
+        .box2 {
+            padding: 20px;
+            margin-right: 10px;
+            background: #0094ff;
+            float: left;
+        }
+        .box3 {
+            padding: 20px;
+            margin-right: 10px;
+            background: #00ff21;
+            float: left;
+        }
+        .box4 {
+            padding: 20px;
+            margin-right: 10px;
+            background: #ff0021;
+            clear: both;
+        }
+        div.test {
+            border: 1px solid #ccc;
+        }
+        #container {
+            width: 960px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: rgba(41, 34, 34, 0.671);
+            color: white;
+        }
+        #container2 {
+            width: 960px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: rgba(216, 41, 41, 0.945);
+            color: white;
+        }
+        #header {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        #contents {
+            width: 580px;
+            padding: 20px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        #sidebar {
+            width: 220px;
+            padding: 20px;
+            float: right;
+            margin-bottom: 20px;
+        }
+        #footer {
+            clear: both;
+            padding: 20px;
+        }
+        #left-sidebar {
+            width: 150px;
+            float: left;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        #right-sidebar {
+            width: 150px;
+            float: right;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .centertext {
+            text-align: left;
+            margin: 10px;
+        }
+        #wrap {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .box {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #0094ff;
+            border: 1px solid black;
+        }
+        #crd1 {
+            top: 5px;
+            left: 5px;
+        }
+        #crd2 {
+            top: 5px;
+            right: 5px;
+        }
+        #crd3 {
+            bottom: 5px;
+            left: 5px;
+        }
+        #crd4 {
+            bottom: 5px;
+            right: 5px;
+        }
+        .icon {
+            background: #00ff21;
+            position: fixed;
+            width: 30px;
+            height: 30px;
+            bottom: 5px;
+            right: 5px;
+        }
+        #b1 {
+            z-index: 1;
+            position: absolute;
+            top: 30px;
+            left: 100px;
+        }
+        #b2 { 
+            z-index: 2;
+            position: absolute;
+            top: 40px;
+            left: 110px;
+        }
+        #b3 {
+            z-index: 3;
+            position: absolute;
+            top: 60px;
+            left: 90px;
+        }
+        nav {
+            margin: auto;
+            padding: auto;
+            width: 500px;
+            text-align: center;
+        }
+        #parents ul li{
+            color: white;
+        }
+    </style>
+    <body class="bg">
+        <div class="icon"></div>
+        <div id="inline">
+            <img src="..\img\Test1.jpg" alt="test">
+            <img src="..\img\Test2.jpg" alt="test">
+            <img src="..\img\Test3.jpg" alt="test">
+            <img src="..\img\Test4.jpg" alt="test">
+            <img src="..\img\Test5.jpg" alt="test">
+            <img src="..\img\Test6.jpg" alt="test">
+        </div>
+        <div id="block">
+            <img src="..\img\Test1.jpg" alt="test">
+            <img src="..\img\Test2.jpg" alt="test">
+            <img src="..\img\Test3.jpg" alt="test">
+            <img src="..\img\Test4.jpg" alt="test">
+            <img src="..\img\Test5.jpg" alt="test">
+            <img src="..\img\Test6.jpg" alt="test">
+        </div>
+        <br>
+        <hr>
+        <div class="bg3">
+            <nav>
+                <ul>
+                    <li><a href="#" class="textdeco">애완견 죵류</a></li>
+                    <li><a href="#" class="textdeco">입양하기</a></li>
+                    <li><a href="#" class="textdeco">건강돌보기</a></li>
+                    <li><a href="#" class="textdeco" style="border-right: 0px;">더불어살기</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <div class="radius"></div>
+        <div class="radius"></div>
+        <div class="radius"></div>
+        <div class="radius"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <hr>
+        <div>
+            <div id="container">
+                <div id="header" class="test">
+                    <h1>사이트 제목</h1>
+                </div>
+                <div id="left-sidebar" class="test">
+                    <h2>좌측 사이드</h2>
+                    <ul>
+                        <li class="centertext">내용 내용</li>
+                        <li class="centertext">내용 내용</li>
+                    </ul>
+                </div>
+                <div id="contents" class="test">
+                    <h2>본문</h2>
+                    <p>내용 내용 내용 내용</p>
+                </div>
+                <div id="right-sidebar" class="test">
+                    <h2>우측 사이드</h2>
+                    <ul>
+                        <li class="centertext">내용 내용</li>
+                        <li class="centertext">내용 내용</li>   
+                    </ul>
+                </div>
+                <div id="footer" class="test">
+                    <h2>푸터</h2>
+                    <p>내용 내용 내용</p>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+            <div class="box" id="crd1"></div>
+            <div class="box" id="crd2"></div>
+            <div class="box" id="crd3"></div>
+            <div class="box" id="crd4"></div>
+            <div id="b1" class="box">1</div>
+            <div id="b2" class="box">2</div>
+            <div id="b3" class="box">3</div>
+        </div>
+        <hr>
+        <div id="container2">
+            <header>
+                <h1>어디로 떠나면 좋을까?</h1>
+            </header>
+            <div class="bg4">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="textdeco">단풍시기</a></li>
+                        <li><a href="#" class="textdeco">서울 단풍길 105년</a></li>
+                        <li><a href="#" class="textdeco">수도권</a></li>
+                        <li><a href="#" class="textdeco" style="border-right: 0px;">지방</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="parents">
+            div위치
+            <ul>ul위치
+                <li>li 위치</li>
+            </ul>
+        </div>
+        <ul>
+            ul 위치2
+            <li>li 위치2</li>
+        </ul>
+    </body>
+</html>

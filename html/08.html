@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no"/>
+        <link rel="stylesheet" href="main.css">
+        <title>자바스크립트 연습</title>
+    </head>
+    <style>
+        fieldset {
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 40px;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        input, button{
+            position: relative;
+            width: 200px;
+            height: 50px;
+            padding: 0;
+            display: inline-block;
+        }
+        input {
+            color: #666;
+            z-index: 2;
+            border: 0 none;
+        }
+        input:focus {
+            outline: 0 none;
+        }
+        input:focus + button .fa
+        {
+            transform:translate(0,0);
+            transition: 0.3s;
+            color: #fff;
+        }
+        button { 
+            z-index: 1;
+            width: 50px;
+            border: 0 none;
+            background: #ceb980;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;  
+            transform: translate(-50px, 0);
+            transition-duration: 0.3s;
+        }
+        .fa-search {
+            font-size: 1.4rem;
+            color: #29abe2;
+            z-index: 3;
+            top: 25%; 
+            transform: translate(-190px, 0);
+            transition-duration: 0.3s;
+            transition: all 0.1s ease-in-out;
+        }
+    </style>
+    <body>
+        <h1>My first application!</h1>
+        <p>Welcome to <i>Learning JavaScript, 3rd Edition</i>.</p>
+        <script src="main.js"></script>
+    </body>
+</html>

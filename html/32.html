@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/imgColorChange.css">
+    <title>imgColorChange</title>
+</head>
+<body>
+    <img src="../img/pokeball.png" width="30%">
+    <div id="bg"></div>
+    <script type="text/javascript">
+        const bg = document.getElementById('bg');
+        function randomColor()
+        {
+            return Math.floor(Math.random() * 255);
+        }
+        bg.addEventListener('click', () => {
+            bg.style.backgroundColor = 'rgba('+randomColor()+','+randomColor()+','+randomColor()+')'
+        })
+    </script>
+</body>
+</html>

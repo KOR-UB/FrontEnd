@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/BorderEffects.css">
+    <title>Border Hover Effects</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <h2>Water Wave Div</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nihil, facere eos ipsa, maiores corporis asperiores quam cumque dicta ex quo! Similique culpa distinctio commodi maiores facilis, corrupti exercitationem provident!</p>
+            </div>
+        </div>
+    </div>
+    <svg>
+        <filter id="wavy">
+            <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite"/>
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+        </filter>
+    </svg>
+</body>
+</html>

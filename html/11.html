@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>맛보기 예제</title>
+        <script src="js/example.js"></script>
+    </head>
+    <style>
+        .test{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            padding-top: 40px;
+            background: rgba(0, 0, 0, 0.842);
+            color: rgba(17, 122, 207, 0.795);
+            font-size: 3em;
+        }
+        .red
+        {
+            color:red;
+        }
+        .aqua
+        {
+            color: aqua;
+        }
+        .green
+        {
+            color: green;
+        }
+        .box {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 35%;
+                height: 110%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        img {
+                width: 500px;
+                height: 500px;
+        }
+    </style>
+    <!-- <input type="button" id="button2" value="버튼2"> -->
+    <script>
+            
+//#
+        // function clickEvent() {
+
+        // alert("버튼2을 누르셨습니다.");
+
+        // }
+        // const button = document.getElementById("button2");
+
+        // button.addEventListener("click", clickEvent);
+//#
+        // function TestScore(name, kor, eng){
+        //         this.userName = name;
+        //         this.korNum = kor;
+        //         this.engNum = eng;
+
+        //         this.getTestInfo = function(){
+        //                 document.write("이름: " + name, "<br>");
+        //                 document.write("국어: " + kor, "<br>");
+        //                 document.write("영어: " + eng, "<br>");
+        //         }
+        //         this.getAvg = function(){
+        //                 return (kor += eng) / 2;
+        //         }
+        // }
+
+        // var kimgun = new TestScore("김군",80, 90);
+        // var ohgun = new TestScore("오군", 100, 80);
+
+        // kimgun.getTestInfo();
+        // document.write("김군의 평균 점수: " + kimgun.getAvg(),"<br><br>")
+
+        // ohgun.getTestInfo();
+        // document.write("오군의 평균 점수: " + ohgun.getAvg(),"<br>")
+//#
+        // function chColor(){
+        //         var arrColor = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        //         var arrNum = Math.floor(Math.random() * arrColor.length);
+        //         var bodyTag = document.getElementById("theBody");
+        //         bodyTag.style.backgroundColor = arrColor[arrNum];
+        // }
+//#
+        // function CheckWeight(name, height, weight){
+        //         this.userName = name;
+        //         this.userHeight = height;
+        //         this.userWeight = weight;
+        //         this.minWeight;
+        //         this.maxWeight;
+
+        //         this.getinfo = function(){
+        //                 var str="";
+        //                 str += "이름: " + this.userName + ",";
+        //                 str += "키: " + this.userHeight + ",";
+        //                 str += "몸무게: " + this.userWeight + "<br>";
+        //                 return str;
+        //         }
+        //         this.getResult = function(){
+        //                 this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+        //                 this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+
+        //                 if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+        //                         return "정상 몸무게입니다";
+        //                 }
+        //                 else if(this.userWeight < this.minWeight){
+        //                         return "정상 몸무게 미달입니다";
+        //                 }
+        //                 else{
+        //                         return "정상 몸무게보다 초과입니다";
+        //                 }
+        //         }
+                
+        // }
+        // var jang = new CheckWeight("장보리", 168, 62);
+        // var park = new CheckWeight("박달채", 180, 88);
+        // console.log(jang);
+        // console.log(park);
+
+        // document.write(jang.getinfo());
+        // document.write(jang.getResult(), "<br>");
+
+        // document.write(jang.getResult === park.getResult);
+//#
+        // var num = 0;
+        // function testFnc(){
+        //         num++;
+        //         document.write(num, "<br>");
+        //         if(num == 10){
+        //          return;
+        //         }
+        //         testFnc();
+        // }
+        // testFnc();
+//#
+        // var num = 1;
+        // function gallery(direct)
+        // {
+        //         if(direct){
+        //           if(num ==6){
+        //        
+        //           }
+        //         num++;
+        //         }
+        //         else{
+        //         if(num ==1){
+        //         return;
+        //         } 
+        //         num--; 
+        //         }
+        // var imgTag = document.getElementById("photo");
+        // imgTag.setAttribute("src","C:/Users/yyaa/Documents/vs/Test" + num + ".jpg");
+        // console.log(num);
+        // }
+//#
+        // function Test(a){
+        //         var sum = 0;
+        //         for (var i = 0; i<a.length; i++)
+        //         {
+        //                 sum += Number(prompt(a[i] + "개수는?" , "0"));
+        //         }
+        //         return sum;
+        // }
+
+        // var b = ["사과", "바나나", "딸기"];
+        // var result = Test(b);
+
+        // document.write("과일 총 개수는 " + result + "개 입니다")
+//#
+        // function testAvg(arrData){
+        //         var sum = 0;
+        //         for (var i=0; i < arrData.length; i++)
+        //         {
+        //                 sum+= Number(prompt(arrData[i] +"점수는?", "0"));
+        //         }
+
+        //         var avg = sum/arrData.length;
+        //         return avg;
+        // }
+
+        // var arrSubject = ["국어", "수학"];
+        // var result = testAvg(arrSubject);
+
+        // document.write("평균 점수는 " + result + "점입니다"); 
+//#
+        //     function sum(num1, num2){
+        //             return num1 + num2;
+        //     }
+        //     var result = sum(10,20);
+        //     document.write(result);
+//#
+        // function myFnc(name, area)
+        // {
+        //         document.write("안녕하세요. " + name + "입니다.", "<br>");
+        //         document.write("사는 곳은 " + area + "입니다.", "<br>");
+        // }
+
+        // myFnc("홍당무", "서울");
+
+        // myFnc("깍두기", "부산");
+//#
+        // var color=["white","yellow","aqua","purple"];
+
+        // var i = 0;
+        // function changeColor()
+        // {
+        //         i++;
+        //         if(i >= color.length)
+        //         {
+        //                 i=0;
+        //         }
+        //         var bodyTag = document.getElementById("theBody");
+        //         bodyTag.style.backgroundColor = color[i];
+        // }
+//#
+        // var count = 0;
+
+        // myFnc();
+
+        // function myFnc(){
+        //         count++;
+        //         document.write("hello" + count, "<br>")
+        // }
+        // myFnc();
+
+        // var theFnc=function(){
+        //         count++;
+        //         document.write("bye" + count, "<br>")
+        // }
+        // theFnc();
+//#
+        // var menu = ["짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"];
+        // var menuNum = Math.floor(Math.random(menu.length)*5);
+        // var result = menu[menuNum];
+        // document.write(result);
+//#
+        // var phoneNum = "010-2345-1234";
+        // var result_1 = phoneNum.substring(0,phoneNum.length - 4);
+        // document.write(result_1, "****<br>")
+
+        // var imgSrc = "images/bnt_out.jpg";
+        // var result_2 = imgSrc.replace("out", "over");
+        // document.write(result_2,"<br>")
+//#
+        // var info = navigator.userAgent.toLocaleLowerCase();
+        // var osimg = null;
+
+        // var scr = screen;
+        // var sc_w = scr.width;
+        // var sc_h = scr.height;
+
+        // document.write("모니터 해상도 너비" + sc_w + "px","<br>");
+        // document.write("모니터 해상도 높이" + sc_h + "px","<br>");
+//#
+        // var addNum = 0;
+        // var subNum = 1000;
+
+        // var auto_1 = setInterval(function(){
+        //     addNum++
+        //     //console.log(addNum);
+        //     document.write(addNum ,"<br>")
+        // }, 3000);
+        
+        // var auto_2 = setInterval(function() {
+        //     subNum--;
+        //     document.write(subNum,"<br>")
+        //     //console.log(subNum);
+        // }, 3000);
+//#
+        // window.open("http://www.easyspub.com", "easyspub", "width=350,height=400,left=50,top=10,scrollbars=no");
+
+//#
+        // var userEmail = prompt("당신의 이메일 주소는>", "");
+        // var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"]
+
+        // var check1 =false;
+        // var check2 =false;
+
+        // if(userEmail.indexOf("@") > 0)
+        // {
+        //     check1 = true;
+        //     for (var i = 0; i<arrUrl.length; i++)
+        //     {
+        //         if(userEmail.indexOf(arrUrl[i]) > 0)
+        //         {
+        //             check2 = true;
+        //         }
+        //     }
+        // }              
+        // if(check1 && check2)
+        //     {
+        //         document.write(userEmail);
+        //     }
+        //     else
+        //     {
+        //         alert("이메일 형식이 잘못되었습니다.");
+        //     } 
+
+
+//#
+        // var userName = prompt("당신의 영문 이름은?","");
+
+        // var upperName = userName.toUpperCase();
+        // document.write(upperName,"<br>");
+
+        // var userNum = prompt("당신의 주민번호는?", "");
+        // var result = userNum.substring(0, userNum.length-7)+"*******";
+        // document.write(result, "<br>");
+//#
+        // var t = "Hello Thank you good luck to you";
+        // document.write(t.charAt(16), "<br />");
+        // document.write(t.indexOf("you"), "<br />");
+        // document.write(t.indexOf("you",16), "<br />");
+        // document.write(t.lastIndexOf("you"), "<br />");
+        // document.write(t.lastIndexOf("you",25), "<br />");
+        // document.write(t.match("luck"), "<br />");
+        // document.write(t.search("you"), "<br />");
+        // document.write(t.substr(21, 4), "<br />");
+        // document.write(t.substring(6,12), "<br />");
+        // document.write(t.replace("you", "me"), "<br />");
+        // document.write(t.toLowerCase(), "<br />");
+        // document.write(t.toUpperCase(), "<br />");
+        // document.write(t.length, "<br />");
+
+        // var s = t.split(" ");
+
+        // document.write(s[0], "<br />")
+        // document.write(s[4], "<br />")
+
+        // var str = "H";
+        // var t=str.charCodeAt(0);
+
+        // document.write(t, "<br />");
+        // document.write(String.fromCharCode(72), "<br />")
+//#
+        // var greenArr = ["교대", "방배", "강남"];
+        // var yellowArr = ["미금", "정자", "수서"];
+
+        // greenArr.splice(2, 1, "서초", "역삼");
+        // console.log(greenArr);
+
+        // var data1 = yellowArr.pop(); //초기화 및 pop 사용 됨
+        // var data2 = yellowArr.shift(); //초기화 및 shift 사용 됨
+
+        // yellowArr.push(data2); // 정자 미금 
+        // console.log(yellowArr);
+        // yellowArr.unshift(data1); //수서 정자 미금
+        // console.log(yellowArr); 
+//#
+        // var arr_1 = ["사당", "교대", "방배", "강남",];
+        // var arr_2 = ["신사", "압구정", "옥수"];
+
+        // var result = arr_1.join("-");
+        // console.log(result);
+
+        // result = arr_1.concat(arr_2);
+        // console.log(result);
+
+        // result = arr_1.slice(1,3);
+        // console.log(result);
+
+        // arr_1.sort();  //가나다라, 1234 규칙으로 정렬
+        // console.log(arr_1);
+
+        // arr_2.reverse();
+        // console.log(arr_2);
+
+//#
+        // var today = new Date();
+        // var nowYear = today.getFullYear();
+
+        // var theDate = new Date(nowYear,11,31)
+        // var diffDate = theDate.getTime()-today.getTime();
+
+        // var result = Math.ceil(diffDate/(60 * 1000 * 60 * 24));
+        // document.write("연말 D-day: "+result+" 일 남았습니다.");
+//#
+        // var today = new Date();
+        // var nowMonth = today.getMonth() +1,
+        // nowDate = today.getDate(),
+        // nowDay = today.getDay();
+
+        // if(nowDay ==0)
+        // {
+        //     nowDay="일 요일";
+        // }
+        // else if(nowDay ==1)
+        // {
+        //     nowDay="월 요일";
+        // }
+        // else if(nowDay ==2)
+        // {
+        //     nowDay="화 요일";
+        // }
+        // else if(nowDay ==3)
+        // {
+        //     nowDay="수 요일";
+        // }     
+        // else if(nowDay ==4)
+        // {
+        //     nowDay="목 요일";
+        // }     
+        // else if(nowDay ==5)
+        // {
+        //     nowDay="금 요일";
+        // }     
+        // else if(nowDay ==6)
+        // {
+        //     nowDay="토 요일";
+        // }     
+
+
+        // document.write("<h1>오늘 날짜 정보</h1>");
+        // document.write("현재 월 " + nowMonth,"<br>");
+        // document.write("현재 일 " + nowDate,"<br>");
+        // document.write("현재 요일 " + nowDay,"<br>");
+
+        // var worldcup = new Date(2002,4,31);
+        // var theMonth = worldcup.getMonth()+1,
+        // theDate = worldcup.getDate(),
+        // theDay = worldcup.getDay();
+
+        // if(theDay ==0)
+        // {
+        //     theDay="일 요일";
+        // }
+        // else if(theDay ==1)
+        // {
+        //     theDay="월 요일";
+        // }
+        // else if(theDay ==2)
+        // {
+        //     theDay="화 요일";
+        // }
+        // else if(theDay ==3)
+        // {
+        //     theDay="수 요일";
+        // }     
+        // else if(theDay ==4)
+        // {
+        //     theDay="목 요일";
+        // }     
+        // else if(theDay ==5)
+        // {
+        //     theDay="금 요일";
+        // }     
+        // else if(theDay ==6)
+        // {
+        //     theDay="토 요일";
+        // }     
+
+        // document.write("<h1>월드컵 날짜 정보</h1>");
+        // document.write("월드컵 몇 월 " + theMonth,"<br>");
+        // document.write("월드컵 몇 일 " + theDate,"<br>");
+        // document.write("월드컵 무슨 요일 " + theDay,"<br>");
+//#
+        // var tv = new Object();
+        // tv.color = "while";
+        // tv.price = 300000;
+        // tv.info = function()
+        // {
+        //     document.write("tv 색상" + this.color,"<br>");
+        //     document.write("tv 가격" + this.price,"<br>");
+        // }
+
+        // var car = {
+        //     color:"black",price:5000000,
+        //     info: function()
+        //     {
+        //         document.write("car 색상" + this.color,"<br>")
+        //         document.write("car 가격" + this.price,"<br>")
+        //     }
+        // };
+        // document.write("<h1>tv 객체 메서드 호출 </h1>");
+        // tv.info();
+        // document.write("<h1>car 객체 메서드 호출 </h1>");
+        // car.info();
+//#
+    // var num =1;
+    // var t="<table border=1>";
+    //     for(var i= 1; i <=5; i++)
+    //     {
+    //         t +="<tr>";  
+    //         for(var k =1; k <=5; k++)
+    //         {
+    //             t +="<td>";  
+    //             t += num++;
+    //             t +="</td>";    
+    //         }
+    //     }
+    //     t +="</tr>"; 
+    //     t +="</table>";
+    //     document.write(t);
+
+//#
+        // var i =1;
+        // while(i < 10)
+        // {
+        //     document.write("5 X " + i + "= "+ i*5,"<br />");
+        //     i++
+        // }
+//#
+        // for(var i=1; i<=1000; i++)
+        // {
+        //     if(i % 5==0 && i % 7 != 0)
+        //     {
+        //         document.write("<p class='red'>" + i + "</p>")
+        //     }
+        //     if(i % 7==0 && i % 5 != 0)
+        //     {
+        //         document.write("<p class='green'>" + i + "</p>")
+        //     }
+        //     if(i % 5==0 && i % 7 == 0)
+        //     {
+        //         document.write("<p class='aqua'>" + i + "</p>")
+        //     }
+        //     if(i == 175) break;
+        // }
+//#
+        //  var i = 10;
+
+        //  do{
+        //      document.write("hello!!");
+
+        //  }
+        //  while(i<10) 
+
+//#
+        // var i =20;
+
+        // while(i >= 10)
+        // {
+        //     if(i % 2 == 0)
+        //     {
+        //         document.write("<p class='blue'>" + i + "</p>");
+        //     }
+        //     else
+        //     {
+        //         document.write("<p class='red'>" + i + "</p>");
+        //     }
+        //     i--;
+        // }
+//#
+        // var i =1;
+        // while(i <=30)
+        // {
+        //     if(i % 2 == 0 && i % 6 == 0) //i의 값이 2의 배수이면서 6의 배수일 경우 i의 값을 출력한다.
+        //     {
+        //         document.write(i,"<br />");
+        //     }
+        //     i++;
+        // }
+
+//#
+        // var i = 1;
+
+        // while(i <= 10)
+        // {
+        //     document.write("안녕하세요" + i, "<br />");
+        //     i++;
+        // }
+        // document.write("The End");
+//#
+        // var site = prompt("네이버, 다음, 네이트, 구글 중 즐겨 사용하는 포털 검색 사이트는?", "");
+
+        // var url;
+
+        // switch(site)
+        // {
+        //     case "구글": url = "www.google.com";
+        //     break;
+        //     case "다음": url = "www.daum.net";
+        //     break;
+        //     case "네이버": url = "www.naver.com";
+        //     break;
+        //     case "네이트": url = "www.nate.com";
+        //     break;
+        //     case "유튜브": url = "www.youtube.com";
+        //     break;
+        //     default: alert("보기 중에 없는 사이트입니다.");
+        // }
+
+        // if(url) location.href = "http://" + url;
+//#
+        // var id = "ssoyacz";
+        // var pw = "qudRlxks23#";
+
+        // var user_id = prompt("아이디는?", "");
+        // var user_pw = prompt("비밀번호는?","");
+
+        // if(user_id == id)
+        // {
+        //     if(user_pw == pw)
+        //     {
+        //         document.write(user_id+"님 반갑습니다");
+        //     }
+        //     else
+        //     {
+        //         alert("비밀번호가 일치하지 않습니다.");
+        //         location.reload();
+        //     }
+        // }
+        // else
+        // {
+        //     alert("아이디가 일치하지 않습니다");
+        //     location.reload();
+        // }
+
+//#
+        // var result =confirm("정말로 회원을 탈퇴하시겠습니까?")
+        // if(result)
+        // {
+        //     document.write("탈퇴 처리되었습니다.")
+        // }
+        // else
+        // {
+        //     document.write("탈퇴 취소되었습니다.")
+        // }
+
+//#
+        // var result;
+        // var result2;
+        // // var num1 = prompt("1분기 판매량을 입력하세요","0")
+        // // var num2 = prompt("2분기 판매량을 입력하세요","0")
+        // // var num3 = prompt("3분기 판매량을 입력하세요","0")
+        // // var num4 = prompt("4분기 판매량을 입력하세요","0")
+
+        // var num1 = prompt("1분기 판매량을 입력하세요")
+        // var num2 = prompt("2분기 판매량을 입력하세요")
+        // var num3 = prompt("3분기 판매량을 입력하세요")
+        // var num4 = prompt("4분기 판매량을 입력하세요")
+        // var str = "<table border='1'>";
+        //     str += "<tr>";
+        //     str += "<td></td><td>판매량</td>";
+        //     str += "</tr>";
+        //     str += "<tr>";
+        //     str += "<td>1분기</td><td>"+num1;
+        //     str += "</td></tr>";
+        //     str += "<tr>";
+        //     str += "<td>1분기</td><td>"+num2;
+        //     str += "</td></tr>";
+        //     str += "<tr>";
+        //     str += "<td>1분기</td><td>"+num3;
+        //     str += "</td></tr>";
+        //     str += "<tr>";
+        //     str += "<td>4분기</td><td>"+ num4;
+        //     str += "</td></tr>";
+        //     document.write(str);
+        //  result= Number(result);
+        //  num1= Number(num1);
+        //  num2= Number(num2);
+        //  num3= Number(num3);
+        //  num4= Number(num4);
+        //  result = num1 + num2 + num3 + num4;
+        //  result2 = num1 + num2 + num3
+        //  document.write("이번 분기 판매량 총 합계는 " + result +" 입니다.<br>");
+        //  var average = result / 4;
+        //  document.write("이번 분기 평균 값은 " + average + " 입니다.<br>");
+        //  var average2 = result2 / 3;
+        //  document.write("전 분기 총 합계는 " + result2 + " 입니다.<br>");
+        //  document.write("전 분기 평균 값은 " + average2 + " 입니다.<br>");
+        //  var check = average >= average2 ? "판매량이 평균 이상으로 증가했습니다." : "판매량이 평균 미달로 감소하였습니다."
+        //  document.write(check+ "<br>")
+        //  if(average >= average2)
+        //  {
+        //     var check2 = average-=average2;
+        //     document.write("평균 값이 "+check2+" 만큼 증가 했습니다.")
+        //  }
+        //  else
+        //  {
+        //     var check2 = average-=average2;
+        //     document.write("평균 값이 "+check2+" 만큼 감소 했습니다.")
+        //  }
+//#
+        // var money = 10000;
+        // var price1 = 3000;
+        // var price2 = 6000;
+        // var price3 = 3000;
+
+        // var result;
+        // var result2 = price1+=price2+=price3;
+
+        // result = money-=result2;
+
+        // result = result ? result+"원 초과" : "돈 관리 잘 했어요!"
+
+        // document.write(result);
+
+//#
+        // var name = prompt("당신의 이름은?", "");
+        // var height = prompt("당신의 신장은?", "");
+        // var weight = prompt("당신의 몸무게는?", "");
+
+        // var normal_w = (height - 100) * 0.9;
+        // var result = weight >= normal_w -5 && weight <= normal_w +5; //오차범위 ±5
+        // result = result? " 적정 체중입니다." : " 적정 체중이 아닙니다";
+        // document.write(name +"님은"+result);
+        
+//#
+    //     var age = prompt("당신의 나이는?", "0");
+
+    //     var num = 20;
+        
+    //    var result = age >= num ? "<h1 class=test>당신은 성인입니다.</h1>" : "<h1 class=test>당신은 미성년자입니다.</h1>"
+    //    document.write(result);
+
+//#
+        // var num1=10;
+        // var num2=20;
+        // var result;
+
+        // num1--;
+        // document.write(num1, "<br>");
+
+        // num1++;
+        // document.write(num1, "<br>");
+
+        // result = num2++;
+        // document.write(result, "<br>");
+
+        // result = ++num2;
+        // document.write(result, "<br>");
+//#
+    // var str ="<table border='1'>";
+    // str += "<tr>";
+    // str += "<td>1</td><td>2</td><td>3</td>";
+    // str += "</tr>";
+    // str += "</table>";
+    // document.write(str); 
+//# 
+        // var age = prompt("당신의 나이는?", "0");
+        
+        // if(age >= 20)
+        //  {
+        //  document.write("<h1 class=test>당신은 성인입니다.</h1>");
+        //  }
+        //  else
+        //  {
+        //  document.write("<h1 class=test>당신은 미성년자입니다.</h1>");
+        //  }
+//#e
+    </script>
+    <body>
+<!-- #
+    <body id ="theBody">
+            <button onclick="chColor()">배경 색상 바꾸기</button> -->
+<!-- #
+        <div id="galleryZone">
+                <p><img src="C:\Users\yyaa\Documents\vs\Test1.jpg" id="photo" alt=""></p>
+                <p class="box">
+                        <button onclick="gallery(0)">이전</button>
+                        <button onclick="gallery(1)">다음</button>
+                </p>          
+        </div> -->
+            
+<!-- #
+    <body id="theBody">
+            <button onclick="changeColor();">배경색 바꾸기</button> -->
+<!-- #
+        <button onclick="clearInterval(auto_1)">증가 정지</button>
+        <button onclick="clearInterval(auto_2)">감소 정지</button>
+#-->
+
+    </body>
+</html>
