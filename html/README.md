@@ -38,9 +38,9 @@
 
 <hr/>
 
-Link:[Google][googlelink]
+Link:[더 알아보기][link]
 
-[googlelink]: https://www.google.com	"google link"
+[link]: https://gist.github.com/ihoneymon/652be052a0727ad59601	"google link"
 
 
 
