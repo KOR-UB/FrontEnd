@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohreoh</title>
+    <link rel="stylesheet" href="../fontawesome-free-5.12.1-web/css/all.css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            min-height: 100vh;
+        }
+        header
+        {
+            z-index: 10000;
+            position: fixed;
+            width: 100%;
+            background: rgba(35, 138, 138, 0.411);
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: thistle;
+            text-shadow: 0px 0px 5px rgb(0, 0, 0),
+            0px 0px 15px rgb(39, 230, 255),
+            0px 0px 40px rgb(39, 230, 255);
+        }
+        header .logo
+        {
+            font-size: 3em;
+            letter-spacing: 5px;
+            cursor: pointer;
+        }
+        header .menu
+        {
+            position: relative;
+            display: flex;
+            
+        }
+        header .menu ul
+        {
+            display: flex;
+            position: relative;
+        }
+        header .menu ul li
+        {
+            font-size: 2em;
+            position: relative;
+            list-style: none;
+            margin-left: 40px;
+            cursor: pointer;
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            padding: 5px 0px;
+        }
+        section
+        {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            justify-content: center;
+            align-items: center;
+        }
+        section.color
+        {
+            background: url(../img/color.jpg);
+        }
+        .box1
+        {
+            position: absolute;
+            background-color: red;
+            mix-blend-mode: hue;
+            top: 0;
+            width: 100%;
+            height: 300px;
+        }
+        .box2
+        {
+            position: absolute;
+            background-color: rgb(0, 26, 255);
+            mix-blend-mode: hue;
+            top: 300px;
+            width: 100%;
+            height: 300px;
+        }
+        .box3
+        {
+            position: absolute;
+            background-color: rgb(251, 255, 0);
+            mix-blend-mode: hue;
+            top: 600px;
+            width: 100%;
+            height: 280px;
+        }
+        section:nth-child(3) .container
+        {
+            display: flex;
+            padding: 105px;
+        }
+        .box
+        {
+            position: relative;
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            background: yellow;
+        }
+        .box:before
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            z-index: 10;
+            animation: anim 5s infinite;
+        }
+        .box:after
+        {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            z-index: 10;
+            animation: anim2 5s infinite;
+        }
+        @keyframes anim
+        {
+            0%
+            {
+                left: 0;
+                top: 0px;
+            }
+            33%
+            {
+                left: 400px;
+                top: 0px;
+            }
+            66%
+            {
+                left: 0px;
+                top: 400px;
+            }
+        }
+        @keyframes anim2
+        {
+            0%
+            {
+                right: 0;
+                bottom: 0;
+            }
+            33%
+            {
+                right: 400px;
+                bottom: 0;
+            }
+            66%
+            {
+                right: 0px;
+                bottom: 400px;
+            }
+        }
+        .box:hover
+        {
+            box-shadow: 0px 0px 15px blue,
+            0px 0px 35px red,
+            0px 0px 65px blue;   
+        }
+        section:nth-child(4)
+        {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="menu">
+            <ul>
+                <li>Contact</li>
+                <li>Portfolio</li>
+                <li>About</li>
+                <li>Team</li>
+            </ul>
+        </div>
+    </header>
+    <section class="color">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="box">
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const box = document.querySelector(".box");
+
+        function boxHandel()
+        {
+            const h6 = document.createElement("h6");
+            h6.style.height = "100%";
+            h6.style.width = "100%";
+            h6.style.margin = "0 auto"
+            h6.style.background = "rgba(0,0,0,0.5)"
+            h6.style.textAlign = "center";
+            h6.style.color = "white";
+            h6.style.fontSize = "4em";
+            h6.innerHTML = "테스트";
+            box.appendChild(h6);
+        }
+        function boxOut()
+        {
+            const h6 = document.querySelector("h6")
+            box.removeChild(h6)
+        }
+        box.addEventListener("mouseenter",boxHandel);
+        box.addEventListener("mouseleave",boxOut);
+    </script>
+</body>
+</html>

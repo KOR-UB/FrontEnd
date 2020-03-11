@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            min-height: 100vh;
+        }
+        header
+        {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,.2);
+            position: fixed;
+            padding: 0 100px;
+            z-index: 1000;
+            border-bottom: 2px dotted black;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+        }
+        header nav
+        {
+            display: flex;
+        }
+        header nav ul
+        {
+            display: flex;
+            list-style: none;
+        }
+        header nav ul li
+        {
+
+            position: relative;
+            display: flex;
+            margin-left: 30px;
+        }
+        header nav ul li a
+        {
+            text-decoration: none;
+            color: rgb(100, 81, 19);
+            font-size: 24px;
+        }
+        section
+        {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(227, 248, 252);
+            border: 2px solid black;
+        }
+        section .container
+        {
+            margin: 0 auto;
+            width: 1000px;
+            height: 600px;
+            background: blanchedalmond;
+            border: 1px solid black;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 3px 5px 15px black;
+        }
+        section .container .content
+        {
+            padding: 30px;
+        }
+        section .container .content h2
+        {
+
+        }
+        section .container .content p
+        {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        section .container .content hr
+        {
+            border:none;
+            border-bottom: 5px dotted black;
+            margin: 15px 0px;
+        }
+        section:nth-child(odd)
+        {
+            background: rgb(99, 252, 180);
+        }
+        section:nth-child(odd) .container
+        {
+            background-color: blueviolet;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+        section:nth-child(odd) .container .box
+        {
+            position: relative;
+            width: 10px;
+            height: 10px;
+            display: flex;
+            background: tomato;
+            border-radius: 50%;
+            animation: anim 3s ease-out infinite;
+        }
+        section:nth-child(odd) .container .box:before
+        {
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: yellowgreen;
+            animation: anim 6s ease-out infinite;
+        }
+        section:nth-child(odd) .container .box:after
+        {
+            content: "";
+            position: absolute;
+            bottom: 50px;
+            right: 100px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            animation: anim 3s ease-out infinite;
+        }
+        @keyframes anim
+        {
+            0%
+            {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 440px;
+            }
+            20%
+            {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 440px;
+            }
+            40%
+            {
+                right: 0;
+                bottom: 0;
+                left: 0;
+                top: 250px;
+            }
+            60%
+            {
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 250px;
+            }
+            80%
+            {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0x;
+            }
+            100%
+            {
+                top: 0;
+                bottom: 0;
+                left: 440px;
+                right: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>문서에 내용을 정의할 것이다</h1>
+        <nav>
+            <ul>
+                <li><a href="#1">제목1</a></li>
+                <li><a href="#2">제목2</a></li>
+                <li><a href="#3">제목3</a></li>
+                <li><a href="#4">제목4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="1">
+        <div class="container">
+            <div class="content">
+                <h2>제목 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus dignissimos molestiae porro voluptatem quis eaque dolores illum, earum voluptas adipisci soluta magnam cupiditate. Obcaecati id magnam neque pariatur! Omnis!</p>
+                <hr>
+                <h2>제목 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus dignissimos molestiae porro voluptatem quis eaque dolores illum, earum voluptas adipisci soluta magnam cupiditate. Obcaecati id magnam neque pariatur! Omnis!</p>
+                <hr>
+                <h2>제목 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus dignissimos molestiae porro voluptatem quis eaque dolores illum, earum voluptas adipisci soluta magnam cupiditate. Obcaecati id magnam neque pariatur! Omnis!</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <section id="2">
+        <div class="container">
+            <div class="contant">
+                <div class="box"></div>
+            </div>
+        </div>
+    </section>
+    <section id="3">
+        <div class="container">
+            <div class="content">
+
+            </div>
+        </div>
+    </section>
+    <section id="4">
+        <div class="container">
+            <div class="content">
+
+            </div>
+        </div>
+    </section>
+    <script>
+        const bx = document.querySelector(".box");
+
+        function test()
+        {
+            bx.style.border = "3px solid black"
+        }
+        bx.addEventListener("click",test);
+    </script>
+</body>
+</html>
