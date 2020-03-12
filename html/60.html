@@ -101,13 +101,41 @@
         }
         section:nth-child(odd) .container
         {
+            display: flex;
+            padding: 30px;
             background-color: blueviolet;
             border-top-right-radius: 10px;
             border-bottom-left-radius: 10px;
             border-top-left-radius: 100px;
             border-bottom-right-radius: 100px;
+            box-shadow: -3px 5px 15px black;
         }
-        section:nth-child(odd) .container .box
+        section:nth-child(odd) .container img
+        {
+            margin: 15px;
+            border-radius: 100px;
+        }
+        section:nth-child(odd) .container .storyBx
+        {
+            padding: 0 10px;
+        }
+        section:nth-child(odd) .container h2
+        {
+            font-size: 3em;
+            color: coral;
+            text-align: center;
+        }
+        section:nth-child(odd) .container p
+        {
+            color: rgb(166, 237, 100);
+            text-align: justify;
+        }
+        section:nth-child(odd) .container .text
+        {
+            clear: both;
+            position: relative;
+        }
+        section:nth-child(even) .container .box
         {
             position: relative;
             width: 10px;
@@ -115,9 +143,9 @@
             display: flex;
             background: tomato;
             border-radius: 50%;
-            animation: anim 3s ease-out infinite;
+            animation: anim 5s ease-out infinite;
         }
-        section:nth-child(odd) .container .box:before
+        section:nth-child(even) .container .box:before
         {
             content: "";
             position: absolute;
@@ -126,20 +154,8 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: yellowgreen;
-            animation: anim 6s ease-out infinite;
-        }
-        section:nth-child(odd) .container .box:after
-        {
-            content: "";
-            position: absolute;
-            bottom: 50px;
-            right: 100px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            animation: anim 3s ease-out infinite;
+            background: rgb(255, 128, 128);
+            animation: anim 5s ease-out infinite;
         }
         @keyframes anim
         {
@@ -190,7 +206,7 @@
 </head>
 <body>
     <header>
-        <h1>문서에 내용을 정의할 것이다</h1>
+        <h1>제목 혹은 로고</h1>
         <nav>
             <ul>
                 <li><a href="#1">제목1</a></li>
@@ -217,15 +233,32 @@
     </section>
     <section id="2">
         <div class="container">
-            <div class="contant">
-                <div class="box"></div>
+            <div class="imgBx">
+                <img src="../img/Food1.jpg" alt="음식1">
+                <img src="../img/Food2.jpg" alt="음식1">
+            </div>
+            <div class="storyBx">
+                <h2>BREAD</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, sequi? Odit officia sequi beatae voluptas amet ipsam, odio a ab assumenda perspiciatis dolores perferendis repellat reprehenderit recusandae distinctio ex provident!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque fugit fugiat at voluptatibus rem atque excepturi eius consequuntur exercitationem tenetur dignissimos porro laborum molestiae odit.</p>
+            </div>
+            <div class="storyBx">
+                <h2>CAKE</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque fugit fugiat at voluptatibus rem atque excepturi eius consequuntur exercitationem tenetur dignissimos porro laborum molestiae odit eaque deleniti minima, ab impedit.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque fugit fugiat at voluptatibus rem atque excepturi eius consequuntur exercitationem tenetur dignissimos porro laborum molestiae odit.</p>
+            </div>
+            <div class="storyBx">
+                <h2>Cookie</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis nesciunt veniam natus architecto in officia nulla mollitia! Sapiente optio, saepe, sed ipsa quas illo non, veritatis incidunt velit quo voluptate!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque fugit fugiat at voluptatibus rem atque excepturi eius consequuntur exercitationem tenetur dignissimos porro laborum molestiae odit.</p>
             </div>
         </div>
     </section>
     <section id="3">
         <div class="container">
+            <div class="box"></div>
             <div class="content">
-
+                
             </div>
         </div>
     </section>
