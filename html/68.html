@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: consolas;
+        }
+        section
+        {
+            padding: 50px;
+            background: #000;
+        }
+        section h2
+        {
+            font-size: 2.5em;
+            color: #fff;
+        }
+        section p
+        {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        ::-webkit-scrollbar
+        {
+            width: 0;
+        }
+        #scrollPath
+        {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: rgba(255,255,255,.05);
+        }
+        #progressbar
+        {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            background: linear-gradient(to top, #008aff,#00ffe7);
+            animation:  animate 5s linear infinite;
+        }
+        @keyframes animate
+        {
+            0%,100%
+            {
+                filter: hue-rotate(0deg);
+            }
+            50%
+            {
+                filter: hue-rotate(360deg);
+            }
+        }
+        #progressbar:before
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(10px);
+        }
+        #progressbar:after
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #008aff, #00ffe7);
+            filter: blur(30px);
+        }
+    </style>
+</head>
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+        <h2>Creative Scroll Progress Bar</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus in consectetur quam ut nisi, placeat repellat, vel totam facilis error, iure at ipsa nesciunt minus maiores velit natus eligendi iusto?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quo repellendus eligendi suscipit laboriosam? Nemo optio autem in temporibus, dolores accusantium dolore perspiciatis quisquam, culpa tenetur deserunt beatae recusandae repellat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut aperiam quam quia ratione maxime id consequatur aliquam dolore, quas nihil voluptas sed inventore autem repellendus? Suscipit tempore aspernatur asperiores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum officia est dolor asperiores nam laborum assumenda omnis inventore nobis mollitia, eius nostrum perspiciatis, ullam illum exercitationem ratione reprehenderit consequuntur tenetur.
+        </p>
+    </section>
+    <script>
+        let Progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            Progress.style.height = progressHeight + "%";
+        }
+
+    </script>
+</body>
+</html>
