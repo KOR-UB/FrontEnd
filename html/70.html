@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            background: url(../img/Switzerland.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section .login-form {
+            padding: 50px;
+            margin: 0 auto;
+        }
+
+        section .login-form fieldset {
+            border-radius: 50px;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+        }
+
+        section .login-form fieldset:hover {
+            background-color: rgba(19, 109, 161, 0.459);
+        }
+
+        section .login-form fieldset legend {
+            position: relative;
+            background: cornflowerblue;
+            font-size: 32px;
+        }
+
+        section .login-form fieldset input {
+            border: none;
+            outline: none;
+            width: 400px;
+            transition: .5s;
+            height: 50px;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+            font-size: 22px;
+            background: linear-gradient(0.6turn, #3f87a6, #72727277, rgba(255, 255, 255, 0.253));
+        }
+
+        section .login-form fieldset input:focus {
+            width: 650px;
+            background-color: rgba(82, 221, 117, 0.466);
+        }
+
+        section .login-form fieldset input::placeholder {
+            font-size: 22px;
+            color: white;
+            text-align: center;
+        }
+
+        section .login-form fieldset input:focus::placeholder {
+            opacity: 0;
+        }
+
+        .box {
+            text-align: center;
+            width: 100%;
+        }
+
+        .box h2 {
+            color: white;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            position: relative;
+        }
+
+        .box h2::before,
+        .box h2::after {
+            content: "";
+            border-bottom: solid rgb(5, 255, 222);
+            border-width: .05em 0;
+            height: .1em;
+            margin: .2em;
+            flex: 1;
+        }
+
+        .box2 {
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(180, 180, 180);
+            padding: 10px;
+            box-shadow: 10px 0 0 1px rgb(180, 180, 180),
+                -10px 0 0 1px rgb(161, 161, 161),
+                0px 10px 0 1px rgb(161, 161, 161),
+                0px -10px 0 1px rgb(180,180,180),
+                0px 0px 0 11px rgb(161, 161, 161);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form action="login" class="login-form">
+            <fieldset>
+                <div class="box">
+                    <h2>로그인</h2>
+                </div>
+                <input type="text" placeholder="아이디" />
+                <input type="text" placeholder="패스워드" />
+            </fieldset>
+        </form>
+    </section>
+</body>
+
+</html>
