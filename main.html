@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>웹카페 - HTML5,CSS3,웹표준,웹접근성</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/fontello.css" />
+    <link rel="stylesheet" href="./css/star.css" />
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
         *
@@ -87,6 +88,7 @@
             top: 0%;
             transform: translateY(0%);
             filter: drop-shadow(0px 0px 10px rgb(37, 255, 37));
+            /* background: red; */
         }
         .container .card .imgBx img
         {
@@ -250,6 +252,175 @@
             text-align: center;
             font-size: 20px;
         }
+        .animcontainer
+        {
+            display: flex;
+            justify-content: stretch;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            background: transparent;
+        }
+        .char
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 115px;
+            text-align: center;
+            overflow: hidden;
+            background: url(https://i.pinimg.com/originals/f7/d8/97/f7d8977935a3ef91038141f04e7e759c.png);
+            background-size: cover;
+            animation: move 10s ease-in infinite;
+            filter: drop-shadow(0px 0px 5px rgb(226, 126, 44));
+        }
+        .ball
+        {
+            filter: drop-shadow(0px 0px 10px rgb(38, 255, 31));
+            position: relative;
+            /* border: 2px solid black; */
+            top: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 50%;
+            animation: ball 10s linear infinite;
+            background: rgb(47, 247, 21);
+        }
+        @keyframes ball
+        {
+            0%
+            {
+                top: 30px;
+                left: 00px;
+            }
+            10%
+            {
+                top: 30px;
+                left: 100px;
+            }
+            20%
+            {
+                top: 30px;
+                left: 180px;
+            }
+            30%
+            {
+                top: 30px;
+                left: 240px;
+            }
+            40%
+            {
+                top: 30px;
+                left: 300px;
+            }
+            60%
+            {
+                top: 30px;
+                left: 1300px;
+            }
+            70%
+            {
+                top: -50px;
+                left: 700px;
+            }
+            80%
+            {
+                top:  -27px;
+                left: 80px;
+            }
+            90%
+            {
+                top:  -4px;
+                left: 150px;
+            }
+            100%
+            {
+                top: 30px;
+                left: 0px;
+            }
+        }
+        @keyframes move
+        {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+            }
+            10%{
+                left: 100px;
+            }
+            20%{
+                left: 100px;
+            }
+            30%{
+                left: 100px;
+            }
+            40%{
+                left: 300px;
+            }
+            50%{
+                left: 100px;
+            }
+            60%{
+                left: 100px;
+            }
+            70%{
+                left: 100px;
+            }
+            80%{
+                left: 80px;
+            }
+            90%{
+                left: 100px;
+            }
+            100%{
+                left: 0px;
+            }
+        }
+
+        .animcontainer::after
+        {
+            content: "Web Standards & Accessibility";
+            color: white;
+            text-shadow: -3px 3px 1px rgb(107, 107, 107);
+            font-size: 28px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            animation: textAni 1s linear,
+            textSize 2s linear 1s infinite;
+        }
+        @keyframes textAni
+        {
+            0%
+            {
+                right: 250px;
+                top: 100px;
+            }
+            100%
+            {
+                right: 10px;
+                top: 10px;
+            }
+        }
+        @keyframes textSize
+        {
+            0%
+            {
+                font-size: 28px;
+            }
+            50%
+            {
+                font-size: 32px;
+            }
+            100%
+            {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 
@@ -325,43 +496,91 @@
             </nav>
         </header>
         <div class="visual">
-            <div class="container">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="./images/nikeshoes.png" alt="shoes">
+            <div class="flower-bg">
+                <section>
+                    <div class="animcontainer">
+                        <div class="char"></div>
+                        <div class="ball"></div>
                     </div>
-                    <div class="contentBx">
-                        <h2>Nike Shoes</h2>
-                        <div class="size">
-                            <h3>Size :</h3>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
-                        </div>
-                        <div class="color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <a href="#">Buy Now</a>
-                    </div>
+                    <h1 class="hello">Hello</h1>
+                    <div class="star star1"></div>
+                    <div class="star star2"></div>
+                    <div class="star star3"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                    <div class="star star6"></div>
+                    <div class="star star7"></div>
+                    <div class="star star8"></div>
+                </section>
+                <div class="flower1">
+                    <img src="./css/images/ani_flower_01.png" alt="flower1">
+                    <img src="./css/images/ani_flower_02.png" alt="flower2">
+                </div>
+                <div class="flower2">
+                    <img src="./css/images/ani_flower_03.png" alt="flower3">
+                    <img src="./css/images/ani_flower_04.png" alt="flower4">
                 </div>
             </div>
+            <!-- <div class="visual-text">Web Standards &amp; Accessibility</div> -->
         </div>
         <div class="main">
-            <div class="group group1">Group1</div>
-            <div class="group group2">Group2</div>
+            <div class="group group1">
+                <form class="box" action="https//formspree.io/mpzljyyp">
+                    <h2>로그인</h2>
+                    <fieldset>
+                            <div class="user-email">
+                                <label for="userEmail">이메일주소</label><input name="userEmail" type="email" id="userEmail" placeholder="@email.com" required />
+                            </div>
+                            <div class="user-pw">
+                                <label for="userPw">비밀번호</label><input name="userPw" type="password" id="userPw" placeholder="8자리 이하" maxlength="8" minlength="4" required />
+                            </div>
+                            <button class="login-btn" type="submit">로그인</button>
+                            <hr>
+                            <ul class="id-pw-join">
+                                <li class="icon-ok"><a href="#">회원가입</a></li>
+                                <li class="icon-ok"><a href="#">아이디/비밀번호 찾기</a></li>
+                            </ul>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="group group2"></div>
             <div class="group group3">Group3</div>
         </div>
         <article class="slogan">슬로건</article>
         <div class="footer-bg">
             <footer class="footer">푸터</footer>
         </div>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/nikeshoes.png" alt="shoes">
+                </div>
+                <div class="contentBx">
+                    <h2>Nike Shoes</h2>
+                    <div class="size">
+                        <h3>Size :</h3>
+                        <span>7</span>
+                        <span>8</span>
+                        <span>9</span>
+                        <span>10</span>
+                    </div>
+                    <div class="color">
+                        <h3>Color :</h3>
+                        <span onclick="colorChange(event)"></span>
+                        <span onclick="colorChange(event)"></span>
+                        <span onclick="colorChange(event)"></span>
+                        <span onclick="colorChange(event)"></span>
+                    </div>
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
+        // function modalopen()
+        // {
+        //     divBx
+        // }
         // const divBx = document.querySelector(".divBx");
         // const h1 = divBx.querySelector("h1");
         // const header = document.querySelector(".header");
@@ -397,6 +616,7 @@
         // Array.from(menu_link).forEach(menu_link)
     </script>
     <script>
+        const hello = document.querySelector(".hello")
         const menuitem = document.querySelectorAll(".menu-item");
         const menulink = document.querySelectorAll(".menu-link")
         const submenu = document.querySelectorAll(".submenu");
@@ -414,6 +634,7 @@
             // targetNext.style.alignItems="center";
             // targetNext.style.backgroundColor = "transparent";
             h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
         } 
         // function clickflex(event)
         // {
@@ -444,14 +665,17 @@
             console.log(event);
             // event.target.nextElementSibling.classList.add("active");
             h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
         }
         function focusremove(event)
         {
             h1.innerText = "확대 영역";
+            hello.innerText = "hello";
         }
         function memberover(event)
         {
             h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
         }
         function Removeclass(event)
         {
@@ -461,6 +685,11 @@
         {
             submenu.classList.add("active");
         }
+        function colorChange(event)
+        {
+            console.log(event);
+            event.target.style.backgroundColor
+        }
         Array.from(member_a).forEach(member_a => member_a.addEventListener("mouseenter", memberover));
         Array.from(member_a).forEach(member_a => member_a.addEventListener("focus", memberover));
         Array.from(menuitem).forEach(menuitem => menuitem.addEventListener("mouseenter", closeUp));
@@ -469,7 +698,6 @@
         Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("mouseenter", focusadd));
         Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("focus", focusadd));
         // Array.from(menulink).forEach(menulink => menulink.addEventListener("click", clickEventHandle))
-
         Array.from(icon).forEach(icon => icon.classList.add("icon-ok"));
     </script>
 </body>
