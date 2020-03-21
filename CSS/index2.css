@@ -1,65 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 @media(min-width: 1000px)
 {
-body
+    *
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body
+    {
+        background-color: rgb(0, 0, 0);
+    }
+    .js-clock
+    {
+        text-align: center;
+        font-size: 4em;
+        color: rgb(34, 146, 90);
+        -webkit-text-stroke: 2px #000;
+    }
+    .js-form
+    {
+        text-align: center;
+    }
+    .inputToDo
+    {
+        width: 300px;
+        border: 0px;
+        background-color: rgba(42, 131, 134, 0.534);
+        padding: 10px 0 10px 0;
+        margin: 15px;
+        text-align: center;
+        border-top: black 2px solid;
+        border-bottom: black 2px solid;
+        outline-style: none;
+        font-size: 1.5em;
+        height: auto; /* 높이 초기화 */ 
+        line-height: normal; /* line-height 초기화 */
+    }
+    .inputToDo::placeholder
+    {
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    }
+    .inputToDo:focus
+    {
+        border-left: black 2px solid;
+        border-right: black 2px solid;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 3px 2px rgb(0, 0, 0);
+        outline-style: double;
+        outline-width: 6px;
+        outline-color: rgba(42, 131, 134, 0.534);
+    }
+    .showing
+    {
+        font-size: 1em;
+    }
+    input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
+    { 
+        color:transparent;
+        text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    }
+    .js-greetings
+    {
+        text-align: center;
+        font-size: 3em;
+    }
+    .js-toDoForm
+    {
+        text-align: center;
+    }
+    .form,
+    .greetings
+    {
+        display: none;
+    }
+    .showing
+    {
+        display: block;
+    }
+    .js-toDoList
+    {
+        color: black;
+        text-align: center;
+        list-style:none;
+        font-size: 2em;
+    }
+    .js-toDoList li span
+    {
+        color: white;
+    }
+    .js-toDoList li button
+    {
+        outline-style: none;
+        color: red;
+        -webkit-text-stroke: 1px #000;
+        background: none;
+        font-size: 1em;
+        border: 0;
+        margin-left: 15px;
+    }
+    svg
+    {
+        z-index: -10;
+        position: fixed;
+        top: -40%;
+        left: 0;
+    }
+
+}
+@media (max-width: 1000px)
 {
-    background-color: white;
-}
-.js-clock
-{
-    text-align: center;
-    font-size: 4em;
-}
-.js-form
-{
-    text-align: center;
-}
-.inputToDo
-{
-    width: 300px;
-    border: 0px;
-    background-color: rgba(42, 131, 134, 0.534);
-    padding: 10px 0 10px 0;
-    margin: 5px;
-    text-align: center;
-    outline-style: none;
-}
-.inputToDo::placeholder
-{
-    color: rgb(0, 0, 0);
-}
-.inputToDo:focus
-{
-    color:transparent;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
-    outline-style: double;
-    outline-width: 5px;
-    outline-color: rgba(42, 131, 134, 0.534);
-}
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
-{ 
-  color:transparent;
-}
-.js-greetings
-{
-    text-align: center;
-}
-.js-toDoForm
-{
-    text-align: center;
-}
-.form,
-.greetings
-{
-    display: none;
-}
-.showing
-{
-  display: block;
-}
-.js-toDoList
-{
-    color: black;
-    text-align: center;
-    list-style:none;
-}
+    
 }

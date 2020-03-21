@@ -1,0 +1,144 @@
+body{
+    background-color : rgb(63, 63, 63);
+  }
+  .slidein
+  {
+    animation: slideIn 3s linear;
+  }
+
+  .clicked
+  {
+    color : #7f8c8d;
+  }
+  .form,
+  .greetings
+  {
+    display: none;
+  }
+  .showing
+  {
+    display: block;
+  }
+  @keyframes fadeIn
+  {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  @keyframes anitest
+  {
+     0%{width: 15px; height: 15px; border: black 5px double; transform:rotate(45deg);}
+     50%{margin-top: 55%;  width: 20px; height: 20px; border: black 5px double;  transform:rotate(135deg);}
+     100% {width: 15px; height: 15px; border: black 5px double; transform:rotate(225deg);}
+  }
+  @keyframes slidein
+  {
+      from {margin-left: 100%; width: 300%;}
+      to {margin-left: 0%; width: 100%;}
+  }
+  .bgImage
+  {
+    position : absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
+  }
+  .js-clock, .js-greetings
+  {
+    color : #ffffff;
+    text-shadow: 2px 2px 3px #2d2f30;
+    transition: color .8s ease-in-out;
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .js-form
+  {
+    text-align: center;
+  }
+  .js-toDoForm
+  {
+    text-align: center;
+  }
+  .js-toDoList
+  {
+    font-size: 2em;
+    position: absolute;
+    left: 42%;
+    color : #dfe4ea;
+    text-shadow: 2px 2px 3px #2d2f30;
+    list-style:none;
+  }
+  .inputToDo
+  {
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 3px #2d2f30;
+    outline-style: none;
+    font-size: 2em;
+    padding:10px 0 0 0;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: black 2px solid;
+    color: white;
+    background: rgba(0, 0, 0, 0.171);
+    width: 22%; /* 원하는 너비 설정 */ 
+    height: auto; /* 높이값 초기화 */ 
+    text-align: center;
+  }
+  .inputToDo::placeholder
+  {
+    color: white;
+    text-shadow: 2px 2px 3px #2d2f30;
+    font-family: initial;
+  }
+  input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder
+  { 
+    color:transparent;
+  }
+  .js-weather
+  {
+    font-size: 1.5em;
+    position: fixed;
+    top:20px;
+    right: 50px;
+    color: white;
+    text-shadow: 2px 2px 3px #2d2f30;
+  }
+  button
+  {
+    text-shadow: 2px 2px 3px #2d2f30;
+    font-size: 0.7em;
+    outline-style: none;
+    background: none;
+    color: rgb(187, 38, 38);
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom-color: black;
+    margin-right: 20px;
+  }
+  .js-pageChange
+  {
+    transition: color .8s ease-in-out;
+    position: fixed;
+    top: 40%;
+    right: 3%;
+  }
+  .pageCube
+  {
+    animation: anitest 1.5s ease-in-out;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+    animation-fill-mode:both;
+    margin-bottom: 20px;
+    display: block;
+    width:10px;height:10px; background-color:rgb(231, 235, 243);
+  }
+  
+

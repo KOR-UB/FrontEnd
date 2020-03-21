@@ -1,0 +1,74 @@
+.js-test
+{
+    border: 1px black solid;
+    padding: 50px;
+}
+video
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 400px;
+    mix-blend-mode: screen;
+    display: inline-block; 
+}
+@font-face { font-family: 'NeoDunggeunmo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'yg-jalnan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff'); font-weight: normal; font-style: normal; }
+.navBox
+{
+    position: absolute;
+    top: 100px;
+    left: 400px;   
+    font-size:150px;
+    box-sizing: border-box;
+  display: inline-block; 
+  text-align: left;
+  color: white;
+  text-shadow: 0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 30px #fff,
+  0 0 40px #21e0d0,
+  0 0 70px #21e0d0,
+  0 0 80px #21e0d0,
+  0 0 100px #21e0d0,
+  0 0 150px #21e0d0;
+}
+.clearfix
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body
+{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .02em;
+    text-transform: none;
+}
+p.result{
+
+    display: inline-block;
+    font-size:150px;
+    padding-right: 2px;
+    box-sizing: border-box;
+    text-align: left;
+    color: white;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #21e0d0,
+    0 0 70px #21e0d0,
+    0 0 80px #21e0d0,
+    0 0 100px #21e0d0,
+    0 0 150px #21e0d0;
+    }
+.typing-txt{display: none;}
+.typeing-txt ul{list-style:none;}
+.typing {  
+    display: inline;
+    line-height:1;
+}

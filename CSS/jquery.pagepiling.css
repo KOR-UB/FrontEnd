@@ -96,9 +96,8 @@ html, body {
 }
 #pp-nav li .active span,
 .pp-slidesNav .active span {
-    background: rgb(0, 255, 234);
-    box-shadow: 0 0 15px 5px rgb(0, 255, 234,0.8);
-    left: -5px;
+    background: rgb(30, 255, 0);
+    box-shadow: 0 0 15px 5px rgba(72, 255, 0, 0.8);
 }
 #pp-nav span,
 .pp-slidesNav span {
@@ -107,7 +106,7 @@ html, body {
     width: 8px;
     height: 8px;
     border: 1px solid #000;
-    background: rgba(255, 255, 255, 1);
+    background: #333;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
