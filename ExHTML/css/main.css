@@ -354,7 +354,7 @@ a{
     transform: perspective(800px) rotateX(60deg);
     transition: 3s;
 } */
-.box h2
+.box span
 {
     color: yellow;
     padding: 10px 0;
@@ -522,6 +522,7 @@ a{
     border-bottom: none;
     background: linear-gradient(to bottom, #ccc, #eee);
     background-color: #ccc;
+    margin-bottom: 15px;
 }
 .search-form fieldset
 {
@@ -540,4 +541,58 @@ a{
     padding: 5px;
     background: black;
     border: none;
+}
+.group2 section
+{
+    width: 100%;
+}
+.group2 .g2btn
+{
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 7px 7px 0 0;
+    border-bottom: none;
+    outline: none;
+}
+/* .group2 .g2btn:hover,
+.group2 .g2btn:focus
+{
+    border: 1px solid #e8852e;
+    border-bottom: none;
+} */
+.group2 small
+{
+    font-size: 14px;
+    float: right;
+}
+/* .g2btn */
+/* .group2 .group2-sec2
+{
+    display: none;
+} */
+.group2 section ul{
+    list-style: none;
+}
+.group2 section li{
+    list-style: none;
+    padding: 15px 0;
+}
+.group2 section li a
+{
+
+    float: left;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.group2 section li time
+{
+
+    float: right;
+}
+.group2 section li:hover
+{
+    color: rgb(20, 117, 0);
 }
