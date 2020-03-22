@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 관련 속성</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* body:hover .ball
+        {
+            left: 100px;
+        } */
+        .animcontainer
+        {
+            display: flex;
+            justify-content: stretch;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background: rgb(231, 255, 20);
+        }
+        .char
+        {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 115px;
+            text-align: center;
+            overflow: hidden;
+            background: url(https://i.pinimg.com/originals/f7/d8/97/f7d8977935a3ef91038141f04e7e759c.png);
+            background-size: cover;
+            animation: move 10s ease-in infinite;
+        }
+        .ball
+        {
+            position: relative;
+            border: 2px solid black;
+            top: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 50%;
+            animation: ball 10s linear infinite;
+            background: rgb(47, 247, 21);
+        }
+        @keyframes ball
+        {
+            0%
+            {
+                top: 30px;
+                left: 00px;
+            }
+            10%
+            {
+                top: 30px;
+                left: 100px;
+            }
+            20%
+            {
+                top: 30px;
+                left: 180px;
+            }
+            30%
+            {
+                top: 30px;
+                left: 240px;
+            }
+            40%
+            {
+                top: 30px;
+                left: 300px;
+            }
+            60%
+            {
+                top: 30px;
+                left: 1800px;
+            }
+            70%
+            {
+                top: -50px;
+                left: 1400px;
+            }
+            80%
+            {
+                top:  -27px;
+                left: 700px;
+            }
+            90%
+            {
+                top:  -4px;
+                left: 300px;
+            }
+            100%
+            {
+                top: 30px;
+                left: 0px;
+            }
+        }
+        @keyframes move
+        {
+            0%
+            {
+                top: 0px;
+                left: 0px;
+            }
+            10%{
+                left: 100px;
+            }
+            20%{
+                left: 100px;
+            }
+            30%{
+                left: 100px;
+            }
+            40%{
+                left: 300px;
+            }
+            50%{
+                left: 100px;
+            }
+            60%{
+                left: 100px;
+            }
+            70%{
+                left: 100px;
+            }
+            80%{
+                left: 100px;
+            }
+            90%{
+                left: 100px;
+            }
+            100%{
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animcontainer">
+        <div class="char">
+           
+        </div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹카페 - HTML5,CSS3,웹표준,웹접근성</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/fontello.css" />
+    <link rel="stylesheet" href="./css/star.css" />
+    <link rel="stylesheet" href="./css/snow.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        .container2 {
+            position: fixed;
+            top: 200px;
+            left: 15px;
+            border-radius: 25px;
+            width: 450px;
+            background: #161616;
+            overflow: hidden;
+        }
+        .container2 .card {
+            position: relative;
+            z-index: 0;
+            top: -15px;
+            width: 100%;
+            height: 450px;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .container2 .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #9bdc28;
+            clip-path: circle(150px at 80% 20%);
+            transition: .5s ease-in-out;
+        }
+
+        .container2 .card:hover::before {
+            clip-path: circle(300px at 80% -20%);
+        }
+
+        .container2 .card::after {
+            content: "Nike";
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            clip-path: circle(300px at 50% 20%);
+            font-size: 12em;
+            font-weight: 800;
+            font-style: italic;
+            color: rgb(255, 255, 255);
+            transition: 1s ease-in-out;
+        }
+
+        .container2 .card:hover::after {
+            top: 50%;
+            left: 0%;
+        }
+
+        .container2 .card .imgBx {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 220px;
+            transition: .5s;
+            z-index: 1000;
+            object-fit: contain;
+        }
+
+        .container2 .card:hover .imgBx {
+            top: 0%;
+            transform: translateY(0%);
+            filter: drop-shadow(0px 0px 10px rgb(37, 255, 37));
+        }
+
+        .container2 .card .imgBx img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-25deg);
+            width: 270px;
+            mix-blend-mode: luminosity;
+        }
+
+        .container2 .card .contentBx {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            transition: 1s;
+            z-index: 1000;
+        }
+
+        .container2 .card:hover .contentBx {
+            height: 210px;
+        }
+
+        .container2 .card .contentBx h2 {
+            position: relative;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .container2 .card .contentBx .size,
+        .container2 .card .contentBx .color {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .container2 .card:hover .contentBx .size {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .5s;
+        }
+
+        .container2 .card:hover .contentBx .color {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .65s;
+        }
+
+        .container2 .card .contentBx .size h3,
+        .container2 .card .contentBx .color h3 {
+            color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-right: 10px;
+        }
+
+        .container2 .card .contentBx .size span,
+        .container2 .card .contentBx .color span {
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            line-height: 26px;
+            font-size: 14px;
+            display: inline-block;
+            color: #111;
+            background: #fff;
+            margin: 0 5px;
+            transition: 0.5s;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 0 10px 2px black;
+        }
+
+        .container2 .card .contentBx .size span:hover {
+            background: #9bdc28;
+        }
+
+        .container2 .card .contentBx .color span {
+            width: 20px;
+            height: 20px;
+            background: #ff0;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .container2 .card .contentBx .color span:nth-child(2) {
+            background: #9bdc28;
+        }
+
+        .container2 .card .contentBx .color span:nth-child(3) {
+            background: red
+        }
+
+        .container2 .card .contentBx .color span:nth-child(4) {
+            background: #e91e63;
+        }
+
+        .container2 .card .contentBx a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #111;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: .5s;
+            text-decoration: none;
+        }
+
+        .container2 .card:hover .contentBx a {
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: 0.75s;
+        }
+
+        .menu>li:nth-child(1) .submenu,
+        .menu>li:nth-child(2) .submenu,
+        .menu>li:nth-child(3) .submenu {
+            color: red;
+        }
+
+        .menu>li:nth-child(4) .submenu,
+        .menu>li:nth-child(5) .submenu,
+        .menu>li:nth-child(6) .submenu {
+            color: blue;
+        }
+
+        .divBx {
+            padding-right: 10px;
+            text-align: center;
+            position: absolute;
+            top: 34px;
+            left: 30px;
+            height: 43px;
+            width: 220px;
+            text-align: center;
+            z-index: 100;
+            color: white;
+            text-shadow: 2px 0 0 black;
+            text-shadow: -2px 0 0 black;
+            text-shadow: 0 2px 0 black;
+            text-shadow: 0 -2px 0 black;
+            overflow: hidden;
+        }
+
+        .divBx h1 {
+            padding-top: 8px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .animcontainer {
+            display: flex;
+            justify-content: stretch;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            background: transparent;
+        }
+
+        .char {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 70px;
+            height: 115px;
+            text-align: center;
+            overflow: hidden;
+            background: url(https://i.pinimg.com/originals/f7/d8/97/f7d8977935a3ef91038141f04e7e759c.png);
+            background-size: cover;
+            animation: move 10s ease-in infinite;
+            filter: drop-shadow(0px 0px 5px rgb(226, 126, 44));
+        }
+
+        .ball {
+            filter: drop-shadow(0px 0px 10px rgb(38, 255, 31));
+            position: relative;
+            /* border: 2px solid black; */
+            top: 30px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 50%;
+            animation: ball 10s linear infinite;
+            background: rgb(47, 247, 21);
+        }
+
+        @keyframes ball {
+            0% {
+                top: 30px;
+                left: 00px;
+            }
+
+            10% {
+                top: 30px;
+                left: 100px;
+            }
+
+            20% {
+                top: 30px;
+                left: 180px;
+            }
+
+            30% {
+                top: 30px;
+                left: 240px;
+            }
+
+            40% {
+                top: 30px;
+                left: 300px;
+            }
+
+            60% {
+                top: 30px;
+                left: 1300px;
+            }
+
+            70% {
+                top: -50px;
+                left: 700px;
+            }
+
+            80% {
+                top: -27px;
+                left: 80px;
+            }
+
+            90% {
+                top: -4px;
+                left: 150px;
+            }
+
+            100% {
+                top: 30px;
+                left: 0px;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            10% {
+                left: 100px;
+            }
+
+            20% {
+                left: 100px;
+            }
+
+            30% {
+                left: 100px;
+            }
+
+            40% {
+                left: 300px;
+            }
+
+            50% {
+                left: 100px;
+            }
+
+            60% {
+                left: 100px;
+            }
+
+            70% {
+                left: 100px;
+            }
+
+            80% {
+                left: 80px;
+            }
+
+            90% {
+                left: 100px;
+            }
+
+            100% {
+                left: 0px;
+            }
+        }
+
+        .animcontainer::after {
+            content: "Web Standards & Accessibility";
+            color: white;
+            text-shadow: -3px 3px 1px rgb(107, 107, 107);
+            font-size: 28px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            animation: textAni 1s linear,
+                textSize 2s linear 1s infinite;
+        }
+
+        @keyframes textAni {
+            0% {
+                right: 250px;
+                top: 100px;
+            }
+
+            100% {
+                right: 10px;
+                top: 10px;
+            }
+        }
+
+        @keyframes textSize {
+            0% {
+                font-size: 28px;
+            }
+
+            50% {
+                font-size: 32px;
+            }
+
+            100% {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <div class="toggle">
+        <span>Start SnowFall</span>
+        <span>Stop SnowFall</span>
+    </div>
+    <div class="container2" aria-hidden="true">
+        <div class="card">
+            <div class="imgBx">
+                <img src="./images/nikeshoes.png" alt="shoes">
+            </div>
+            <div class="contentBx">
+                <h2>Nike Shoes</h2>
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="color">
+                    <h3>Color :</h3>
+                    <span onclick="colorChange(event)" style="background: #9bdc28;"></span>
+                    <span onclick="colorChange(event)" style="background: red;"></span>
+                    <span onclick="colorChange(event)" style=" background: #e91e63;"></span>
+                    <span onclick="colorChange(event)" style=" background: #ff0;"></span>
+                </div>
+                <a href="#" >Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <div class="divBx">
+                <h1>확대 영역</h1>
+            </div>
+            <h1 class="logo"><a href="#"><img src="./images/logo.png" alt="" /></a></h1>
+            <ul class="member">
+                <li><a href="#">홈</a></li>
+                <li><span aria-hidden="true">:</span><a href="#">로그인</a></li>
+                <li><span aria-hidden="true">:</span><a href="#">회원가입</a></li>
+                <li><span aria-hidden="true">:</span><a href="#">사이트맵</a></li>
+                <li><span aria-hidden="true">:</span><a href="#">english</a></li>
+            </ul>
+            <nav class="navigation">
+                <div class="snow-fillBx"></div>
+                <h2 class="a11y-hidden">메인 메뉴</h2>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">HTML에 대해</a>
+                        <ul class="submenu">
+                            <li><a href="#">HTML5 소개</a></li>
+                            <li><a href="#">레퍼런스 소개</a></li>
+                            <li><a href="#">활용 예제</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">CSS에 대해</a>
+                        <ul class="submenu">
+                            <li><a href="#">CSS소개</a></li>
+                            <li><a href="#">CSS2 VS CSS3</a></li>
+                            <li><a href="#">CSS 애니메이션</a></li>
+                            <li><a href="#">CSS Framework</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">웹표준</a>
+                        <ul class="submenu">
+                            <li><a href="#">웹표준 이란?</a></li>
+                            <li><a href="#">W3C</a></li>
+                            <li><a href="#">HTML5 현재와 미래</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">웹 접근성</a>
+                        <ul class="submenu">
+                            <li><a href="#">웹 접근성의 개요</a></li>
+                            <li><a href="#">장애 환경의 이해</a></li>
+                            <li><a href="#">장차법</a></li>
+                            <li><a href="#">웹 접근성 품질마크</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">묻고 답하기</a>
+                        <ul class="submenu">
+                            <li><a href="#">묻고 답하기</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1대1 질문</a></li>
+                            <li><a href="#">웹표준</a></li>
+                            <li><a href="#">웹 접근성</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">자료실</a>
+                        <ul class="submenu">
+                            <li><a href="#">공개 자료실</a></li>
+                            <li><a href="#">이미지 자료실</a></li>
+                            <li><a href="#">웹표준 자료실</a></li>
+                            <li><a href="#">웹 접근성 자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="visual">
+            <div class="flower-bg">
+                <section class="section-star">
+                    <div class="animcontainer">
+                        <div class="char"></div>
+                        <div class="ball"></div>
+                    </div>
+                    <h1 class="hello">Hello</h1>
+                    <div class="star star1"></div>
+                    <div class="star star2"></div>
+                    <div class="star star3"></div>
+                    <div class="star star4"></div>
+                    <div class="star star5"></div>
+                    <div class="star star6"></div>
+                    <div class="star star7"></div>
+                    <div class="star star8"></div>
+                </section>
+                <div class="flower1">
+                    <img src="./css/images/ani_flower_01.png" alt="flower1">
+                    <img src="./css/images/ani_flower_02.png" alt="flower2">
+                </div>
+                <div class="flower2">
+                    <img src="./css/images/ani_flower_03.png" alt="flower3">
+                    <img src="./css/images/ani_flower_04.png" alt="flower4">
+                </div>
+            </div>
+            <!-- <div class="visual-text">Web Standards &amp; Accessibility</div> -->
+        </div>
+        <div class="main">
+            <div class="group group1">
+                <form  method="POST" class="box" id="form" action="https//formspree.io/mpzljyyp">
+                    <h2>로그인</h2>
+                    <fieldset>
+                        <div class="user-email">
+                            <label for="userEmail">이메일주소</label><input name="userEmail" type="email" id="userEmail"
+                                placeholder="@email.com" onchange="validation()" required />
+                        </div>
+                        <div class="user-pw">
+                            <label for="userPw">비밀번호</label><input name="userPw" type="password" id="userPw"
+                                placeholder="8자리 이하" maxlength="8" minlength="4" required />
+                        </div>
+                        <button class="login-btn" type="submit">로그인</button>
+                        <hr>
+                        <ul class="id-pw-join">
+                            <li class="icon-ok"><a href="#">회원가입</a></li>
+                            <li class="icon-ok"><a href="#">아이디/비밀번호 찾기</a></li>
+                        </ul>
+                    </fieldset>
+                </form>
+                <ul class="group1-ul">
+                    <li class="icon-ok"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="마크업 유효성 검사 사이트로 이동(새창)" target="_blank">W3C Markup Validation</a></li>
+                    <li class="icon-ok"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="CSS 유효성 검사 사이트로 이동(새창)" target="_blank">CSS Validation Service</a></li>
+                </ul>
+                <section class="group1-sec">
+                    <h2>웹 관련 용어</h2>
+                    <div class="group1-contentBx">
+                        <img src="images/web_standards.gif" alt="">
+                        <div class="Bx">
+                            <small>웹 표준 이란?</small>
+                            <p>W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="group group2">
+                <form class="search-form" method="POST" action="https://formspree.io/seulbinim@gmail.com">
+                    <fieldset>
+                            <label for="search" class="icon-search">자료검색</label>
+                            <input required type="search" name="search" id="search" placeholder="검색어를 입력하세요.">
+                            <button type="submit" class="search-btn">검색</button>
+                    </fieldset>
+                </form>
+                <section>
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li><a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a></li>
+                        <li><a href="#">W3C 사이트 리뉴얼 및 공지사항</a></li>
+                        <li><a href="#">KWCAG 2.1 소식</a></li>
+                        <li><a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a></li>
+                        <li><a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="group group3">Group3</div>
+        </div>
+        <article class="slogan">슬로건</article>
+        <div class="footer-bg">
+            <footer class="footer">
+                <div class="imgBx">
+                    <img src="./images/html5_logo.png" alt="HTML5logo">
+                    <img src="./images/css3_logo.png" alt="CSS3logo">
+                </div>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">개인정보 보호정책</a></li>
+                        <li><a href="#">이메일주소 무단수집 거부</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">SITE MAP</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-logo">
+                    <address>서울시 강남구 역삼동 718-5 전화 : 02-3429-5114 email : seulbinim@gmail.com</address>
+                    <address>Copyright since © 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.</address>
+                </div>
+            </footer>
+        </div>
+        <script src="./js/particle/particles.js"></script>
+        <script src="./js/particle/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function validation()
+        {
+            var form = document.getElementById("form");
+            var email = document.getElementById("userEmail").value;
+            var text = document.querySelector(".hello");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email.match(pattern))
+            {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "유효한 이메일 주소";
+            }
+            else
+            {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "유효하지 않은 이메일 주소";
+            }
+            if(email == "")
+            {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                ext.innerHTML = "";
+            }
+        }
+        // function modalopen()
+        // {
+        //     divBx
+        // }
+        // const divBx = document.querySelector(".divBx");
+        // const h1 = divBx.querySelector("h1");
+        // const header = document.querySelector(".header");
+        // const menu_item = document.querySelectorAll(".menu-item");
+        // const menu_link = document.querySelectorAll(".menu-link");
+        // const submenu = document.querySelectorAll(".submenu");
+
+        // function enterHandle(e)
+        // {
+        //     const lastChild = e.target.lastElementChild;
+        //     console.log(lastChild.className);
+        //     // if(lastChild.classList)
+        //     lastChild.classList.remove("active");
+        //     lastChild.classList.add("active");
+        //     h1.innerText = event.target.innerText;
+        // }
+        // function leaveHandle(e)
+        // {
+        //     console.log(e);
+        //     const lastChild = e.fromElement;
+        //     lastChild.classList.remove("active");
+        //     h1.innerText = "확대 영역"
+        // }
+        // function test(e)
+        // {
+        //     console.log(e);
+        // }
+        // Array.from(submenu).forEach(submenu => submenu.addEventListener("mouseleave", leaveHandle));
+        // Array.from(menu).forEach(submenu => submenu.addEventListener("focus", enterHandle));
+        // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseenter",enterHandle));
+
+        // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseleave",leaveHandle));
+        // Array.from(menu_link).forEach(menu_link)
+    </script>
+    <script>
+        const hello = document.querySelector(".hello")
+        const menuitem = document.querySelectorAll(".menu-item");
+        const menulink = document.querySelectorAll(".menu-link")
+        const submenu = document.querySelectorAll(".submenu");
+        const icon = document.querySelectorAll(".submenu li");
+        const sub_a = document.querySelectorAll(".submenu li a");
+        const divBx = document.querySelector(".divBx");
+        const h1 = divBx.querySelector("h1");
+        const member_a = document.querySelectorAll(".member li a");
+
+        function closeUp(event) {
+            // const targetNext = event.target.nextElementSibling;
+            // targetNext.style.display="flex";
+            // targetNext.style.justifyContent = "center";
+            // targetNext.style.alignItems="center";
+            // targetNext.style.backgroundColor = "transparent";
+            h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
+        }
+        // function clickflex(event)
+        // {
+        //     console.log(event)
+        //     const lasttarget = event.target.nextElementSibling;
+        //     lasttarget.style.display = "flex"
+        //     lasttarget.style.justifyContent = "center";
+        //     lasttarget.style.alignItems="center";
+        //     lasttarget.style.backgroundColor = "transparent";
+        //     console.log(lasttarget);
+        // }
+        // function bye(event)
+        // {
+        //     const lasttarget = event.target.lastElementChild;
+        //     lasttarget.style.display = "none";
+        // }
+        // function clickEventHandle(event)
+        // {
+        //     // console.log(event.target.nextElementSibling);
+        //     const nextEl = event.target.nextElementSibling;
+        //     if(nextEl.className = "active")
+        //     {
+        //         console.log("?");
+        //     }
+        // }
+        function focusadd(event) {
+            console.log(event);
+            // event.target.nextElementSibling.classList.add("active");
+            h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
+        }
+
+        function focusremove(event) {
+            h1.innerText = "확대 영역";
+            hello.innerText = "hello";
+        }
+
+        function memberover(event) {
+            h1.innerText = event.target.innerText;
+            hello.innerText = event.target.innerText;
+        }
+
+        function Removeclass(event) {
+            console.log(event);
+        }
+
+        function focusEvent() {
+            submenu.classList.add("active");
+        }
+
+        function colorChange(e) {
+            console.log(e.current.target);
+            console.dir(e);
+            // event.target.style.backgroundColor
+        }
+        Array.from(member_a).forEach(member_a => member_a.addEventListener("mouseenter", memberover));
+        Array.from(member_a).forEach(member_a => member_a.addEventListener("focus", memberover));
+        Array.from(menuitem).forEach(menuitem => menuitem.addEventListener("mouseenter", closeUp));
+        Array.from(menulink).forEach(menulink => menulink.addEventListener("focus", focusadd));
+        Array.from(menulink).forEach(menulink => menulink.addEventListener("blur", focusremove));
+        Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("mouseenter", focusadd));
+        Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("focus", focusadd));
+        // Array.from(menulink).forEach(menulink => menulink.addEventListener("click", clickEventHandle))
+        Array.from(icon).forEach(icon => icon.classList.add("icon-ok"));
+    </script>
+        <script>
+            // const menu = document.querySelector(".menu");
+            $(document).ready(function()
+            {
+                $(".toggle").click(function()
+                {
+                    $(".toggle").toggleClass("active");
+                    $("#particles-js").toggleClass("active");
+                    $(".snow-fillBx").toggleClass("snow-fill");
+                    $(".menu").toggleClass("menu-snow");
+                    $("#form").toggleClass("menu-snow");
+                    $(".logo img").toggleClass("menu-snow");
+                })
+            })
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,543 @@
+@import url(./normalize.css);
+@font-face{font-display:swap;font-family:Alegreya Sans;font-style:normal;font-weight:400;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/AlegreyaSans-Regular.98b724378169423e445d69ec1782a3b6.woff) format("woff")}@font-face{font-display:swap;font-family:Alegreya Sans;font-style:normal;font-weight:500;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/AlegreyaSans-Medium.d2d523dfe82dad6dfdd742ec9ea5678e.woff) format("woff")}@font-face{font-display:swap;font-family:Alegreya Sans;font-style:normal;font-weight:700;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/AlegreyaSans-Bold.417c58b15fc82ee963233c9335c06011.woff) format("woff")}@font-face{font-display:swap;font-family:Exocet Blizzard;font-style:normal;font-weight:500;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/ExocetBlizzardOT-Medium.15c1404fff96cb17daa2359e3d7c31d9.woff) format("woff")}@font-face{font-display:swap;font-family:Old Fenris;font-style:normal;font-weight:400;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/OldFenris-Regular-bop.72eab62356f584d7f881fcb5e1e990e4.woff2) format("woff2"),url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/OldFenris-Regular-bop.5f614bccba35eedfbf4ad4ea05147310.woff) format("woff")}@font-face{font-display:swap;font-family:Open Sans;font-style:normal;font-weight:700;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/OpenSans-Bold.f9fc9780feed3b7444ba6277f067c7f5.woff) format("woff")}@font-face{font-display:swap;font-family:Xingkai;font-style:normal;font-weight:700;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/arxingkaigbbd.c67fcd3e4ecebe5cf492cc500da50439.woff) format("woff")}@font-face{font-display:swap;font-family:Guyin;font-style:normal;font-weight:700;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/arguyingbbd.b7e6c0231f0ca7cf54c52b64a5690d65.woff) format("woff")}@font-face{font-display:swap;font-family:Cryzcuhei;font-style:normal;font-weight:700;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/arcrystalheig30bd.d79fce3650d450a5e02be79425f9f87e.woff) format("woff")}@font-face{font-display:swap;font-family:Noto Sans KR;font-style:normal;font-weight:400;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/noto-sans-kr-v12-latin_korean-regular.231ef82653d90aa19929e7dcd84c55c7.woff) format("woff")}@font-face{font-display:swap;font-family:Kodia;font-style:normal;font-weight:400;src:url(https://d3a5h34gwy5glx.cloudfront.net/assets/fonts/kodia.9bf4b0d255c4c1396e597fdf6a216eb2.woff) format("woff")}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+/* CSS 클래스 모듈 */
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 10px;
+}
+body
+{
+    color: #181818;
+    padding: 0;
+    font-family: "Noto Sans KR", "sans-serif";
+    font-size: 1.4rem;
+}   
+/* 하이퍼링크스타일 */
+a{
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .4s;
+}
+.container
+{
+    background: silver;
+}
+.header
+{
+    z-index: 100;
+    padding-top: 10px;
+    position: relative;
+    background: #fff;
+    padding: 0 30px 0 30px; 
+    border-radius: 0 0 15px 15px;
+    z-index: 5;
+    /* border-radius: 0 0 5px 50px; */
+}
+.header .logo
+{
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 32px;
+    /* background: #30abf2; */
+    width: 176px;
+    height: 45px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 1;
+    border-radius: 10px 10px 0 0;
+    outline: none;
+    background: #ffc23d;
+}
+.header .logo img
+{
+    box-shadow: 0 0 0 2px black;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding-right: 10px;
+}
+.header:focus-within .logo
+{
+    top: 40px;
+    height: 1px;
+    opacity: 0;
+}
+.header:focus-within .logo a
+{
+    outline: none;
+}
+.header .member
+{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    text-align: right;
+    font-size: 0;
+    padding: 2px 0;
+    margin-right: -10px;
+}
+.a11y-hidden
+{
+    background: blue;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    overflow: hidden;
+}
+.header .member li
+{
+    display: inline-block;
+    font-size: 1.4rem;
+}
+.header .member li,
+.header .member li a
+{   
+    display: inline-block;
+}
+.menu
+{
+    margin: 10px 0 0;
+    border-top: 2px solid black;
+    background-color: #ed552f;
+    /* background: #63a89f; */
+    display: flex;
+    /* background: #f24d30 linear-gradient(to bottom, rgba(140,47,239,1) 0%,rgba(239,38,169,1) 18%,rgba(239,38,169,1) 22%,rgba(41,137,216,1) 42%,rgba(219,35,35,1) 50%,rgba(219,35,35,1) 50%,rgba(219,35,35,1) 58%,rgba(41,137,216,1) 68%,rgba(41,137,216,1) 68%,rgba(32,124,202,1) 79%,rgba(202,129,239,1) 100%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding-left: 200px;
+    list-style: none;
+    box-shadow: 0 -3px 5px 0px black ;
+    border-radius: 0 0 10px 10px;
+    
+}
+.navigation
+{
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 3;
+}
+.menu-item{
+    padding: 10px 20px;
+    outline: 0;
+    border-left: 2px solid snow;
+}
+.menu-item .menu-link
+{
+    text-shadow: 1px 0 0 #161616,
+    -1px 0px 0 #161616,
+    0px 1px 0 #161616,
+    0px -1px 0 #161616;;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+/* .menu-item .menu-link:hover,
+.menu-item .menu-link:focus
+{
+    color: yellow;
+}
+.menu-item .menu-link:focus + .submenu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.menu-item:hover .submenu,
+.menu-item:focus .submenu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+} */
+/* .menu-item:hover .submenu
+{
+    border-bottom: 2px solid black;
+} */
+.menu-item:hover::after
+{
+    content:"";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 30px;
+}
+.submenu
+{
+    display: none;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    list-style: none;
+    padding: 7px 0;
+    background: pink;
+    width: 75%;
+}
+.active
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+.submenu li
+{
+    position: relative;
+    padding: 5px 20px;
+}
+.menu-link:hover
+{
+    color: yellow;
+}
+/* .menu-item:hover .submenu, */
+.menu-item:focus-within .submenu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+.menu-item:hover .submenu,
+.menu-item:focus-within .menu-link
+{
+    color: yellow;
+}
+.header .member li a
+{
+    padding: 8px 10px;
+}
+.visual
+{
+    position: relative;
+    height: 200px;
+    /* background: lime; */
+}
+.main
+{
+    position: relative;
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px 15px 0 0 ;
+}
+.group
+{
+    /* border: 1px solid black; */
+    margin: 15px;
+    height: 410px;
+}
+.group1
+{
+    width: 250px;
+    /* background: pink;    */
+}
+.group2
+{
+    width: 380px;
+}
+.group3
+{
+    width: 190px;
+    background: skyblue;
+}
+
+.slogan
+{
+    background: blueviolet;
+    height: 15vh;
+}
+.footer-bg
+{
+    width: 100%;
+    background: linear-gradient(to bottom, #ccc, #eee 60%, #fff 100%);
+    background-color: #ccc;
+    padding: 20px;
+}
+.footer 
+{
+    width: 940px;
+    position: relative;
+}
+.footer ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.footer .footer-menu
+{
+    background: rgb(92, 92, 92);
+    width: 700px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 8px;
+}
+.footer ul li
+{
+    padding: 5px 15px;
+}
+.footer ul li a
+{
+    text-decoration: none;
+    color: white;
+} 
+.footer address
+{
+    margin-top: 8px;
+    display: inline-block;
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+}
+.footer .imgBx
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.footer .imgBx img
+{
+    padding-right: 10px;
+}
+.header,
+.main,
+.footer,
+.slogan,
+.visual
+{
+    width: 940px;
+    margin: 0 auto;
+}
+/* .clearfix
+{
+    clear: both;
+} */
+/* .main::after
+{
+    content: "";
+    clear: both;
+    display: block;
+    height: 30px;
+    background: olivedrab;
+} */
+
+/* 레이아웃 */
+/* 헤더 */
+.box
+{
+    width: 250px;
+    padding: 5px 10px;
+    background: rgb(255, 115, 0) radial-gradient(circle at right top, #e8852e, #ed552f);
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(109, 109, 109);
+    padding-bottom: 15px;
+}
+/* body:hover
+{
+    transform: perspective(800px) rotateX(60deg);
+    transition: 3s;
+} */
+.box h2
+{
+    color: yellow;
+    padding: 10px 0;
+}
+.box fieldset
+{
+    border: none;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+.box label
+{
+    display: inline-block;
+    font-size: 12px;
+    width: 100px;
+}
+.box fieldset input
+{
+    position: relative;
+    right: 20px;
+    width: 80px;
+    padding: 0 5px;
+}
+.box fieldset input::placeholder
+{
+    font-size: 10px;
+}
+.box fieldset .login-btn
+{
+    position: relative;
+    bottom: 40px;
+    width: 60px;
+    float: right;
+    height: 40px;
+    background: orange; 
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.box hr
+{
+    margin: 7px 0;
+}
+.box .id-pw-join
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+}
+.box .id-pw-join li
+{
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 12px;
+    background: none;
+    border: none;
+}
+.group1-ul
+{
+    margin-top: 10px;
+    list-style: none;
+}
+.group1-ul li
+{
+    background: linear-gradient(#bcbcbc, #f0f0f0);
+    margin-top: 15px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    list-style: none;
+}
+.group1-ul li a
+{
+    color: black
+}
+.group1-ul li:hover
+{
+    /* background: #161616; */
+    box-shadow: inset 0px 0px 5px 3px black;
+}
+.group1-sec
+{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 15px;
+    background: rgb(197, 197, 197);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px 3px black;
+}
+.group1-sec h2
+{
+    font-size: 15px;
+}
+.group1-sec .group1-contentBx
+{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.group1-sec .group1-contentBx img
+{
+    margin-top: 6px;
+    padding-right: 20px;
+}
+.group1-sec .group1-contentBx .Bx small
+{
+    color: blue;
+}
+.group1-sec .group1-contentBx .Bx p
+{
+    margin-top: 5px;
+}
+.snow-fill
+{
+    position: absolute;
+    top: -12px;
+    background: rgb(223, 223, 223);
+    width: 100%;
+    clip-path: polygon(15% 91%, 32% 91%, 46% 93%, 59% 90%, 67% 88%, 78% 89%, 88% 91%, 94% 95%, 100% 100%, 0 100%);
+
+    /* transition: 15s; */
+    box-shadow: 0 5px 3px 0 white;
+    animation: snowFill 15s linear forwards;
+    z-index: -10;
+    /* border-top: 5px solid white; */
+    /* border-radius: 12px 12px 0 0; */
+}
+@keyframes snowFill
+{
+    0%
+    {
+        top: -6px;
+        height: 5px;
+        clip-path: polygon(0 0);
+    }
+    50%
+    {
+        top: -12px;
+        height: 25px;
+        clip-path: polygon(0 58%, 16% 28%, 38% 23%, 50% 21%, 60% 56%, 68% 53%, 82% 60%, 100% 57%, 100% 90%, 70% 80%, 0 50%);
+
+    }
+    100%
+    {
+        top: -40px;
+        height: 45px;
+        clip-path: polygon(0 58%, 16% 48%, 38% 53%, 50% 51%, 60% 56%, 68% 53%, 82% 60%, 100% 57%, 100% 90%, 100% 100%, 0 100%);
+    }
+}
+.menu-snow
+{
+    background: rgb(97, 166, 194);
+    transition: all 5s;
+}
+.search-form
+{
+    padding: 10px 0 0 10px;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #ccc, #eee);
+    background-color: #ccc;
+}
+.search-form fieldset
+{
+    border: none;
+}
+.search-form fieldset input
+{
+    border: 1px solid #aaa;
+    padding: 5px;
+    border-radius: 3px;
+}
+.search-form fieldset button
+{
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    background: black;
+    border: none;
+}
