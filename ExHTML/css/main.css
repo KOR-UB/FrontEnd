@@ -596,3 +596,9 @@ a{
 {
     color: rgb(20, 117, 0);
 }
+.g2btn.g2-sec-btn
+{
+    border: 1px solid #ed552f;
+     border-bottom: none;
+    color: #ed552f;
+}
