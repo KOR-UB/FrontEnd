@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section
+        {
+            margin: 0 100px;
+            width: 400px;
+            height: 150px;
+            padding: 10px;
+            background: rgb(185, 185, 185);
+        }
+        section h2
+        {
+            padding: 10px 0;
+            background: red;
+        }
+        section dl dt
+        {
+            /* background: blue; */
+            width: 300px;
+            float: right;
+            background: green;
+        }
+        section dl dd img
+        {
+            padding: 0 10px;
+            float: left;
+            background: rgb(255, 166, 0);
+        }
+        section dl dd p
+        {
+            width: 300px;
+            float: right;
+            background: rgb(255, 0, 179);
+            /* background: gray; */
+        }
+        .group1-sec
+        {
+            display: inline-block;
+            padding: 10px;
+            height: 160px;
+            margin-top: 15px;
+            background: rgb(197, 197, 197);
+            border-radius: 10px;
+            border: 1px solid #aaa;
+        }
+        .group1-sec:hover
+        {
+            box-shadow: inset 0px 0px 20px 0 black;
+        }
+        .group1-sec h2
+        {
+            background: red;
+            font-size: 15px;
+        }
+        .group1-sec .group1-contentBx
+        {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .group1-sec .group1-contentBx img
+        {
+            margin-top: 6px;
+            padding-right: 20px;
+            background: rgb(255, 166, 0);
+        }
+        .group1-sec .group1-contentBx .Bx small
+        {
+            font-size: 14px;
+            color: black;
+            background: green;
+        }
+        .group1-sec .group1-contentBx .Bx p
+        {
+            background: rgb(255, 0, 179);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>웹 관련 용어</h2>
+        <dl>
+            <dt>웹 표준 이란?</dt>
+            <dd><img src="./images/web_standards.gif" alt="w3clogo"></dd>
+            <dd><p>W3C단체에서 규정한 웹 기술 사양에 대한 규칙을 말하는 표준 규격은...</p></dd>
+        </dl>
+    </section>
+    <section class="group1-sec">
+        <h2>웹 관련 용어</h2>
+        <div class="group1-contentBx">
+            <img src="images/web_standards.gif" alt="">
+            <div class="Bx">
+                <small>웹 표준 이란?</small>
+                <p>W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

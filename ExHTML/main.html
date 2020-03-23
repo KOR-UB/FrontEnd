@@ -18,420 +18,22 @@
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-        .container2 {
-            position: fixed;
-            top: 200px;
-            left: 15px;
-            border-radius: 25px;
-            width: 450px;
-            background: #161616;
-            overflow: hidden;
-        }
-        .container2 .card {
-            position: relative;
-            z-index: 0;
-            top: -15px;
-            width: 100%;
-            height: 450px;
-            background: transparent;
-            overflow: hidden;
-        }
-
-        .container2 .card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #9bdc28;
-            clip-path: circle(150px at 80% 20%);
-            transition: .5s ease-in-out;
-        }
-
-        .container2 .card:hover::before {
-            clip-path: circle(300px at 80% -20%);
-        }
-
-        .container2 .card::after {
-            content: "Nike";
-            position: absolute;
-            top: 10%;
-            left: 30%;
-            clip-path: circle(300px at 50% 20%);
-            font-size: 12em;
-            font-weight: 800;
-            font-style: italic;
-            color: rgb(255, 255, 255);
-            transition: 1s ease-in-out;
-        }
-
-        .container2 .card:hover::after {
-            top: 50%;
-            left: 0%;
-        }
-
-        .container2 .card .imgBx {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 220px;
-            transition: .5s;
-            z-index: 1000;
-            object-fit: contain;
-        }
-
-        .container2 .card:hover .imgBx {
-            top: 0%;
-            transform: translateY(0%);
-            filter: drop-shadow(0px 0px 10px rgb(37, 255, 37));
-        }
-
-        .container2 .card .imgBx img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-25deg);
-            width: 270px;
-            mix-blend-mode: luminosity;
-        }
-
-        .container2 .card .contentBx {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 60px;
-            text-align: center;
-            transition: 1s;
-            z-index: 1000;
-        }
-
-        .container2 .card:hover .contentBx {
-            height: 210px;
-        }
-
-        .container2 .card .contentBx h2 {
-            position: relative;
-            text-align: center;
-            font-weight: 600;
-            letter-spacing: 1px;
-            color: #fff;
-        }
-
-        .container2 .card .contentBx .size,
-        .container2 .card .contentBx .color {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 8px 20px;
-            transition: 0.5s;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .container2 .card:hover .contentBx .size {
-            opacity: 1;
-            visibility: visible;
-            transition-delay: .5s;
-        }
-
-        .container2 .card:hover .contentBx .color {
-            opacity: 1;
-            visibility: visible;
-            transition-delay: .65s;
-        }
-
-        .container2 .card .contentBx .size h3,
-        .container2 .card .contentBx .color h3 {
-            color: #fff;
-            font-weight: 300;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-right: 10px;
-        }
-
-        .container2 .card .contentBx .size span,
-        .container2 .card .contentBx .color span {
-            width: 26px;
-            height: 26px;
-            text-align: center;
-            line-height: 26px;
-            font-size: 14px;
-            display: inline-block;
-            color: #111;
-            background: #fff;
-            margin: 0 5px;
-            transition: 0.5s;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 0 10px 2px black;
-        }
-
-        .container2 .card .contentBx .size span:hover {
-            background: #9bdc28;
-        }
-
-        .container2 .card .contentBx .color span {
-            width: 20px;
-            height: 20px;
-            background: #ff0;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .container2 .card .contentBx .color span:nth-child(2) {
-            background: #9bdc28;
-        }
-
-        .container2 .card .contentBx .color span:nth-child(3) {
-            background: red
-        }
-
-        .container2 .card .contentBx .color span:nth-child(4) {
-            background: #e91e63;
-        }
-
-        .container2 .card .contentBx a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #fff;
-            border-radius: 4px;
-            margin-top: 10px;
-            font-weight: 600;
-            color: #111;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: .5s;
-            text-decoration: none;
-        }
-
-        .container2 .card:hover .contentBx a {
-            opacity: 1;
-            transform: translateY(0px);
-            transition-delay: 0.75s;
-        }
-
-        .menu>li:nth-child(1) .submenu,
-        .menu>li:nth-child(2) .submenu,
-        .menu>li:nth-child(3) .submenu {
-            color: red;
-        }
-
-        .menu>li:nth-child(4) .submenu,
-        .menu>li:nth-child(5) .submenu,
-        .menu>li:nth-child(6) .submenu {
-            color: blue;
-        }
-
-        .divBx {
-            padding-right: 10px;
-            text-align: center;
-            position: absolute;
-            top: 34px;
-            left: 30px;
-            height: 43px;
-            width: 220px;
-            text-align: center;
-            z-index: 100;
-            color: white;
-            text-shadow: 2px 0 0 black;
-            text-shadow: -2px 0 0 black;
-            text-shadow: 0 2px 0 black;
-            text-shadow: 0 -2px 0 black;
-            overflow: hidden;
-        }
-
-        .divBx h1 {
-            padding-top: 8px;
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .animcontainer {
-            display: flex;
-            justify-content: stretch;
-            align-items: center;
-            width: 100%;
-            height: 200px;
-            background: transparent;
-        }
-
-        .char {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 70px;
-            height: 115px;
-            text-align: center;
-            overflow: hidden;
-            background: url(https://i.pinimg.com/originals/f7/d8/97/f7d8977935a3ef91038141f04e7e759c.png);
-            background-size: cover;
-            animation: move 10s ease-in infinite;
-            filter: drop-shadow(0px 0px 5px rgb(226, 126, 44));
-        }
-
-        .ball {
-            filter: drop-shadow(0px 0px 10px rgb(38, 255, 31));
-            position: relative;
-            /* border: 2px solid black; */
-            top: 30px;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            overflow: hidden;
-            border-radius: 50%;
-            animation: ball 10s linear infinite;
-            background: rgb(47, 247, 21);
-        }
-
-        @keyframes ball {
-            0% {
-                top: 30px;
-                left: 00px;
-            }
-
-            10% {
-                top: 30px;
-                left: 100px;
-            }
-
-            20% {
-                top: 30px;
-                left: 180px;
-            }
-
-            30% {
-                top: 30px;
-                left: 240px;
-            }
-
-            40% {
-                top: 30px;
-                left: 300px;
-            }
-
-            60% {
-                top: 30px;
-                left: 1300px;
-            }
-
-            70% {
-                top: -50px;
-                left: 700px;
-            }
-
-            80% {
-                top: -27px;
-                left: 80px;
-            }
-
-            90% {
-                top: -4px;
-                left: 150px;
-            }
-
-            100% {
-                top: 30px;
-                left: 0px;
-            }
-        }
-
-        @keyframes move {
-            0% {
-                top: 0px;
-                left: 0px;
-            }
-
-            10% {
-                left: 100px;
-            }
-
-            20% {
-                left: 100px;
-            }
-
-            30% {
-                left: 100px;
-            }
-
-            40% {
-                left: 300px;
-            }
-
-            50% {
-                left: 100px;
-            }
-
-            60% {
-                left: 100px;
-            }
-
-            70% {
-                left: 100px;
-            }
-
-            80% {
-                left: 80px;
-            }
-
-            90% {
-                left: 100px;
-            }
-
-            100% {
-                left: 0px;
-            }
-        }
-
-        .animcontainer::after {
-            content: "Web Standards & Accessibility";
-            color: white;
-            text-shadow: -3px 3px 1px rgb(107, 107, 107);
-            font-size: 28px;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            animation: textAni 1s linear,
-                textSize 2s linear 1s infinite;
-        }
-
-        @keyframes textAni {
-            0% {
-                right: 250px;
-                top: 100px;
-            }
-
-            100% {
-                right: 10px;
-                top: 10px;
-            }
-        }
-
-        @keyframes textSize {
-            0% {
-                font-size: 28px;
-            }
-
-            50% {
-                font-size: 32px;
-            }
-
-            100% {
-                font-size: 28px;
-            }
-        }
+        
     </style>
 </head>
 
 <body>
+    <span class="ttttt" style="position: absolute; display: inline; "></span>
+    <script>
+        const test = document.querySelector(".ttttt");
+        console.log(test.style);
+    </script>
     <div id="particles-js"></div>
     <div class="toggle">
         <span>Start SnowFall</span>
         <span>Stop SnowFall</span>
     </div>
+    <a href="#"></a>
     <div class="container2" aria-hidden="true">
         <div class="card">
             <div class="imgBx">
@@ -453,7 +55,7 @@
                     <span onclick="colorChange(event)" style=" background: #e91e63;"></span>
                     <span onclick="colorChange(event)" style=" background: #ff0;"></span>
                 </div>
-                <a href="#" >Buy Now</a>
+                <a href="#" aria-hidden="true">Buy Now</a>
             </div>
         </div>
     </div>
@@ -567,6 +169,7 @@
                         <span style="--i:3;">인</span>
                     </div>
                     <fieldset>
+                        <legend class="a11y-hidden">회원 로그인 폼</legend>
                         <div class="user-email">
                             <label for="userEmail">이메일주소</label><input name="userEmail" type="email" id="userEmail"
                                 placeholder="@email.com" onchange="validation()" required />
@@ -583,9 +186,10 @@
                         </ul>
                     </fieldset>
                 </form>
+                <h2 class="a11y-hidden">유효성검사 배너</h2>
                 <ul class="group1-ul">
-                    <li class="icon-ok"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="마크업 유효성 검사 사이트로 이동(새창)" target="_blank">W3C Markup Validation</a></li>
-                    <li class="icon-ok"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="CSS 유효성 검사 사이트로 이동(새창)" target="_blank">CSS Validation Service</a></li>
+                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="마크업 유효성 검사 사이트로 이동(새창)" target="_blank">W3C Markup Validation</a></li>
+                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="CSS 유효성 검사 사이트로 이동(새창)" target="_blank">CSS Validation Service</a></li>
                 </ul>
                 <section class="group1-sec">
                     <h2>웹 관련 용어</h2>
@@ -626,7 +230,24 @@
                         <li><a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a><time datetime="2020-03-22">2020-03-22</time datetime="2020-03-22"></li>
                         <li><a href="#">로얄티 프리 이미지 자료</a><time datetime="2020-03-22">2020-03-22</time datetime="2020-03-22"></li>
                     </ul>
-                </section>     
+                </section>
+                <div class="NEWS">
+                    <h2>새소식</h2><small class="icon-plus"><a href="#">더보기</a></small>
+                    <hr>
+                    <div class="news-img">
+                        <img src="./images/news.gif" alt="news">
+                        <small>W3C 리뉴얼</small>
+                    </div>
+                    <div class="news-text">
+                        <h3>W3C 사이트가 리뉴얼 되었습니다.</h3>
+                        <time datetime="2020-03-23">2020-03-23</time>
+                        <p>
+                            디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 
+                            기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                            찾기 쉽도록 구성되어 있습니다.  
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="group group3">Group3</div>
         </div>
@@ -651,6 +272,14 @@
                     <address>Copyright since © 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.</address>
                 </div>
             </footer>
+            <svg>
+                <filter id="wavy">
+                    <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+                        <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite"/>
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
+                </filter>
+            </svg>
         </div>
         <script src="./js/particle/particles.js"></script>
         <script src="./js/particle/app.js"></script>
