@@ -24,36 +24,36 @@
         {
             margin: 0 100px;
             width: 400px;
-            height: 150px;
+            /* height: 150px; */
             padding: 10px;
             background: rgb(185, 185, 185);
         }
         section h2
         {
             padding: 10px 0;
-            background: red;
+            /* background: red; */
         }
         section dl dt
         {
             /* background: blue; */
             width: 300px;
             float: right;
-            background: green;
+            /* background: green; */
         }
         section dl dd img
         {
             padding: 0 10px;
             float: left;
-            background: rgb(255, 166, 0);
+            /* background: rgb(255, 166, 0); */
         }
         section dl dd p
         {
             width: 300px;
             float: right;
-            background: rgb(255, 0, 179);
+            /* background: rgb(255, 0, 179); */
             /* background: gray; */
         }
-        .group1-sec
+        /* .group1-sec
         {
             display: inline-block;
             padding: 10px;
@@ -95,6 +95,26 @@
         {
             background: rgb(255, 0, 179);
             margin-top: 5px;
+        } */
+        .even dt
+        {
+            width: 300px;
+            text-align: right;
+            float: left;
+        }
+        .even dd img
+        {
+            padding: 0 10px;
+            float: right;
+            /* background: rgb(255, 166, 0); */
+        }
+        .even dd p
+        {
+            width: 300px;
+            float: left;
+            text-align: right;
+            /* background: rgb(255, 0, 179); */
+            /* background: gray; */
         }
     </style>
 </head>
@@ -102,12 +122,20 @@
     <section>
         <h2>웹 관련 용어</h2>
         <dl>
-            <dt>웹 표준 이란?</dt>
-            <dd><img src="./images/web_standards.gif" alt="w3clogo"></dd>
-            <dd><p>W3C단체에서 규정한 웹 기술 사양에 대한 규칙을 말하는 표준 규격은...</p></dd>
+            <div>
+                <dt>웹 표준 이란?</dt>
+                <dd><img src="./images/web_standards.gif" alt="w3clogo"></dd>
+                <dd><p>W3C단체에서 규정한 웹 기술 사양에 대한 규칙을 말하는 표준 규격은...</p></dd>
+            </div>
+            <br><br><br><br><hr><br>
+            <div class="even">
+                <dt>웹 표준 이란?</dt>
+                <dd><img src="./images/web_standards.gif" alt="w3clogo"></dd>
+                <dd><p>W3C단체에서 규정한 웹 기술 사양에 대한 규칙을 말하는 표준 규격은...</p></dd>
+            </div>
         </dl>
     </section>
-    <section class="group1-sec">
+    <!-- <section class="group1-sec">
         <h2>웹 관련 용어</h2>
         <div class="group1-contentBx">
             <img src="images/web_standards.gif" alt="">
@@ -116,6 +144,6 @@
                 <p>W3C 단체에서 규정한 웹 기술 사양에 대한 규칙을 말하며 표준 규격은...</p>
             </div>
         </div>
-    </section>
+    </section> -->
 </body>
 </html>

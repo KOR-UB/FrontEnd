@@ -254,7 +254,6 @@ a{
 .group3
 {
     width: 190px;
-    background: skyblue;
 }
 
 .slogan
@@ -539,7 +538,7 @@ a{
 }
 .search-form
 {
-    padding: 10px 0 0 10px;
+    padding: 10px 0 0 20px;
     border-radius: 15px 15px 0 0;
     border: 1px solid #aaa;
     border-bottom: none;
@@ -576,7 +575,7 @@ a{
     border: 1px solid #aaa;
     border-radius: 7px 7px 0 0;
     border-bottom: none;
-    outline: none;
+    /* outline: none; */
 }
 /* .group2 .g2btn:hover,
 .group2 .g2btn:focus
@@ -648,7 +647,7 @@ a{
 {
     position: relative;
     display: inline-block;
-    box-shadow: 0px 10px 25px 0 gray;
+    box-shadow: 0px 10px 15px 0 gray;
 }
 .group2 .NEWS .news-img small
 {
@@ -685,4 +684,103 @@ svg
 {
     width: 0;
     height: 0;
+}
+.group3 .event-view
+{
+    border-radius: 5px;
+    border: 1px solid #9b9b9b;
+    font-size: 10px;
+    width: 100%;
+    padding: 10px;
+    background: rgb(233, 233, 233);
+}
+.group3 .event-view h2 span
+{
+    color: #ed552f;
+}
+.group3 .event-view .event-main
+{
+    display: inline-block;
+    width: 130px;
+}
+.group3 .event-view button
+{
+    cursor: pointer;
+    display: inline-block;
+    width: 15px;
+    font-size: 16px;
+    border: none;
+    padding: 0 4px;
+    color: #ed552f;
+}
+.group3 .event-view .event-imgBx
+{
+    margin: 10px 5px 5px 5px;
+    box-shadow: 4px 4px 0 0 gray;
+}
+.group3 .event-view .event-content
+{
+    width: 100%;
+    font-weight: 300;
+    text-align: justify;
+    padding: 9px;
+}
+.group3 .event-view hr
+{
+    margin-bottom: 10px;
+}
+.group3 .event-view ul
+{
+    margin-top: 5px;
+    list-style: none;
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: .6s;
+}
+.group3 .event-view ul li
+{
+    background: white;
+    padding: 3px 15px;
+    font-size: 14px;
+}
+.group3 .event-view .event-ul:hover,
+.group3 .event-view .event-ul:focus-within
+{
+    height: 110px;
+    transition: .6s;
+}
+.group3 .popularsite
+{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 150px;
+    background: rgb(233, 233, 233);
+    border-radius: 5px;
+    border: 1px solid #9b9b9b;
+    font-size: 10px;
+    padding: 10px;
+}
+.popularsite .popularsite-main h2
+{
+    display: inline-block;
+}
+.popularsite .popularsite-main h2 span
+{
+    color:#ed552f;
+}
+.popularsite .popularsite-main small
+{
+    font-size: 13px;
+    float: right;
+}
+.popularsite ol
+{
+    padding: 10px 0 0 10px;
+}
+.popularsite ol li{
+    font-size: 14px;
 }
