@@ -19,7 +19,7 @@ body
     padding: 0;
     font-family: "Noto Sans KR", "sans-serif";
     font-size: 1.4rem;
-}   
+}
 /* 하이퍼링크스타일 */
 a{
     color: inherit;
@@ -575,6 +575,7 @@ a{
     border: 1px solid #aaa;
     border-radius: 7px 7px 0 0;
     border-bottom: none;
+    float: left;
     /* outline: none; */
 }
 /* .group2 .g2btn:hover,
@@ -583,10 +584,15 @@ a{
     border: 1px solid #e8852e;
     border-bottom: none;
 } */
+
 .group2 small
 {
     font-size: 14px;
     float: right;
+}
+.group2 section
+{
+    clear: both;
 }
 /* .g2btn */
 /* .group2 .group2-sec2
@@ -764,6 +770,10 @@ svg
     font-size: 10px;
     padding: 10px;
 }
+.popularsite .popularsite-main
+{
+    margin-bottom: 6px;
+}
 .popularsite .popularsite-main h2
 {
     display: inline-block;
@@ -779,8 +789,25 @@ svg
 }
 .popularsite ol
 {
-    padding: 10px 0 0 10px;
+    list-style: none;
 }
 .popularsite ol li{
     font-size: 14px;
+    padding: 4px;
+    counter-increment:number;
+}
+.popularsite ol li::before
+{
+    content: counter(number);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    right: 5px;
+    line-height: 21px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    background: gray;
 }
