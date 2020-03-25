@@ -20,6 +20,11 @@ body
     font-family: "Noto Sans KR", "sans-serif";
     font-size: 1.4rem;
 }
+.menu-snow
+{
+    background: rgb(126, 177, 197) !important; 
+    transition: all 5s;
+}
 /* 하이퍼링크스타일 */
 a{
     color: inherit;
@@ -694,7 +699,7 @@ a{
     left: -10px;
     width: 100%;
     height: 100%;
-    border: 4px solid #fff;
+    border: 4px solid black;
     background: transparent;
     filter: url(#wavy);
 }
@@ -883,9 +888,4 @@ svg
 .slogan q::after
 {
     content: "";
-}
-.menu-snow
-{
-    background: rgb(126, 177, 197) !important; 
-    transition: all 5s;
 }
