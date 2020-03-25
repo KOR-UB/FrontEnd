@@ -4,21 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>웹카페 - HTML5,CSS3,웹표준,웹접근성</title>
+    <link rel="shortcut icon" href="./images/common/webcafe.ico">
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/fontello.css" />
     <link rel="stylesheet" href="./css/star.css" />
-    <link rel="stylesheet" href="./css/snow.css"/>
+    <link rel="stylesheet" href="./css/snow.css" />
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-        *
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Poppins", sans-serif;
         }
-        
     </style>
 </head>
 
@@ -136,8 +135,8 @@
             <div class="flower-bg">
                 <section class="section-star">
                     <div class="animcontainer">
-                        <div class="char"></div>
-                        <div class="ball"></div>
+                        <!-- <div class="char"></div>
+                        <div class="ball"></div> -->
                     </div>
                     <h1 class="hello">Hello</h1>
                     <!-- <div class="star star1"></div>
@@ -162,7 +161,7 @@
         </div>
         <div class="main">
             <div class="group group1">
-                <form  method="POST" class="box" id="form" action="https//formspree.io/mpzljyyp">
+                <form method="POST" class="box" id="form" action="https//formspree.io/mpzljyyp">
                     <div class="wavy">
                         <span style="--i:1;">로</span>
                         <span style="--i:2;">그</span>
@@ -188,8 +187,12 @@
                 </form>
                 <h2 class="a11y-hidden">유효성검사 배너</h2>
                 <ul class="group1-ul">
-                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="마크업 유효성 검사 사이트로 이동(새창)" target="_blank">W3C Markup Validation</a></li>
-                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="CSS 유효성 검사 사이트로 이동(새창)" target="_blank">CSS Validation Service</a></li>
+                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a
+                            href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="마크업 유효성 검사 사이트로 이동(새창)"
+                            target="_blank">W3C Markup Validation</a></li>
+                    <li><img src="./css/images/validation_icon.png" alt="validation_icon"><a
+                            href="https://validator.w3.org/unicorn/?ucn_lang=ko" title="CSS 유효성 검사 사이트로 이동(새창)"
+                            target="_blank">CSS Validation Service</a></li>
                 </ul>
                 <section class="group1-sec">
                     <h2>웹 관련 용어</h2>
@@ -205,9 +208,9 @@
             <div class="group group2">
                 <form class="search-form" method="POST" action="https://formspree.io/seulbinim@gmail.com">
                     <fieldset>
-                            <label for="search" class="icon-search">자료검색</label>
-                            <input required type="search" name="search" id="search" placeholder="검색어를 입력하세요.">
-                            <button type="submit" class="search-btn">검색</button>
+                        <label for="search" class="icon-search">자료검색</label>
+                        <input required type="search" name="search" id="search" placeholder="검색어를 입력하세요.">
+                        <button type="submit" class="search-btn">검색</button>
                     </fieldset>
                 </form>
                 <button class="g2btn g2-sec-btn" onclick="sectiontab(event,1)">공지사항</button>
@@ -216,11 +219,15 @@
                 <small class="icon-plus pluslist2" style="display: none;"><a href="#">자료 더보기</a></small>
                 <section class="group2-sec" style="display:block;">
                     <ul class="group2-list list1">
-                        <li><a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
-                        <li><a href="#">W3C 사이트 리뉴얼 및 공지사항</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
+                        <li><a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a><time
+                                datetime="2020-03-22T14:53:30">2020-03-22</time></li>
+                        <li><a href="#">W3C 사이트 리뉴얼 및 공지사항</a><time datetime="2020-03-22T14:53:30">2020-03-22</time>
+                        </li>
                         <li><a href="#">KWCAG 2.1 소식</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
-                        <li><a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
-                        <li><a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
+                        <li><a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a><time
+                                datetime="2020-03-22T14:53:30">2020-03-22</time></li>
+                        <li><a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a><time
+                                datetime="2020-03-22T14:53:30">2020-03-22</time></li>
                     </ul>
                 </section>
                 <section class="group2-sec2" style="display:none;">
@@ -228,7 +235,8 @@
                         <li><a href="#">디자인 사이트 링크 모음</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
                         <li><a href="#">웹 접근성 관련 자료 모음</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
                         <li><a href="#">예제 샘플 응용해보기</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
-                        <li><a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
+                        <li><a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a><time
+                                datetime="2020-03-22T14:53:30">2020-03-22</time></li>
                         <li><a href="#">로얄티 프리 이미지 자료</a><time datetime="2020-03-22T14:53:30">2020-03-22</time></li>
                     </ul>
                 </section>
@@ -240,17 +248,19 @@
                         <a href="#"><small>W3C 리뉴얼</small></a>
                     </div>
                     <div class="news-text">
-                        <a href="#"><h3>W3C 사이트가 리뉴얼 되었습니다.</h3>
-                        <time datetime="2020-03-23">2020-03-23</time>
-                        <p>
-                        디자인 및 다양한 view 환경을 고려하여 구성되어 있으며,
-                        기존보다 최신 정보 및 개발자를 위한 기술 가이드도
-                        찾기 쉽도록 구성되어 있습니다.
-                        </p></a>
+                        <a href="#">
+                            <h3>W3C 사이트가 리뉴얼 되었습니다.</h3>
+                            <time datetime="2020-03-23">2020-03-23</time>
+                            <p>
+                                디자인 및 다양한 view 환경을 고려하여 구성되어 있으며,
+                                기존보다 최신 정보 및 개발자를 위한 기술 가이드도
+                                찾기 쉽도록 구성되어 있습니다.
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
-    
+
             <div class="group group3">
                 <div class="event-view">
                     <div class="event-main">
@@ -281,17 +291,32 @@
                         <h2>인기 <span>사이트</span></h2><small class="icon-plus"><a href="#">더보기</a></small>
                     </div>
                     <ol>
-                        <li><a href="#">W3C</a></li>
-                        <li><a href="#">CSS Zen Garden</a></li>
-                        <li><a href="#">MDN</a></li>
-                        <li><a href="#">Web Standards</a></li>
+                        <li><a href="#">W3C</a><em class="up"></em></li>
+                        <li><a href="#">CSS Zen Garden</a><em class="stop"></em></li>
+                        <li><a href="#">MDN</a><em class="down"></em></li>
+                        <li><a href="#">Web Standards</a><em class="up"></em></li>
                     </ol>
                 </div>
             </div>
         </div>
-        <article class="slogan">슬로건</article>
+        <article class="slogan">
+            <div class="sloganBx">
+                <div class="imgBx">
+                    <img src="./css/images/coffee.png" alt="coffee">
+                </div>
+                <div class="qBx">
+                    <q>
+                        <span>The power of the Web is in its universality, Access by everyone regardless of disability is an
+                            essential aspect. Tim Berners - Lee , W3C Director and inventor of the World Wide Web</span>
+                    </q>
+                </div>
+            </div>
+        </article>
         <div class="footer-bg">
             <footer class="footer">
+                <div class="f-logo">
+                    <img src="./images/footer_logo.png" alt="footer-logo">
+                </div>
                 <div class="imgBx">
                     <img src="./images/html5_logo.png" alt="HTML5logo">
                     <img src="./images/css3_logo.png" alt="CSS3logo">
@@ -309,264 +334,256 @@
                     <address>서울시 강남구 역삼동 718-5 전화 : 02-3429-5114 email : seulbinim@gmail.com</address>
                     <address>Copyright since © 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.</address>
                 </div>
-                <marquee width="300">←♡--&lt;</marquee><font size="5">{></font>
+            </footer>
+        </div>
+    </div>
+                <!-- <marquee width="300">←♡--&lt;</marquee>
+                <font size="5">{></font>
                 <marquee behavior=alternate width="300" scrollamount="1000">반짝</marquee>
                 <marquee behavior=alternate width="30">@^.^@</marquee>
-                <marquee direction="RIGHT" scrollamount="1"> __@/``</marquee>
-            </footer>
-            <svg>
+                <marquee direction="RIGHT" scrollamount="1"> __@/``</marquee> -->
+
+            <!-- <svg>
                 <filter id="wavy">
                     <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
-                        <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02" repeatCount="indefinite"/>
+                        <animate attributeName="baseFrequency" dur="60s" values="0.02;0.05;0.02"
+                            repeatCount="indefinite" />
                     </feTurbulence>
                     <feDisplacementMap in="SourceGraphic" scale="30"></feDisplacementMap>
                 </filter>
-            </svg>
-        </div>
+            </svg> -->
         <script src="./js/particle/particles.js"></script>
         <script src="./js/particle/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script>
-        function validation()
-        {
-            var form = document.getElementById("form");
-            var email = document.getElementById("userEmail").value;
-            var text = document.querySelector(".hello");
-            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            function validation() {
+                var form = document.getElementById("form");
+                var email = document.getElementById("userEmail").value;
+                var text = document.querySelector(".hello");
+                var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-            if(email.match(pattern))
-            {
-                form.classList.add("valid");
-                form.classList.remove("invalid");
-                text.innerHTML = "유효한 이메일 주소";
-            }
-            else
-            {
-                form.classList.remove("valid");
-                form.classList.add("invalid");
-                text.innerHTML = "유효하지 않은 이메일 주소";
-            }
-            if(email == "")
-            {
-                form.classList.remove("valid");
-                form.classList.add("invalid");
-                ext.innerHTML = "";
-            }
-        }
-        // function modalopen()
-        // {
-        //     divBx
-        // }
-        // const divBx = document.querySelector(".divBx");
-        // const h1 = divBx.querySelector("h1");
-        // const header = document.querySelector(".header");
-        // const menu_item = document.querySelectorAll(".menu-item");
-        // const menu_link = document.querySelectorAll(".menu-link");
-        // const submenu = document.querySelectorAll(".submenu");
-
-        // function enterHandle(e)
-        // {
-        //     const lastChild = e.target.lastElementChild;
-        //     console.log(lastChild.className);
-        //     // if(lastChild.classList)
-        //     lastChild.classList.remove("active");
-        //     lastChild.classList.add("active");
-        //     h1.innerText = event.target.innerText;
-        // }
-        // function leaveHandle(e)
-        // {
-        //     console.log(e);
-        //     const lastChild = e.fromElement;
-        //     lastChild.classList.remove("active");
-        //     h1.innerText = "확대 영역"
-        // }
-        // function test(e)
-        // {
-        //     console.log(e);
-        // }
-        // Array.from(submenu).forEach(submenu => submenu.addEventListener("mouseleave", leaveHandle));
-        // Array.from(menu).forEach(submenu => submenu.addEventListener("focus", enterHandle));
-        // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseenter",enterHandle));
-
-        // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseleave",leaveHandle));
-        // Array.from(menu_link).forEach(menu_link)
-    </script>
-    <script>
-        const hello = document.querySelector(".hello")
-        const menuitem = document.querySelectorAll(".menu-item");
-        const menulink = document.querySelectorAll(".menu-link")
-        const submenu = document.querySelectorAll(".submenu");
-        const icon = document.querySelectorAll(".submenu li");
-        const icon2 = document.querySelectorAll(".group2-list li a");
-        const sub_a = document.querySelectorAll(".submenu li a");
-        const divBx = document.querySelector(".divBx");
-        const h1 = divBx.querySelector("h1");
-        const member_a = document.querySelectorAll(".member li a");
-        const sec1 = document.querySelector(".group2-sec");
-        const sec2 = document.querySelector(".group2-sec2");
-        
-        const g2secbtn1 = document.querySelector(".g2-sec-btn");
-        const g2secbtn2 = document.querySelector(".g2-sec-btn2");
-
-        const group2Listli1 = document.querySelectorAll(".list1 li");
-        const group2Listli2 = document.querySelectorAll(".list2 li")
-        const pluslist1 = document.querySelector(".pluslist1");
-        const pluslist2 = document.querySelector(".pluslist2");
-
-        // Array.from(group2Listli1).forEach(group2Listli1 => group2Listli1.addEventListener("click",list1Event));
-        // Array.from(group2Listli2).forEach(group2Listli2 => group2Listli2.addEventListener("click",list2Event));
-
-        // function list1Event()
-        // {
-        //     g2secbtn1.style.border = "1px solid #e8852e";
-        //     g2secbtn1.style.borderBottom = "none";
-        //     g2secbtn2.style.border = "1px solid #aaa";
-        //     g2secbtn2.style.borderBottom = "none";
-        // }
-        // function list2Event()
-        // {
-        //     g2secbtn1.style.border = "1px solid #aaa";
-        //     g2secbtn1.style.borderBottom = "none";
-        //     g2secbtn2.style.border = "1px solid #e8852e";
-        //     g2secbtn2.style.borderBottom = "none";
-        // }
-        function sectiontab(e, num)
-        {
-            if(num === 1)
-            {
-                if(sec1.style.display === "block")
-                {
-                    console.log("이미 블록");
+                if (email.match(pattern)) {
+                    form.classList.add("valid");
+                    form.classList.remove("invalid");
+                    text.innerHTML = "유효한 이메일 주소";
+                } else {
+                    form.classList.remove("valid");
+                    form.classList.add("invalid");
+                    text.innerHTML = "유효하지 않은 이메일 주소";
                 }
-                else if(sec1.style.display === "none")
-                {
-                    g2secbtn2.style.border = "1px solid #aaa"
-                    g2secbtn2.style.borderBottom = "none";
-                    g2secbtn1.style.border = "1px solid #ed552f"
-                    g2secbtn1.style.borderBottom = "none";
-                    g2secbtn2.style.color = "black";
-                    g2secbtn1.style.color = "#ed552f";
-                    sec1.style.display = "block";
-                    sec2.style.display = "none";
-                    pluslist2.style.display = "none"
-                    pluslist1.style.display = "block"
-                    console.log("블록으로 변환");
+                if (email == "") {
+                    form.classList.remove("valid");
+                    form.classList.add("invalid");
+                    ext.innerHTML = "";
                 }
             }
-            else if(num === 2)
-            {
-                if(sec2.style.display === "block")
-                {
-                    console.log("이미 블록");
-                }
-                else if(sec2.style.display === "none")
-                {
-                    g2secbtn1.style.border = "1px solid #aaa"
-                    g2secbtn1.style.borderBottom = "none";
-                    g2secbtn2.style.border = "1px solid #ed552f"
-                    g2secbtn2.style.borderBottom = "none";
-                    g2secbtn2.style.color = "#ed552f";
-                    g2secbtn1.style.color = "black";
-                    sec1.style.display = "none";
-                    sec2.style.display = "block";
-                    pluslist1.style.display = "none"
-                    pluslist2.style.display = "block"
-                    console.log("블록으로 변환");
-                }
-            }
-            // if()
+            // function modalopen()
             // {
-
+            //     divBx
             // }
-        }
+            // const divBx = document.querySelector(".divBx");
+            // const h1 = divBx.querySelector("h1");
+            // const header = document.querySelector(".header");
+            // const menu_item = document.querySelectorAll(".menu-item");
+            // const menu_link = document.querySelectorAll(".menu-link");
+            // const submenu = document.querySelectorAll(".submenu");
 
-        function closeUp(event) {
-            // const targetNext = event.target.nextElementSibling;
-            // targetNext.style.display="flex";
-            // targetNext.style.justifyContent = "center";
-            // targetNext.style.alignItems="center";
-            // targetNext.style.backgroundColor = "transparent";
-            h1.innerText = event.target.innerText;
-            hello.innerText = event.target.innerText;
-        }
-        // function clickflex(event)
-        // {
-        //     console.log(event)
-        //     const lasttarget = event.target.nextElementSibling;
-        //     lasttarget.style.display = "flex"
-        //     lasttarget.style.justifyContent = "center";
-        //     lasttarget.style.alignItems="center";
-        //     lasttarget.style.backgroundColor = "transparent";
-        //     console.log(lasttarget);
-        // }
-        // function bye(event)
-        // {
-        //     const lasttarget = event.target.lastElementChild;
-        //     lasttarget.style.display = "none";
-        // }
-        // function clickEventHandle(event)
-        // {
-        //     // console.log(event.target.nextElementSibling);
-        //     const nextEl = event.target.nextElementSibling;
-        //     if(nextEl.className = "active")
-        //     {
-        //         console.log("?");
-        //     }
-        // }
-        function focusadd(event) {
-            console.log(event);
-            // event.target.nextElementSibling.classList.add("active");
-            h1.innerText = event.target.innerText;
-            hello.innerText = event.target.innerText;
-        }
+            // function enterHandle(e)
+            // {
+            //     const lastChild = e.target.lastElementChild;
+            //     console.log(lastChild.className);
+            //     // if(lastChild.classList)
+            //     lastChild.classList.remove("active");
+            //     lastChild.classList.add("active");
+            //     h1.innerText = event.target.innerText;
+            // }
+            // function leaveHandle(e)
+            // {
+            //     console.log(e);
+            //     const lastChild = e.fromElement;
+            //     lastChild.classList.remove("active");
+            //     h1.innerText = "확대 영역"
+            // }
+            // function test(e)
+            // {
+            //     console.log(e);
+            // }
+            // Array.from(submenu).forEach(submenu => submenu.addEventListener("mouseleave", leaveHandle));
+            // Array.from(menu).forEach(submenu => submenu.addEventListener("focus", enterHandle));
+            // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseenter",enterHandle));
 
-        function focusremove(event) {
-            h1.innerText = "확대 영역";
-            hello.innerText = "hello";
-        }
+            // Array.from(menu_item).forEach(menu_item => menu_item.addEventListener("mouseleave",leaveHandle));
+            // Array.from(menu_link).forEach(menu_link)
+        </script>
+        <script>
+            const hello = document.querySelector(".hello")
+            const menuitem = document.querySelectorAll(".menu-item");
+            const menulink = document.querySelectorAll(".menu-link")
+            const submenu = document.querySelectorAll(".submenu");
+            const icon = document.querySelectorAll(".submenu li");
+            const icon2 = document.querySelectorAll(".group2-list li a");
+            const sub_a = document.querySelectorAll(".submenu li a");
+            const divBx = document.querySelector(".divBx");
+            const h1 = divBx.querySelector("h1");
+            const member_a = document.querySelectorAll(".member li a");
+            const sec1 = document.querySelector(".group2-sec");
+            const sec2 = document.querySelector(".group2-sec2");
 
-        function memberover(event) {
-            h1.innerText = event.target.innerText;
-            hello.innerText = event.target.innerText;
-        }
+            const g2secbtn1 = document.querySelector(".g2-sec-btn");
+            const g2secbtn2 = document.querySelector(".g2-sec-btn2");
 
-        function Removeclass(event) {
-            console.log(event);
-        }
+            const group2Listli1 = document.querySelectorAll(".list1 li");
+            const group2Listli2 = document.querySelectorAll(".list2 li")
+            const pluslist1 = document.querySelector(".pluslist1");
+            const pluslist2 = document.querySelector(".pluslist2");
 
-        function focusEvent() {
-            submenu.classList.add("active");
-        }
+            // Array.from(group2Listli1).forEach(group2Listli1 => group2Listli1.addEventListener("click",list1Event));
+            // Array.from(group2Listli2).forEach(group2Listli2 => group2Listli2.addEventListener("click",list2Event));
 
-        function colorChange(e) {
-            console.log(e.current.target);
-            console.dir(e);
-            // event.target.style.backgroundColor
-        }
-        Array.from(member_a).forEach(member_a => member_a.addEventListener("mouseenter", memberover));
-        Array.from(member_a).forEach(member_a => member_a.addEventListener("focus", memberover));
-        Array.from(menuitem).forEach(menuitem => menuitem.addEventListener("mouseenter", closeUp));
-        Array.from(menulink).forEach(menulink => menulink.addEventListener("focus", focusadd));
-        Array.from(menulink).forEach(menulink => menulink.addEventListener("blur", focusremove));
-        Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("mouseenter", focusadd));
-        Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("focus", focusadd));
-        // Array.from(menulink).forEach(menulink => menulink.addEventListener("click", clickEventHandle))
-        Array.from(icon).forEach(icon => icon.classList.add("icon-ok"));
-        Array.from(icon2).forEach(icon2 => icon2.classList.add("icon-dot-circled"));
-    </script>
+            // function list1Event()
+            // {
+            //     g2secbtn1.style.border = "1px solid #e8852e";
+            //     g2secbtn1.style.borderBottom = "none";
+            //     g2secbtn2.style.border = "1px solid #aaa";
+            //     g2secbtn2.style.borderBottom = "none";
+            // }
+            // function list2Event()
+            // {
+            //     g2secbtn1.style.border = "1px solid #aaa";
+            //     g2secbtn1.style.borderBottom = "none";
+            //     g2secbtn2.style.border = "1px solid #e8852e";
+            //     g2secbtn2.style.borderBottom = "none";
+            // }
+            function sectiontab(e, num) {
+                if (num === 1) {
+                    if (sec1.style.display === "block") {
+                        console.log("이미 블록");
+                    } else if (sec1.style.display === "none") {
+                        g2secbtn2.style.border = "1px solid #aaa"
+                        g2secbtn2.style.borderBottom = "none";
+                        g2secbtn1.style.border = "1px solid #ed552f"
+                        g2secbtn1.style.borderBottom = "none";
+                        g2secbtn2.style.color = "black";
+                        g2secbtn1.style.color = "#ed552f";
+                        sec1.style.display = "block";
+                        sec2.style.display = "none";
+                        pluslist2.style.display = "none"
+                        pluslist1.style.display = "block"
+                        console.log("블록으로 변환");
+                    }
+                } else if (num === 2) {
+                    if (sec2.style.display === "block") {
+                        console.log("이미 블록");
+                    } else if (sec2.style.display === "none") {
+                        g2secbtn1.style.border = "1px solid #aaa"
+                        g2secbtn1.style.borderBottom = "none";
+                        g2secbtn2.style.border = "1px solid #ed552f"
+                        g2secbtn2.style.borderBottom = "none";
+                        g2secbtn2.style.color = "#ed552f";
+                        g2secbtn1.style.color = "black";
+                        sec1.style.display = "none";
+                        sec2.style.display = "block";
+                        pluslist1.style.display = "none"
+                        pluslist2.style.display = "block"
+                        console.log("블록으로 변환");
+                    }
+                }
+                // if()
+                // {
+
+                // }
+            }
+
+            function closeUp(event) {
+                // const targetNext = event.target.nextElementSibling;
+                // targetNext.style.display="flex";
+                // targetNext.style.justifyContent = "center";
+                // targetNext.style.alignItems="center";
+                // targetNext.style.backgroundColor = "transparent";
+                h1.innerText = event.target.innerText;
+                hello.innerText = event.target.innerText;
+            }
+            // function clickflex(event)
+            // {
+            //     console.log(event)
+            //     const lasttarget = event.target.nextElementSibling;
+            //     lasttarget.style.display = "flex"
+            //     lasttarget.style.justifyContent = "center";
+            //     lasttarget.style.alignItems="center";
+            //     lasttarget.style.backgroundColor = "transparent";
+            //     console.log(lasttarget);
+            // }
+            // function bye(event)
+            // {
+            //     const lasttarget = event.target.lastElementChild;
+            //     lasttarget.style.display = "none";
+            // }
+            // function clickEventHandle(event)
+            // {
+            //     // console.log(event.target.nextElementSibling);
+            //     const nextEl = event.target.nextElementSibling;
+            //     if(nextEl.className = "active")
+            //     {
+            //         console.log("?");
+            //     }
+            // }
+            function focusadd(event) {
+                // event.target.nextElementSibling.classList.add("active");
+                h1.innerText = event.target.innerText;
+                hello.innerText = event.target.innerText;
+            }
+
+            function focusremove(event) {
+                h1.innerText = "확대 영역";
+                hello.innerText = "hello";
+            }
+
+            function memberover(event) {
+                h1.innerText = event.target.innerText;
+                hello.innerText = event.target.innerText;
+            }
+
+            // function Removeclass(event) {
+            //     console.log(event);
+            // }
+
+            function focusEvent() {
+                submenu.classList.add("active");
+            }
+
+            // function colorChange(e) {
+            //     console.log(e.current.target);
+            //     console.dir(e);
+            //     // event.target.style.backgroundColor
+            // }
+            Array.from(member_a).forEach(member_a => member_a.addEventListener("mouseenter", memberover));
+            Array.from(member_a).forEach(member_a => member_a.addEventListener("focus", memberover));
+            Array.from(menuitem).forEach(menuitem => menuitem.addEventListener("mouseenter", closeUp));
+            Array.from(menulink).forEach(menulink => menulink.addEventListener("focus", focusadd));
+            Array.from(menulink).forEach(menulink => menulink.addEventListener("blur", focusremove));
+            Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("mouseenter", focusadd));
+            Array.from(sub_a).forEach(sub_a => sub_a.addEventListener("focus", focusadd));
+            // Array.from(menulink).forEach(menulink => menulink.addEventListener("click", clickEventHandle))
+            Array.from(icon).forEach(icon => icon.classList.add("icon-ok"));
+            Array.from(icon2).forEach(icon2 => icon2.classList.add("icon-dot-circled"));
+        </script>
         <script>
             // const menu = document.querySelector(".menu");
-            $(document).ready(function()
-            {
-                $(".toggle").click(function()
-                {
+            $(document).ready(function () {
+                $(".toggle").click(function () {
                     $(".toggle").toggleClass("active");
                     $("#particles-js").toggleClass("active");
                     $(".snow-fillBx").toggleClass("snow-fill");
                     $(".menu").toggleClass("menu-snow");
                     $("#form").toggleClass("menu-snow");
                     $(".logo img").toggleClass("menu-snow");
+                    $(".group1-ul li").toggleClass("menu-snow");
+                    $(".group1-sec").toggleClass("menu-snow");
+                    $(".search-form").toggleClass("menu-snow");
+                    $(".event-view").toggleClass("menu-snow");
+                    $(".popularsite").toggleClass("menu-snow");
+                    $("group2-list").toggleClass("menu-snow");
                 })
             })
         </script>

@@ -29,7 +29,9 @@ a{
 }
 .container
 {
-    background: silver;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgb(224, 224, 224), rgb(255, 255, 255));
 }
 .header
 {
@@ -231,7 +233,8 @@ a{
     position: relative;
     display: flex;
     min-height: 400px;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     background: #fff;
     border-radius: 15px 15px 0 0 ;
@@ -255,11 +258,14 @@ a{
 {
     width: 190px;
 }
-
 .slogan
 {
-    background: blueviolet;
-    height: 15vh;
+    /* margin-top: 20px;
+    background: rgb(233, 233, 233);
+    border-radius: 5px;
+    border: 1px solid #9b9b9b;
+    font-size: 10px;
+    padding: 10px; */
 }
 .footer-bg
 {
@@ -305,6 +311,12 @@ a{
     font-style: normal;
     width: 100%;
     text-align: center;
+}
+.footer .f-logo
+{
+    position: absolute;
+    left: -100px;
+    top: 8px;
 }
 .footer .imgBx
 {
@@ -531,11 +543,6 @@ a{
         clip-path: polygon(0 58%, 16% 48%, 38% 53%, 50% 51%, 60% 56%, 68% 53%, 82% 60%, 100% 57%, 100% 90%, 100% 100%, 0 100%);
     }
 }
-.menu-snow
-{
-    background: rgb(97, 166, 194);
-    transition: all 5s;
-}
 .search-form
 {
     padding: 10px 0 0 20px;
@@ -637,6 +644,7 @@ a{
 }
 .group2 .NEWS h2
 {
+    position: relative;
     display: inline-block;
     font-size: 16px;
     color: #ed552f;
@@ -647,6 +655,10 @@ a{
 }
 .group2 .NEWS hr
 {
+    width: 340px;
+    height: 1px;
+    border: none;
+    background: linear-gradient(45deg, #707070, transparent);
     margin: 10px 0;
 }
 .group2 .NEWS .news-img
@@ -674,7 +686,7 @@ a{
 .group2 .NEWS .news-text p{
     padding: 10px 0;
 }
-.header::before
+/* .header::before
 {
     content: '';
     position: absolute;
@@ -690,7 +702,7 @@ svg
 {
     width: 0;
     height: 0;
-}
+} */
 .group3 .event-view
 {
     border-radius: 5px;
@@ -755,8 +767,7 @@ svg
 .group3 .event-view .event-ul:hover,
 .group3 .event-view .event-ul:focus-within
 {
-    height: 110px;
-    transition: .6s;
+    padding-bottom: 110px;
 }
 .group3 .popularsite
 {
@@ -791,10 +802,35 @@ svg
 {
     list-style: none;
 }
+.popularsite ol img
+{
+    float: right;
+}
 .popularsite ol li{
     font-size: 14px;
     padding: 4px;
     counter-increment:number;
+    position: relative;
+}
+.up,
+.stop,
+.down{
+    background: url(./images/rank.png) no-repeat;
+    padding-top: 11px;
+    width: 9px;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.down
+{
+    background-position: 0 100%;
+}
+.stop
+{
+    background-position: 0 50%;
 }
 .popularsite ol li::before
 {
@@ -810,4 +846,46 @@ svg
     font-size: 12px;
     font-weight: 100;
     background: gray;
+}
+.slogan
+{
+    padding-top: 40px;
+    width: 700px;
+    position: relative;
+    margin-top: 30px;
+    color: rgb(114, 161, 108);
+}
+.slogan .qBx
+{
+    position: relative;
+}
+
+.slogan .imgBx
+{
+    position: absolute;
+    left: -125px;
+    top:0px;
+}
+.slogan q
+{
+    /* padding: 50px; */
+    font-size: 13px;
+    text-align: justify;
+    padding: 0 20px;
+}
+.slogan q::before
+{
+    position: absolute;
+    left: 0px;
+    top: -10px;
+    font-size: 50px;
+}
+.slogan q::after
+{
+    content: "";
+}
+.menu-snow
+{
+    background: rgb(126, 177, 197) !important; 
+    transition: all 5s;
 }
