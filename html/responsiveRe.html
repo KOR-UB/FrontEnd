@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        html
+        {
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            min-height: 1000px;
+  
+        }
+        section
+        {
+            overflow: hidden;
+            position: relative;
+        }
+        header
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 100px;
+            z-index: 1000;
+            transition: 0.6s;
+        }
+        header.sticky
+        {
+            padding: 5px 100px;
+            background: #fff;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+        }
+        header.sticky .logo,
+        header.sticky ul li a
+        {
+            color:#000;
+        }
+        header .logo
+        {
+            position: relative;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+        }
+        header ul
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul li
+        {
+            position: relative;
+            list-style: none;
+        }
+        header ul li a
+        {
+            position: relative;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: 300;
+            transition: .6s;
+        }
+        .banner
+        {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: url(../img/brandbg.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner h2
+        {
+            color: #fff;
+            font-size: 90px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1em;
+        }
+        .banner h2 span
+        {
+            color: #4978ff;
+        }
+        .sec
+        {
+            background: #fff;
+            padding: 100px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sec .content
+        {
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        .mxw800p
+        {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h3
+        {
+            font-size: 40px;
+            font-weight: 200;
+            margin-bottom: 10px;
+        }
+        p
+        {
+            position: relative;
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .btn
+        {
+            position: relative;
+            font-size: 18px;
+            font-weight: 300;
+            padding: 10px 30px;
+            background: #000;
+            text-decoration: none;
+            color: #fff;
+        }
+        .services
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 30px;
+            /* width: 1000px; */
+            max-width: 100%;
+            margin-top: 40px;
+        }
+        .services .box
+        {
+            width: 300px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .services .box .iconBx
+        {
+            margin-top: 25px;
+        }
+        .services .box .iconBx img
+        {
+            max-width: 70px;
+            margin-bottom: 15px;
+        }
+        .services .box h2
+        {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .stats
+        {
+            background: #000;
+            padding-top: 250px;
+            margin-top: -250px;
+        }
+        .stats h3,
+        .stats p
+        {
+            color: #fff;
+        }
+        .statsBox
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            max-width: 100%;
+            margin-top: 40px;
+        }
+        .statsBox h2
+        {
+            color: #fff;
+            font-size: 36px;
+        }
+        .statsBox h4
+        {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .workBx
+        {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+            max-width: 100%;
+            margin-top: 40px;
+        }
+        .workBx .brand
+        {
+            position: relative;
+            background: #4978ff;
+            min-height: 300px;
+            width: 250px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h6
+        {
+            display: inline;
+            /* position: fixed; */
+            position: absolute;
+            background: linear-gradient(45deg, red 10%, blue 80%, transparent) !important;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+        @keyframes animate
+        {
+            0%
+            {
+                width: 0px;
+                height: 0px;
+                opacity: 0.5;
+            }
+            100%
+            {
+                width: 1000px;
+                height: 1000px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Service</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h2>We Make<br><span>Brands</span> Matter</h2>
+    </section>
+    <!-- About -->
+    <section class="sec" id="about">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Who We Are</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+                <a href="#" class="btn">Read Our Story</a>
+            </div>
+        </div>
+    </section>
+    <!-- Services -->
+    <section class="sec" id="services">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Who We Do</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+            </div>
+            <div class="services">
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="../img/icon1.png" alt="icon1">
+                    </div>
+                    <div class="content">
+                        <h2>Design</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="../img/icon2.png" alt="icon2">
+                    </div>
+                    <div class="content">
+                        <h2>Development</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="iconBx">
+                        <img src="../img/icon3.png" alt="icon3">
+                    </div>
+                    <div class="content">
+                        <h2>Branding</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio rem, eum ex harum quis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats -->
+    <section class="sec stats">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Our Achievements</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+            </div>
+            <div class="statsBox">
+                <div class="box">
+                    <h2>1200+</h2>
+                    <h4>Projects</h4>
+                </div>
+                <div class="box">
+                    <h2>800+</h2>
+                    <h4>Happy Clients</h4>
+                </div>
+                <div class="box">
+                    <h2>150+</h2>
+                    <h4>Countries</h4>
+                </div>
+                <div class="box">
+                    <h2>50+</h2>
+                    <h4>Awards</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <section class="sec work" id="portfolio">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Recent Work</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+            </div>
+            <div class="workBx">
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+                <div class="brand">
+                    <a href="#"><h2>Brand Name</h2></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team -->
+    <section class="sec" id="team">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Meet Our Expert</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam, dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam doloribus accusamus ratione quos fugit expedita?</p>
+            </div>
+            <div class="teamBx">
+                <div class="member">
+                    <div class="imgBx">
+                        <img src="../img/brand1.jpg" alt="1">
+                    </div>
+                    <div class="details">
+                        <div>
+                            <h2>John Doe<br><span>Creative Director</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="imgBx">
+                        <img src="../img/brand2.jpg" alt="2">
+                    </div>
+                    <div class="details">
+                        <div>
+                            <h2>John Doe<br><span>Creative Director</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="imgBx">
+                        <img src="../img/brand3.jpg" alt="3">
+                    </div>
+                    <div class="details">
+                        <div>
+                            <h2>John Doe<br><span>Creative Director</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="imgBx">
+                        <img src="../img/brand4.jpg" alt="4">
+                    </div>
+                    <div class="details">
+                        <div>
+                            <h2>John Doe<br><span>Creative Director</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="sec contact" id="contact">
+        <div class="content">
+            <div class="mxw800p">
+                <h3>Send Us A Message</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam vitae obcaecati, amet ullam,
+                    dolores, totam repellat quia accusamus cupiditate sequi quod? Laboriosam architecto quisquam
+                    doloribus accusamus ratione quos fugit expedita?</p>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <div class="row100">
+                        <div class="inputBx50">
+                            <input type="text" name="" placeholder="Full Name">
+                        </div>
+                        <div class="inputBx50">
+                            <input type="text" name="" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="inputBx100">
+                            <input type="submit" name="" value="Send">
+                        </div>
+                    </div>
+                </form>
+                </form>
+            </div>
+            <div class="sci">
+                <ul>
+                    <li><a href="#"><img src="../img/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../img/twitter.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../img/linkedin.png" alt="facebook"></a></li>
+                </ul>
+            </div>
+            <p class="copyright">Design & Developed By <a href="#">Online Tutorials</a></p>
+        </div>
+    </section>
+    <script>
+        const button = document.querySelectorAll('a');
+        button.forEach(btn => {
+            btn.addEventListener('click', function(e)
+            {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+
+                let ripples = document.createElement("h6");
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+
+                setTimeout(()=>
+                {
+                    ripples.remove()
+                },1000);
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function()
+        {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+        function toggle()
+        {
+            var header = document.querySelector("header");
+            header.classList.toggle("active");
+        }
+    </script>
+    <!-- <script type="text/javascript" src="../js/examples.js"></script> -->
+</body>
+</html>

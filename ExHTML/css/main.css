@@ -320,8 +320,8 @@ a{
 .footer .f-logo
 {
     position: absolute;
-    left: -100px;
-    top: 8px;
+    /* left: -100px; */
+    top: 13px;
 }
 .footer .imgBx
 {
@@ -761,7 +761,7 @@ svg
     overflow: hidden;
     border: 1px solid black;
     border-radius: 3px;
-    transition: .3 s;
+    transition: .3s;
 }
 .group3 .event-view ul li
 {
