@@ -417,6 +417,13 @@ p
 {
     display: none;
 }
+#portfolioMenu
+{
+    z-index: 10000000000000;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+}
 @media (max-width: 1160px) {
     .services {
         grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));

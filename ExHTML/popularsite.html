@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }   
+        ol
+        {
+            list-style: none;
+        }
+        ol li
+        {
+            
+            counter-increment: number;
+            margin-bottom: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-flow: row nowrap;
+        }
+        ol li::before
+        {
+            content: counter(number);
+            position: relative;
+            left: -5px;
+            padding: 2px 4px;
+            background: #aaa;
+            font-size: .9em;
+            color: white;
+        }
+        ol li a
+        {
+            /* background: red;
+            flex-grow: 1; */
+            text-decoration: none;
+            color: black;
+        }
+        .container
+        {
+            width: 200px;
+            padding: 20px;
+            background: rgb(230, 230, 230);
+            border: 1px solid black;
+            transition: .5s linear;
+            clip-path: circle(30%);
+        }
+        .container:active
+        {
+            transform: perspective(8000px) rotate(180deg) scale(-1);
+            width: 2000px;
+            clip-path: circle(100%);
+        }
+        .up,
+        .stop,
+        .down
+        {
+            /* position: absolute;
+            right: 0;
+            top: 12px; */
+            margin-left: auto;
+            background: url(./css/images/rank.png) no-repeat;
+            width: 9px;
+            height: 10px;
+            transform: translateY(-50%);
+        }
+        .stop
+        {
+            background-position: 0 100%;
+        }
+        .down
+        {
+            background-position: 0 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ol>
+            <li><a href="#">W3C</a><em class="up"></em></li>
+            <li><a href="#">CSS Zen Garden</a><em class="down"></em></li>
+            <li><a href="#">MDN</a><em class="stop"></em></li>
+            <li><a href="#">Web Standards</a><em class="up"></em></li>
+        </ol>
+    </div>
+</body>
+</html>
