@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        header
+        {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            overflow: hidden;
+            z-index: 10000000;
+            min-width: 100%;
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to left, black  50%, white 50%);
+            transition: .4s;
+            border-bottom: 3px solid black;
+        }
+        body
+        {
+            min-height: 1000px;
+        }
+        header .ulBox
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 50%;
+            height: 100%;
+        }
+        header ul
+        {
+            width: 100%;
+            min-width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header ul li
+        {
+            padding: 10px;
+            position: relative;
+            margin: 0px 20px;
+        }
+        header ul li a
+        {
+            color: white;
+            text-decoration: none;
+        }
+        header .logo
+        {
+            padding-left: 120px;
+            font-size: 3rem;
+            letter-spacing: 5px;
+            font-weight: 900;
+        }
+        section:nth-child(2)
+        {
+            margin-top: 50px;
+            border: 5px solid black;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(.9);
+            background: url(../img/italy.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        /* body
+        {
+            width: 100%;
+            height: 100vh;
+            background: url(../img/italy.jpg);;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        } */
+        section:first-of-type
+        {
+       
+        }
+        section:nth-child(odd)
+        {
+            background: linear-gradient(-35deg, white, transparent);
+
+        }
+        section:nth-child(even) .container
+        {
+            background: linear-gradient(135deg , rgba(0, 0, 0, 0.623) 40%, transparent);
+        }
+        section .container
+        {
+            align-self:center;
+            width: 100%;
+            height: 50vh;
+            /* background: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+            padding: 0 40px;
+        }
+        section .container h1
+        {
+            width: 100%;
+            font-size: 8rem;
+            text-shadow: 0px 0px 10px white;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+        section .container p
+        {
+            color: white;
+            font-style: italic;
+            font-size: 2.5rem;
+            text-shadow: yellow;
+            text-shadow: 3px 3px 0px rgb(49, 92, 170);
+            text-align: justify;
+        }
+        .imgBx
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            /* background:transparent; */
+            /* background: red; */
+        }
+        .imgBx img
+        {
+            position: absolute;
+            top: -250px;
+            left: 450px;
+            object-fit: cover;
+            filter: drop-shadow(0px 0px 10px rgb(251, 255, 0));
+        }
+        section .container h2
+        {
+            margin: 0 auto;
+            width: 1000px;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .sticky
+        {
+            padding: 5px 50px;
+            color: white;
+            background: rgba(0, 0, 0, 0.507);
+            border-bottom: 4px dashed white;
+        }
+        section:nth-child(3)
+        {
+            background: black;
+            color: white;
+            width: 100%;
+            height: 100vh;
+        }
+        section:nth-child(3) .container .contentH2
+        {
+            width: 100%;
+            margin-top: 100px;
+            align-self: flex-start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 1s;
+        }
+        section:nth-child(3) h2
+        {
+            text-shadow: 0px 0px 20px rgb(255, 217, 0),
+            0px 0px 60px rgb(212, 0, 255),
+            20px 20px 120px rgb(255, 0, 0),
+            40px 40px 180px rgba(0, 238, 255, 0.459);
+        }
+        .TestE
+        {
+            transform: scale(.7);
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <div class="ulBox">
+            <ul>
+                <li><a href="#">테스트1</a></li>
+                <li><a href="#">테스트2</a></li>
+                <li><a href="#">테스트3</a></li>
+                <li><a href="#">테스트4</a></li>
+                <li><a href="#">테스트5</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="content">
+                <h1>대제목</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam labore libero corrupti accusamus! Laborum culpa iure laudantium! Expedita ex beatae dolor nam nemo nihil laudantium molestiae labore ea fugiat.</p>
+            </div>
+            <div class="imgBx">
+                <img src="../img/logo1.png" alt="logo">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="contentH2">
+                <h2>중제목</h2>
+                <h2>중제목</h2>
+                <h2>중제목</h2>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener("scroll", function()
+        {
+            var header = document.querySelector("header");
+            var h2 = document.querySelector(".contentH2");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            h2.classList.toggle("TestE", window.scrollY > 500);
+        })
+    </script>
+</body>
+</html>

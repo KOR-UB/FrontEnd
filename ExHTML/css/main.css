@@ -320,8 +320,8 @@ a{
 .footer .f-logo
 {
     position: absolute;
-    left: -100px;
-    top: 8px;
+    /* left: -100px; */
+    top: 13px;
 }
 .footer .imgBx
 {
@@ -761,7 +761,7 @@ svg
     overflow: hidden;
     border: 1px solid black;
     border-radius: 3px;
-    transition: .6s;
+    transition: .3s;
 }
 .group3 .event-view ul li
 {
@@ -773,6 +773,7 @@ svg
 .group3 .event-view .event-ul:focus-within
 {
     padding-bottom: 110px;
+
 }
 .group3 .popularsite
 {
@@ -807,10 +808,10 @@ svg
 {
     list-style: none;
 }
-.popularsite ol img
+/* .popularsite ol img
 {
     float: right;
-}
+} */
 .popularsite ol li{
     font-size: 14px;
     padding: 4px;

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            font-size: 16px;
+        }
+        /* footer
+        {
+            width: 100%;
+            height: 250px;
+            background: rgba(0,0,0,.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 30px;
+            background: red;
+        }
+        footer ul
+        {
+            background: #161616;
+            border-radius: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+        }
+        footer ul li
+        {
+            list-style: none;
+            margin: 0px 45px;
+        }
+        footer ul li a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        footer address
+        {
+            background: red;
+            width: 730px;
+            font-style: normal;
+            margin-top: 10px;
+            text-align: left;
+            font-size: 13px;
+        }
+        footer .grid
+        {
+            background: rgba(0, 0, 0, 0.205);
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer .grid:nth-child(1)
+        {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+        footer .grid:nth-child(1) img
+        {
+            transform: scale(2);
+        }
+        footer .grid:nth-child(2)
+        {
+            grid-column: span 3;
+        }
+        footer .grid:nth-child(3) img
+        {
+            margin: 0px 30px;
+        }
+        footer .grid:nth-child(4)
+        {
+            grid-column: span 4;
+        }
+        footer .grid:nth-child(4) address
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-flow: column;
+            margin-right: auto;
+        } */
+        footer
+        {
+            width: 940px;
+            margin: 0 auto;
+            background: yellow;
+            display: grid;
+            grid-template-columns: 180px 660px 100px;
+            grid-template-rows: 50px 25px 25px;
+            justify-items: center;
+        }
+        footer ul
+        {}
+        .footer-logo
+        {
+            align-self: center;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        .guide-list
+        {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .address
+        {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .copyright
+        {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+        .badge
+        {
+            align-self: center;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <a href="#" class="footer-logo">
+          <img src="images/footer_logo.png" alt="web cafe">
+        </a>
+        <ul class="guide-list">
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보 보호정책</a></li>
+          <li><a href="#">이메일주소 무단수집 거부</a></li>
+          <li><a href="#">contact us</a></li>
+          <li><a href="#">site map</a></li>
+        </ul>
+        <address class="address">
+          <span>서울시 강남구 역삼동 718-5</span>
+          <span>전화 : 02-3429-5114</span>
+          <span>email : <a href="mailto:seulbinim@gmail.com">seulbinim@gmail.com</a></span>
+        </address>
+        <small class="copyright">
+          Copyright since &copy; 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.
+        </small>
+        <div class="badge">
+          <img src="images/html5_logo.png" alt="최신 표준인 HTML5를 사용하여 마크업 했습니다.">
+          <img src="images/css3_logo.png" alt="최신 기술인 CSS3를 활용하여 디자인 했습니다.">
+        </div>
+        <!-- <div class="imgBx">
+            <img src="./images/footer_logo.png" alt="f-logo">
+            <ul>
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#">개인정보 보호정책</a></li>
+                <li><a href="#">이메일주소 무단수집 거부</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">SITE MAP</a></li>
+            </ul>
+        </div>
+        <address>
+            <span>주소: 경기도 남양주시 경춘로 양골 3길 40, 507호</span>
+            <span>전화: 010-7940-2535</span>
+            <span>이메일: yyb97@naver.com</span>
+            <span>Copyright since © 2010 by Web Cafe CORPORATION ALL RIGHTS RESERVED.</span>
+        </address> -->
+    </footer>
+</body>
+</html>
