@@ -15,7 +15,8 @@ body
 }  
 .container
 {
-    width: 100%;
+    position: relative;
+    min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,9 +26,10 @@ body
 {
     z-index: 1000;
     background: white;
-    position: fixed;
+    position: relative;
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -85,7 +87,6 @@ body
 }
 .appNavigation
 {
-    margin-top: 85px;
     align-self: start;
     width: 100%;
     display: flex;
@@ -232,7 +233,7 @@ body
 }
 .appMain .board .Board-list
 {
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .appMain .board .Board-list ul
 {
@@ -241,6 +242,8 @@ body
 .appMain .board .Board-list time
 {
     display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
 }
 .appMain .board .Board-list ul li
 {
@@ -250,10 +253,11 @@ body
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 15px 0;
+    margin: 8px 0;
 }
 .appMain .board .Board-list ul li a
 {
+    font-size: 1.4rem;
     text-decoration: none;
     color: black;
 }
@@ -353,8 +357,32 @@ body
 }
 @media (max-width:1000px)
 {
-    body
+    .container
     {
-        background: red;
+        min-width: 100%;
+        flex-flow: column;
+        
+    }
+    .appHeader
+    {
+        padding: 0px;
+        white-space: nowrap;
+    }
+    .appNavigation
+    {
+        display: none;
+    }
+    .appHeader .search-form
+    {
+        width: 100%;
+        right: 0;
+    }
+    .appMain
+    {
+
+    }
+    .book,.news,.board,.twitter,.favorite
+    {
+        
     }
 }
