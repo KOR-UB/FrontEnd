@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap Text Around circle</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+        body
+        {
+            background: #000;
+        }
+        section
+        {
+            position: relative;
+            width: 100%;
+            padding: 50px;
+        }
+        .circle
+        {
+            position: relative;
+            overflow: hidden;
+        }
+        .circle.circle1
+        {
+            width: 400px;
+            height: 400px;
+            float: left;
+            border-radius: 50%;
+            margin: 20px;
+            shape-outside: circle();
+            transition: .6s;
+        }
+        .circle.circle1:hover
+        {
+            width: 100%;
+            border-radius: 0;
+            shape-outside: none;
+        }
+        .circle.circle2
+        {
+            width: 300px;
+            height: 300px;
+            float: right;
+            border-radius: 50%;
+            margin: 20px;
+            shape-outside: circle();
+        }
+        section h2
+        {
+            color: #fff;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        section p
+        {
+            color: #fff;
+        }
+        .circle img
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="circle circle1">
+            <img src="../img/italy.jpg" alt="img1">
+        </div>
+        <div class="circle circle2">
+            <img src="../img/brand3.jpg" alt="img1">
+        </div>
+        <div>
+            <h2>Wrap Text Around Circle #2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nihil aut a unde nostrum aliquid praesentium doloremque veniam, explicabo at minima officiis quo ea harum, magni quaerat eum temporibus eius.
+            Harum perspiciatis similique quaerat vel totam eius eum eligendi pariatur mollitia unde minima maxime, deleniti quod architecto dolore ab nostrum esse dignissimos cumque molestias non corrupti blanditiis laudantium! Debitis, veritatis.
+            Soluta incidunt, rerum tempore, porro amet quibusdam voluptas numquam nostrum at minus, autem unde maiores illo temporibus harum assumenda omnis debitis. Tempore distinctio a asperiores esse laborum, labore minima exercitationem.
+            Eos quia voluptatibus eligendi, qui reiciendis ad amet in dolorum nihil provident cupiditate nesciunt animi consequatur quidem ab, laborum, soluta mollitia velit aliquam maxime. Aut, molestiae? Consectetur vitae tempora facilis?
+            Veniam, totam in. Illum voluptate ipsa voluptatem assumenda cum non placeat fugiat nobis? Eveniet animi sit culpa, aut quod eligendi deleniti suscipit non, soluta ullam, expedita necessitatibus impedit cumque velit.
+            Non, laborum? Aliquam aliquid cum expedita fugiat reiciendis vitae ullam inventore unde totam architecto itaque quam quibusdam illo similique obcaecati, dolorum, ab doloribus iure laboriosam. Itaque adipisci qui similique suscipit!
+            Itaque fuga atque vero eius sunt perspiciatis quas quasi quae, debitis commodi molestias. Ullam nisi vero nulla error dolorum est minus illo in dolorem! Unde, distinctio recusandae. In, eveniet iure.
+            Fugiat, alias quam corrupti, eaque nostrum itaque, quae minima repellat nisi magnam aliquam impedit vitae illum debitis facilis expedita adipisci cupiditate ex! Laborum similique beatae exercitationem pariatur, expedita quam veritatis.
+            Nisi inventore asperiores quod omnis maxime atque itaque repudiandae magni. Sed corrupti placeat ad possimus qui, inventore ex, iste amet excepturi vel corporis, accusantium perspiciatis exercitationem dolorem? Id, porro odio.
+            Porro, accusantium. Sunt vel commodi voluptas inventore ex! Delectus facilis provident sequi consequuntur soluta? Quasi autem minima ex nobis expedita ut corporis, officiis tenetur reprehenderit quidem et officia sequi laboriosam.
+            Perferendis, iste. Ipsam excepturi distinctio est temporibus illo cumque vitae quisquam ipsum accusamus dolorem. Corporis ab doloribus non cumque omnis amet itaque hic explicabo deleniti est sunt ea, odit ratione.
+            Impedit quaerat, doloremque corrupti exercitationem maiores velit quis! Alias laboriosam laudantium praesentium repellat facilis ducimus quos assumenda labore veritatis culpa sapiente aliquam voluptatibus, quasi odit. Perspiciatis a pariatur reiciendis esse!
+            Voluptate, maxime saepe odio quae aut maiores animi dicta vel provident itaque. Quae sit libero corporis nihil aperiam expedita tempora, dignissimos reprehenderit vitae repellendus dolores praesentium incidunt et, error nostrum.
+            Saepe voluptatibus a repudiandae harum facere veniam culpa debitis nulla inventore minus illum, quod ad aspernatur possimus modi magni! Cum natus, consectetur a eius architecto repellat soluta totam fugiat quis?
+            Quod modi necessitatibus voluptas architecto id totam nobis nesciunt delectus reiciendis vel. Et quo debitis hic nesciunt distinctio tempore soluta dolores reprehenderit, architecto, at provident. Provident maiores sequi eaque vel.</p>
+        </div>
+    </section>
+</body>
+</html>
