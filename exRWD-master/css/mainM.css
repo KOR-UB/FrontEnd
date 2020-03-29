@@ -117,10 +117,21 @@ body
     z-index: 1;
     transition: 0.5s;
 }
+.appHeader.active .toggle::before
+{
+    box-shadow: none;
+    transform: translateY(10px) rotate(450deg);
+    
+}
+.appHeader.active .toggle::after
+{
+    transform: translateY(-10px) rotate(-450deg);  
+}
 .appNavigation.active{
     z-index: 5;
     top: 0;
     display: block;
+    position: fixed;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
 }
@@ -128,6 +139,25 @@ body
 {
     float: right;
     margin:15px;
+}
+.appNavigation ul
+{
+    list-style: none;
+    margin: 15px 0;
+}
+.appNavigation ul li
+{
+    list-style: circle;
+    margin: 5px 0;
+}
+.nav-toggle::before
+{
+    box-shadow: none;
+    transform: translateY(10px) rotate(45deg);
+}
+.nav-toggle::after
+{
+    transform: translateY(-10px) rotate(-45deg);  
 }
 .appMain
 {
@@ -212,6 +242,7 @@ body
 .appMain .twitter
 {
     position: relative;
+    padding-bottom: 20px;
 }
 .appMain .twitter time
 {
@@ -228,6 +259,7 @@ body
     width: 100px;
     height: 100px;
     float: right;
+    shape-outside: circle();
 }
 .twit-imgBx img
 {
@@ -256,7 +288,7 @@ body
 }
 .appMain .favorite .fav-list ol li
 {
-    display: inline-block;
+    width: 100%;
     counter-increment: number;
     list-style: none;
     padding: 5px 0;
@@ -325,7 +357,4 @@ body
     margin: 5px 0;
     font-style: normal;
     display: block;
-}
-.appNavigation.active ul li a {
-
 }

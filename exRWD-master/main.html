@@ -140,10 +140,10 @@
                 <div class="group">
                     <div class="fav-list">
                         <ol>
-                            <li><a href="#">Learn CSS Layout</a></li><span class="icon-link-ext"></span>
-                            <li><a href="#">Learn CSS Layout</a></li><span class="icon-link-ext"></span>
-                            <li><a href="#">Learn CSS Layout</a></li><span class="icon-link-ext"></span>
-                            <li><a href="#">Learn CSS Layout</a></li><span class="icon-link-ext"></span>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
                         </ol>
                     </div>
                 </div>
@@ -159,7 +159,9 @@
     <script>
         function toggle()
         {
-            var header = document.querySelector(".appNavigation");
+            var Navi = document.querySelector(".appNavigation");
+            var header = document.querySelector(".appHeader");
+            Navi.classList.toggle("active");
             header.classList.toggle("active");
         }
     </script>

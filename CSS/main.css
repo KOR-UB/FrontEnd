@@ -1,0 +1,397 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html
+{
+    font-size: 10px;
+}
+body
+{
+    font-size: 1.6rem;
+    /* background: blanchedalmond; */
+}  
+.container
+{
+    position: relative;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.appHeader
+{
+    z-index: 1000;
+    background: white;
+    position: relative;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 150px;
+}
+.appHeader .logo img
+{
+    width: 100%;
+}
+.appHeader .search-form
+{
+    position: absolute;
+    top: 45%;
+    right: 140px;
+}
+.appHeader .search-form input
+{
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 400px;
+    padding: 10px;   
+}
+.appHeader .search-form button
+{
+    border: none;
+    border: 1px solid rgb(95, 54, 35);
+    outline: none;
+    position: relative;
+    padding: 7px 15px;
+    background: rgb(161, 126, 104);
+    color: white;
+    border-radius: 5px;
+}
+.appHeader nav
+{
+    align-self: flex-start;
+}
+.appHeader nav ul
+{
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.appHeader nav ul li a
+{
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.appNavigation
+{
+    align-self: start;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(143, 126, 94);
+    padding: 20px 0;
+}
+.appNavigation .Nav_ul
+{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.appNavigation .Nav_ul li
+{
+    font-size: 2rem;
+    -webkit-text-stroke: 3
+}
+.appNavigation .Nav_ul li ul
+{
+    margin-top: 10px;
+    padding-left: 25px;
+}
+.appNavigation .Nav_ul li ul li
+{
+    font-size: 1.5rem;
+    padding: 8px 0;
+
+}
+.appNavigation .Nav_ul a
+{
+    color: white;
+    text-decoration: none;
+}
+.appMain
+{
+    width: 1000px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.book
+{
+    width: 320px;
+    margin-right: 20px;
+}
+.news
+{
+    width:660px;
+}
+.board
+{
+    width: 320px;
+    margin-right: 20px;
+    position: relative;
+}
+.board .Board-plus
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    color: rgb(143, 115, 56);
+    font-size: .9em;
+}
+
+.twitter
+{
+    width: 400px;
+    margin-right: 20px;
+}
+.favorite
+{
+    width: 240px;
+}
+.appMain .imgBx
+{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+.appMain .contentBx p
+{
+    font-size: 2rem !important;
+}
+.news .imgBx img
+{
+    transform: translateY(-230px);
+}
+.board .imgBx img
+{
+    transform: translateY(-115px);
+}
+.twitter .imgBx img
+{
+    transform: translateY(-460px);
+}
+.favorite .imgBx img
+{
+    transform: translateY(-345px);
+}
+.appMain .contentBx
+{
+    display: inline-block;
+}
+
+.appMain .book .contentBx p
+{
+    color: rgb(101, 146, 34);
+}
+.appMain .news .contentBx p
+{
+    color: rgb(138, 136, 46);
+}
+.appMain .board .contentBx p
+{
+    color: rgb(131, 120, 84);
+}
+.appMain .twitter .contentBx p
+{
+    color: rgb(39, 85, 155);
+}
+.appMain .favorite .contentBx p
+{
+    color: rgb(201, 120, 0);
+}
+.appMain .book img
+{
+    max-width: 100%;
+}
+.appMain .book .fig
+{
+    margin-top: 15px;
+    text-align: center;
+}
+.appMain .book .fig p,
+.appMain .news p
+{
+    margin: 6px 0;
+    font-size: 1.5rem;
+    line-height: 20px;
+}
+.appMain .book .fig small
+{
+    margin-top: 10px;
+}
+.appMain .news .videoBx video
+{
+    margin-top: 8px;
+    max-width: 100%;
+}
+.appMain .board .Board-list
+{
+    padding-top: 10px;
+}
+.appMain .board .Board-list ul
+{
+    list-style: none;
+}
+.appMain .board .Board-list time
+{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+.appMain .board .Board-list ul li
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0;
+}
+.appMain .board .Board-list ul li a
+{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+.appMain .twitter
+{
+    position: relative;
+}
+.appMain .twitter time
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.twit-details
+{
+    margin: 20px 0 30px 0;
+}
+.twit-imgBx
+{
+    width: 100px;
+    height: 100px;
+    float: right;
+    shape-outside: circle();
+}
+.twit-imgBx img
+{
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.twit-details a:hover
+{
+    color: red;
+}
+.appMain .favorite .fav-list ol
+{
+    padding-left: 30px;
+}
+.appMain .favorite .fav-list ol li
+{
+    display: inline-block;
+    counter-increment: number;
+    list-style: none;
+    padding: 5px 0;
+    position: relative;
+}
+.appMain .favorite .fav-list ol li a
+{
+   
+    color: black;
+    text-decoration: none;
+}
+.appMain .favorite .fav-list ol li::before
+{
+    content: counter(number);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    right: 5px;
+    line-height: 34px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+    background: rgb(240, 163, 21);
+}
+.appFooter
+{
+    width: 100%;
+    padding: 20px 0;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+.appFooter address
+{
+    font-style: normal;
+    padding: 10px 0;
+    font-weight: 100;  
+    background: transparent;
+    color: white;
+    text-align: center;
+}
+.book,.news,.board,.twitter,.favorite
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* min-height: 500px;
+    border: 1px solid black; */
+}
+/* @media (max-width:1000px)
+{
+    .container
+    {
+        min-width: 100%;
+        flex-flow: column;
+        
+    }
+    .appHeader
+    {
+        padding: 0px;
+        white-space: nowrap;
+    }
+    .appNavigation
+    {
+        display: none;
+    }
+    .appHeader .search-form
+    {
+        width: 100%;
+        right: 0;
+    }
+    .appMain
+    {
+
+    }
+    .book,.news,.board,.twitter,.favorite
+    {
+        
+    }
+} */

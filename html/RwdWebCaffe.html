@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/seulbinim.jpg">
+    <title>ResponsiveWebCaffe</title>
+    <link rel="stylesheet" href="../CSS/main.css" media="screen and (min-width: 1000px)">
+    <link rel="stylesheet" href="../CSS/mainM.css" media="screen and (max-width: 999px)">
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="../CSS/entry.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="appHeader">
+            <h1>
+                <a href="#" class="logo"><img src="../img/rwd-logo.png" alt="logo"></a>
+                <div class="toggle" onclick="toggle()"></div>
+            </h1>
+            <div class="search-form">
+                <input type="search" placeholder="검색어를 입력하세요.">
+                <button>검색</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="appNavigation">
+            <div class="toggle nav-toggle" onclick="toggle()"></div>
+            <ul class="Nav_ul">
+                <li class="icon-star" style="color: white;"><a href="#">HTML에 대해</a>
+                    <ul>
+                        <li><a href="#">HTML5 소개</a></li>
+                        <li><a href="#">레퍼런스 소개</a></li>
+                        <li><a href="#">활용 예제</a></li>
+                    </ul>
+                </li>
+                <li class="icon-star" style="color: white;"><a href="#">CSS에 대해</a>
+                    <ul>
+                        <li><a href="#">CSS 소개</a></li>
+                        <li><a href="#">CSS2 VS CSS3</a></li>
+                        <li><a href="#">CSS 애니메이션</a></li>
+                    </ul>
+                </li>
+                <li class="icon-star" style="color: white;"><a href="#">웹표준/웹접근성</a>
+                    <ul>
+                        <li><a href="#">웹표준 이란?</a></li>
+                        <li><a href="#">웹접근성의 개요</a></li>
+                        <li><a href="#">HTML5의 현재와 미래</a></li>
+                    </ul>
+                </li>
+                <li class="icon-star" style="color: white;"><a href="#">묻고 답하기</a>
+                    <ul>
+                        <li><a href="#">묻고 답하기</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1대1 질문</a></li>
+                    </ul>
+                </li>
+                <li class="icon-star" style="color: white;"><a href="#">자료실</a>
+                    <ul>
+                        <li><a href="#">공개 자료실</a></li>
+                        <li><a href="#">이미지 자료실</a></li>
+                        <li><a href="#">예제 자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main class="appMain">
+            <section class="book">
+                <div class="contentBx sprite spriteBook" >
+                    <h2>추천서적</h2>
+                    <p>Recommend Book</p>
+                </div>
+                <div class="group">
+                    <div class="fig">
+                        <img src="../img/book_rwd.jpg" alt="반응형 웹 핵심 가이드북">
+                        <p>반응형웹 핵심 가이드북 도서</p>
+                        <small>저자 김데레사</small>
+                        <p style="color:rgb(53, 231, 53); font-size: 3rem;">★★★★☆</p>
+                        <p style="margin-top: 20px;">반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="contentBx sprite spriteNews">
+                    <h2>새소식</h2>
+                    <p>WebCafe News</p>
+                </div>
+                <div class="group">
+                    <div class="videoBx">
+                        <video muted src="../Video/stories.mp4" poster="../Video/poster.jpg" controls></video>
+                    </div>
+                    <p>구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접 이야기를 나눠보는 ‘구글플레이 개발자와의 대화’ 행사를 정기적으로 개최할 예정입니다. 오늘 3월 29일(수) 구글 캠퍼스 서울에서 열린 첫 번째 ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로 진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목 받으며 글로벌 진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.</p>   
+                    <time datetime="2020-03-27T20:17:10" style="float: right;"><span class="icon-calendar"></span>2020-03-27</time>
+                </div>
+            </section>
+            <section class="board">
+                <div class="contentBx sprite spriteBoard">
+                    <h2>게시판</h2>
+                    <p>WebCafe Board</p>
+                </div>
+                <div class="group">
+                    <div class="Board-list">
+                        <ul>
+                            <li class="icon-star"><a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a></li><time datetime="2020-03-27T20:07:10">2020.03.27</time>
+                            <li class="icon-star"><a href="#">W3C 사이트 리뉴얼 및 공지사항</a></li><time datetime="2020-03-27T20:07:10">2020.03.27</time>
+                            <li class="icon-star"><a href="#">KWCAG 2.1 소식</a></li><time datetime="2020-03-27T20:07:10">2020.03.27</time>
+                            <li class="icon-star"><a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a></li><time datetime="2020-03-27T20:07:10">2020.03.27</time>
+                        </ul>
+                    </div>
+                    <a href="#" class="Board-plus"><span class="icon-plus"></span>더보기</a>
+                </div>
+            </section>
+            <article class="twitter">
+                <div class="contentBx sprite spriteTwitter">
+                    <h2>트위터</h2>
+                    <p>WebCafe Twitter</p>
+                </div>
+                <div class="group">
+                    <div class="twit-details">
+                        <small>김데레사 <a href="#" title="트위터 계정으로 이동" style="text-decoration: none;">&#64;seulbinim</a></small>
+                        <div class="twit-imgBx">
+                            <img src="../img/seulbinim.jpg" alt="교수님">
+                        </div>
+                    </div>
+                    <p>웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.</p>
+                    <time datetime="2020-03-27T20:17:10"><span class="icon-calendar" style="color: rgb(103, 159, 182);"></span>2020-03-27</time>
+                </div>
+            </article>
+            <section class="favorite">
+                <div class="contentBx sprite spriteFavorite">
+                    <h2>인기 사이트</h2>
+                    <p>Favorite Site</p>
+                </div>
+                <div class="group">
+                    <div class="fav-list">
+                        <ol>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                            <li><a href="#">Learn CSS Layout</a><span class="icon-link-ext"></span></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="appFooter">
+            <address>서울시 마포구 상수동 123-12 한주빌딩 5층</address>
+            <address>전화: 02-234-5678</address>
+            <address>이메일: seulbinim@gmail.com</address>
+            <address style="font-size: .7em;">COPYRIGHT SINCE &copy; 2010 BY WEB CAFE CORPORATION ALL RIGHTS RESERVED.</address>
+        </footer>
+    </div>
+    <script>
+        function toggle()
+        {
+            var Navi = document.querySelector(".appNavigation");
+            var header = document.querySelector(".appHeader");
+            Navi.classList.toggle("active");
+            header.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

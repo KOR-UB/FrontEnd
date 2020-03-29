@@ -76,14 +76,11 @@ body
     justify-content: center;
     align-items: center;
 }
-.appHeader nav ul span
-{
-    margin: 0 10px;
-}
 .appHeader nav ul li a
 {
     color: black;
     text-decoration: none;
+    margin: 0 15px;
 }
 .appNavigation
 {
