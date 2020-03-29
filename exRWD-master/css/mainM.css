@@ -1,0 +1,331 @@
+body
+{
+    font-size: 1.5rem;
+}
+.container
+{
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+.appHeader,
+.appMain,
+.appFooter {
+  width: 100%;
+}
+.appHeader
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    background: rgb(97, 70, 20);
+}
+.appHeader nav
+{
+    width: 100%;
+    order: -1;
+    background: rgb(126, 111, 30);
+}
+.appHeader nav ul
+{
+    padding: 0px 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.appHeader nav ul li
+{
+    list-style: none;
+    margin: 0 10px;
+}
+.appHeader nav ul li a, .appHeader nav ul span
+{
+    color: white;
+}
+.appHeader h1
+{
+    padding: 0;
+    margin: 0;
+}
+.appHeader .logo
+{
+    display: inline-block;
+    padding: 10px 0;
+}
+.appHeader .search-form
+{
+    padding-bottom: 10px;
+}
+.appHeader .search-form button
+{
+    border: 0;
+    padding: 0;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    position: relative;
+}
+.appHeader .search-form button::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./images/btn_search.png") no-repeat;
+    background-size: 100% 100%;
+}
+.appNavigation
+{
+    position: absolute;
+    top: -1000px;
+    visibility: none;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+.toggle {
+    display: inline-block;
+    align-self: flex-end;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 15px;
+    z-index: 0;
+}
+.toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    box-shadow: 0 10px 0 rgb(255, 255, 255);
+    transition: 0.5s;
+}
+.toggle:after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 0.5s;
+}
+.appNavigation.active{
+    z-index: 5;
+    top: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+.appNavigation .nav-toggle
+{
+    float: right;
+    margin:15px;
+}
+.appMain
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.appMain li
+{
+    list-style: none;
+}
+.appMain .contentBx
+{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.appMain .group
+{
+    padding: 10px;
+}
+.appMain .book .fig
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+.appMain .book .fig small
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.appMain .book .fig img
+{
+    width: 80%;
+    margin-bottom: 15px;
+}
+.appMain .book .fig p
+{
+    margin: 2px 0;
+}
+.appMain .board .Board-plus
+{
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
+.appMain .board .Board-list
+{
+    padding-top: 10px;
+}
+.appMain .board .Board-list ul
+{
+    list-style: none;
+    padding-left: 20px;
+}
+.appMain .board .Board-list time
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+.appMain .board .Board-list ul li
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0;
+}
+.appMain .board .Board-list ul li a
+{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+.appMain .twitter
+{
+    position: relative;
+}
+.appMain .twitter time
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.twit-details
+{
+    margin: 20px 0 30px 0;
+}
+.twit-imgBx
+{
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+.twit-imgBx img
+{
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.twit-details a
+{
+    color: skyblue;
+}
+.twit-details a:hover
+{
+    color: red;
+}
+.appMain .contentBx h2,
+.appMain .contentBx p
+{
+    padding: 0;
+    margin: 0;
+}
+.appMain .favorite .fav-list ol
+{
+    padding-left: 30px;
+}
+.appMain .favorite .fav-list ol li
+{
+    display: inline-block;
+    counter-increment: number;
+    list-style: none;
+    padding: 5px 0;
+    position: relative;
+}
+.appMain .favorite .fav-list ol li a
+{
+   
+    color: black;
+    text-decoration: none;
+}
+.appMain .favorite .fav-list ol li::before
+{
+    content: counter(number);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    right: 5px;
+    line-height: 34px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+    background: rgb(240, 163, 21);
+}
+.appMain .book .contentBx p
+{
+    color: rgb(101, 146, 34);
+}
+.appMain .news .contentBx p
+{
+    color: rgb(138, 136, 46);
+}
+.appMain .board .contentBx p
+{
+    color: rgb(131, 120, 84);
+}
+.appMain .twitter .contentBx p
+{
+    color: rgb(39, 85, 155);
+}
+.appMain .favorite .contentBx p
+{
+    color: rgb(201, 120, 0);
+}
+.book,
+.news,
+.board,
+.twitter,
+.favorite
+{
+    width: 100%;
+}
+.news video
+{
+    width: 100%;
+}
+.twitter
+{
+    order: 1;
+}
+.appFooter address
+{
+    margin: 5px 0;
+    font-style: normal;
+    display: block;
+}
+.appNavigation.active ul li a {
+
+}

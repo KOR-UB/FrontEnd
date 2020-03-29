@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+        body
+        {
+            font-size: 16px;
+        }
+        header
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 20vh;
+            padding: 5px 20px;
+           
+            z-index: 10000;
+        }
+        header .logo
+        {
+            width: 100px
+            /* background: red; */
+        }
+        header .logo::before
+        {
+            
+        }
+        header .logo img
+        {
+            max-width: 100%;
+        }
+        section
+        {
+            background: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .menu-list
+        {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: column;
+        }
+        header .nav-list
+        {
+            white-space: nowrap;
+            font-size: .8em;
+        }
+        header .nav-list ul
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .menu-item
+        {
+            flex: 2;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7em;
+        }
+        header .menu-item li,
+        header .nav-list ul li
+        {
+            position: relative;
+            list-style: none;
+            margin: 0 5px;
+        }
+        body
+        {
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="../img/logo2.png" alt="logo"></a></h1>
+        <div class="menu-list">
+            <div class="nav-list">
+                 <ul>
+                     <li><a href="#">로그인</a></li>
+                     <li><a href="#">회원가입</a></li>
+                     <li><a href="#">사이트맵</a></li>
+                 </ul>
+            </div>
+            <ul class="menu-item">
+                <li><a href="#">테스트</a></li>
+                <li><a href="#">테스트2</a></li>
+                <li><a href="#">테스트3</a></li>
+            </ul>
+
+        </div>
+        
+    </header>
+    <section>
+        <div class="Test">t
+        </div>
+    </section>
+</body>
+</html>

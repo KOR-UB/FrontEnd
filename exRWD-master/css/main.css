@@ -55,12 +55,12 @@ body
 }
 .appHeader .search-form button
 {
-    border: 1px solid brown;
+    border: none;
+    border: 1px solid rgb(95, 54, 35);
     outline: none;
     position: relative;
-    top: 1px;
-    padding: 9px 15px;
-    background: rgb(117, 89, 71);
+    padding: 7px 15px;
+    background: rgb(161, 126, 104);
     color: white;
     border-radius: 5px;
 }
@@ -105,18 +105,18 @@ body
 }
 .appNavigation .Nav_ul li
 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     -webkit-text-stroke: 3
 }
 .appNavigation .Nav_ul li ul
 {
-    list-style: none;
+    margin-top: 10px;
     padding-left: 25px;
 }
 .appNavigation .Nav_ul li ul li
 {
-    font-size: 1.8rem;
-    padding: 6px 0;
+    font-size: 1.5rem;
+    padding: 8px 0;
 
 }
 .appNavigation .Nav_ul a
@@ -126,7 +126,6 @@ body
 }
 .appMain
 {
-    display: flex;
     width: 1000px;
     flex-wrap: wrap;
     margin-top: 30px;
@@ -144,7 +143,18 @@ body
 {
     width: 320px;
     margin-right: 20px;
+    position: relative;
 }
+.board .Board-plus
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    color: rgb(143, 115, 56);
+    font-size: .9em;
+}
+
 .twitter
 {
     width: 400px;
@@ -298,6 +308,7 @@ body
 }
 .appMain .favorite .fav-list ol li
 {
+    display: inline-block;
     counter-increment: number;
     list-style: none;
     padding: 5px 0;
@@ -355,7 +366,7 @@ body
     /* min-height: 500px;
     border: 1px solid black; */
 }
-@media (max-width:1000px)
+/* @media (max-width:1000px)
 {
     .container
     {
@@ -385,4 +396,4 @@ body
     {
         
     }
-}
+} */
