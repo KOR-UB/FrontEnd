@@ -1,0 +1,206 @@
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+/* 스타일 초기화 */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.resetMargin {
+  margin: 0;
+}
+.resetList {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.resetBox {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+/* 링크 스타일 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 기본 스타일 */
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Spoqa Han Sans', sans-serif;
+  font-size: 1.6rem;
+}
+/* 모바일 & 데스크탑 공통 */
+.appHeader {
+}
+.appNavigation {
+  background-color: orange;
+}
+.appMain {
+  background-color: lime;
+}
+.appFooter {
+  background-color: purple;
+}
+.button
+{
+  position: relative;
+  padding-left: 30px;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+} 
+.button::after
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/btn_search.png") no-repeat;
+  background-size: 100% 100%;
+}
+[type = "search"]
+{
+  width: calc(100% - 40px);
+}
+/* 공통 컨테이너 */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.appMain {
+padding: 10px;
+display: flex;
+flex-flow: row wrap;
+}
+.book .content{
+    width: 100%;
+}
+.sprite
+{
+  background: url("./images/sprite_main.png") no-repeat;
+  padding-left: 65px;
+  height: 60px
+}
+.news .sprite
+{
+    background-position: 0 -230px;
+}
+.board .sprite
+{
+    background-position: 0 -115px;
+}
+.twitter .sprite
+{
+    background-position: 0 -460px;
+}
+.favorite .sprite
+{
+    background-position: 0 -345px;
+}
+@media screen and (max-width: 999px) {
+  /* 모바일 디바이스 */
+  .appHeader,
+  .appMain,
+  .appFooter {
+    width: 100%;
+  }
+  .appNavigation {
+    display: none;
+  }
+  /* 모바일 헤더 */
+  .appHeader {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background: rgb(56, 48, 46);
+  }
+  .brand,
+  .memberOnly,
+  .searchForm {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  /* 모바일 브랜드 */
+  .brand img {
+    padding: 10px 0;
+  }
+  /* 모바일 멤버링크 */
+  .memberOnly {
+    order: -1;
+    text-align: right;
+    background-color: rgb(152, 133, 116);
+  }
+  .memberOnly li {
+    display: inline-block;
+    line-height: 30px;
+    color: #fff;
+  }
+
+  /* 모바일 검색 폼 */
+  .searchForm {
+  }
+  .appMain {
+    height: 70vh;
+  }
+  .book,
+  .news,
+  .board,
+  .twitter,
+  .favorite {
+    width: 100%;
+    height: 20%;
+  }
+  .appFooter {
+    height: 15vh;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* 데스크탑 컨테이너 */
+  .container {
+    background-color: pink;
+    justify-content: center;
+  }
+  .appHeader,
+  .appMain {
+    width: 1000px;
+    padding: 20px;
+  }
+  .appNavigation,
+  .appFooter {
+    width: 100%;
+  }
+  .appHeader {
+    height: 10vh;
+  }
+  .appNavigation {
+    height: 20vh;
+  }
+  .appMain {
+    height: 60vh;
+    justify-content: space-between;
+  }
+  .book {
+    width: 320px;
+  }
+  .news {
+    width: 660px;
+  }
+  .board {
+    width: 320px;
+  }
+  .twitter {
+    width: 400px;
+  }
+  .favorite {
+    width: 240px;
+  }
+  .appFooter {
+    height: 10vh;
+  }
+}

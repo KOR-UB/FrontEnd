@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/starbuxclone">
+    <title>스타벅스 클론</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+            padding: 0px 20px;
+        }
+        body
+        {
+        }
+        header
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000000000000000000000000000000000000000000000000000000000000;
+            background: #f6f5ef;
+            width: 100%;
+            height: 123px;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            align-items: center;
+            padding: 0 30px;
+            border-top: 2px solid black;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        header .logo
+        {
+            position: relative;
+            top: -8px;
+            width: 75px;
+            height: 75px;
+            background: url(https://www.istarbucks.co.kr/common/img/common/logo.png) no-repeat;
+        }
+        header .logo a
+        {
+            color: transparent;
+            font-size: 0.01em;
+        }
+        header nav
+        {
+            width: 100%;
+            margin-right: 60px;
+        }
+        header nav ul
+        {
+            float: right;
+            align-self: flex-end;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }   
+        header nav ul li,
+        header nav ul span
+        {
+            align-self: flex-end;
+            font-size: 0.8em;
+        }
+        header nav ul span
+        {
+            opacity: .3;
+        }
+        header nav ul .search input
+        {
+            display: none;
+        }
+        header nav ul .search a
+        {
+            position: relative;
+            top: 6px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+        }
+        header .menu-list
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 1em;
+        }
+        .Max1100
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .sec1
+        {
+            width: 100%;
+            height: 768px;
+            background: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/20_blossom_bev_bg.jpg) no-repeat;
+            background-position: bottom center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="Max1100">
+            <nav>
+                <ul>
+                    <li><a href="#">Sign In</a></li><span>ㅣ</span>
+                    <li><a href="#">My Starbucks</a></li><span>ㅣ</span>
+                    <li><a href="#">Customer Service & Ideas</a></li><span>ㅣ</span>
+                    <li><a href="#">Find a Store</a></li>
+                    <div class="search">
+                        <input type="search" name="search" aria-label="검색" placeholder="통합검색">
+                        <a href="#"><img src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png" alt="검색 돋보기"></a>
+                    </div>
+                </ul>
+            </nav>
+            <h1 class="logo">
+                <a href="#"><a href="#">로고</a>
+            </h1>
+                <div>
+                    <ul class="menu-list">
+                        <li><a href="#">coffee</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">responsibility</a></li>
+                        <li><a href="#">my starbucks rewards</a></li>
+                        <li><a href="#">whats new</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <section class="sec1 banner">
+            <div class="Max1100">
+            </div>
+        </section>
+        <div class="board">
+            <div class="Max1100">
+            </div>
+        </div>
+        <div class="reward">
+            <div class="Max1100">
+            </div>
+        </div>
+        <section class="sec2 banner">
+            <div class="Max1100">
+            </div>
+        </section>
+        <div class="small-banner">
+            <div class="Max1100">
+            </div>
+        </div>
+        <section class="sec3 banner">
+            <div class="Max1100">
+            </div>
+        </section>
+        <section class="sec4 banner">
+            <div class="Max1100">
+            </div>
+        </section>
+        <section class="sec5 banner">
+            <div class="Max1100">
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

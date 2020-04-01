@@ -17,7 +17,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
+    flex-flow: row wrap;
     background: rgb(97, 70, 20);
 }
 .appHeader nav
@@ -129,7 +129,6 @@ body
 {
     box-shadow: none;
     transform: translateY(10px) rotate(450deg);
-    
 }
 .appHeader.active .toggle::after
 {
