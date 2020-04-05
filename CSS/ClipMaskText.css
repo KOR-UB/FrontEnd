@@ -59,7 +59,7 @@ section:nth-child(4) .content h2
 {
     background-image: url(../img/Sand1.jpg);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-size: 1400px 900px;
 }
 section .content a
