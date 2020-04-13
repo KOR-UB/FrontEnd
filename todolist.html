@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        .form,
+        .greetings
+        {
+            display: none;
+        }
+        .js-greetings
+        {
+            text-align: center;
+            font-size: 6em;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-image: url(../img/italy.jpg);
+            background-attachment: fixed;
+            animation: movebg 40s linear infinite;
+        }
+        form
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .js-toDoList
+        {
+            overflow: hidden;
+        }
+        .js-toDoList li
+        {   
+            text-align: center;
+            transform: translateX(100%);
+            margin: 15px 0;
+            animation: move 2s ease-in-out forwards;
+            font-size: 1.3em;
+        }
+        @keyframes move
+        {
+            0%
+            {
+   
+            }
+            100%
+            {
+                background: skyblue;
+                filter: hue-rotate(360deg);
+                color: black;
+                transform: none;
+            }
+        }
+        input
+        {
+            font-size: 2em;
+            text-align: left;
+            width: 40%;
+            border: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            transition: .4s ease-in-out;
+            background: linear-gradient(75deg, rgba(201, 54, 230, 0.5)19.9%, rgb(255, 255, 255) 20%,  rgba(55, 167, 212, 0.5) 20.1%);
+        }
+        input:hover,
+        input:focus
+        {
+            background: linear-gradient(-75deg, rgb(201, 54, 230)19.9%, rgb(255, 255, 255) 20%,  rgb(55, 168, 212) 20.1%);
+            color: white;
+            width: 80%;
+            border-radius: 20px;
+        }
+        input::placeholder
+        {
+            transition: 1s;
+            color: black;
+            text-align: center;
+        }
+        input:hover::placeholder
+        {
+            color: white;
+            transform: translateX(40%);
+        }
+        .js-clock
+        {
+            width: 100%;
+            text-align: center;
+            font-size: 15em;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-image: url(../img/italy.jpg);
+            background-attachment: fixed;
+            animation: movebg 40s linear infinite;
+        }
+        @keyframes movebg
+        {
+            0%
+            {
+                background-position: -2000px;
+            }
+            100%
+            {
+                background-position: 2000px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="js-clock">00:00:00</h1>
+    <form class="js-form form showing">
+        <input type="text" placeholder="너의 이름은?" class="inputToDo">
+    </form>
+    <h2 class="js-greetings"></h2>
+    <form class="js-toDoForm">
+        <input type="text" placeholder="할일을 적으세요" class="inputToDo">
+    </form>
+    <ul class="js-toDoList">
+    </ul>
+    <script>
+        const clock = document.querySelector(".js-clock"),
+        form = document.querySelector(".js-form"),
+        input = form.querySelector(".inputToDo"),
+        greetings = document.querySelector(".js-greetings"),
+        
+        toDoForm = document.querySelector(".js-toDoForm"),
+        toDoInput = toDoForm.querySelector(".inputToDo"),
+        toDoList = document.querySelector(".js-toDoList");
+
+        const USER_LS = "currentUser",
+        SHOWING_CN = "showing",
+        
+        TODOS_LS = "toDos";
+        let toDos = [];
+
+        function ClockCheck()
+        {
+            const date = new Date();
+            const h = date.getHours();
+            const m = date.getMinutes();
+            const s = date.getSeconds();
+            clock.innerText = `${h < 10 ? `0${h}` : h}:${m < 10 ? `0${m}` : m}:${s < 10 ? `0${s}` : s}`;
+        }
+        ClockCheck();
+        setInterval(ClockCheck, 1000);
+
+        function loadName()
+        {
+            const currentUser = localStorage.getItem(USER_LS);
+            if(currentUser === null)
+            {
+                askForName();
+            }
+            else
+            {
+                paintGreeting(currentUser);
+            }
+        }
+        function saveName(text)
+        {
+            localStorage.setItem(USER_LS, text);
+        }
+        function askForName()
+        {
+            form.classList.add(SHOWING_CN);
+            form.addEventListener("submit", handleSubmit);
+        }
+        function handleSubmit(event)
+        {
+            event.preventDefault();
+            currentUser = input.value;
+            paintGreeting(currentUser);
+            saveName(currentUser);
+        }
+        function paintGreeting(text)
+        {
+            form.classList.remove(SHOWING_CN);
+            greetings.classList.add(SHOWING_CN);
+            greetings.innerText = `안녕하세요 ${text}`;
+        }
+        loadName();
+
+        function toDoInit()
+        {
+            loadToDos();
+            toDoForm.addEventListener("submit", submitHandle)
+        }
+        function submitHandle(event)
+        {
+            event.preventDefault();
+            const currentvalue = toDoInput.value;
+            paintToDo(currentvalue);
+            toDoInput.value="";
+        }
+        function paintToDo(text)
+        {
+            const li = document.createElement("li"),
+            span = document.createElement("span"),
+            delBtn = document.createElement("button");
+            newId = toDos.length +1;
+            delBtn.innerText = "X";
+            span.innerText = text;
+            delBtn.addEventListener("click", deleteToDo);
+            li.appendChild(span);
+            li.appendChild(delBtn);
+            li.id = newId;
+            toDoList.appendChild(li);
+            const toDoObj = {
+                text: text,
+                id: newId
+            };
+            toDos.push(toDoObj);
+            saveToDos();
+        }
+        function deleteToDo(event)
+        {
+            const btn = event.target,
+            li = btn.parentNode;
+            
+            toDoList.removeChild(li);
+            const cleanToDos = toDos.filter(function(toDo)
+            {
+                return toDo.id !== parseInt(li.id);
+            });
+            toDos = cleanToDos;
+            saveToDos();
+        }
+        function saveToDos()
+        {
+            localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+        }
+        function loadToDos()
+        {
+            const loadedToDos = localStorage.getItem(TODOS_LS);
+            if(loadedToDos !== null)
+            {
+                const parsedToDos = JSON.parse(loadedToDos);
+                parsedToDos.forEach(function(toDo){
+                    paintToDo(toDo.text);
+                });
+            }
+        }
+        toDoInit();
+
+    </script>
+</body>
+</html>
