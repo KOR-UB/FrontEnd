@@ -4,11 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            transition: 0.5s;
+            min-height: 100vh;
+            width: 100%;
+        }
+        form
+        {
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .box
+        {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            transition: 1s;
+            margin: 15px;
+        }
+        .container
+        {
+            margin-top: 50px;
+            width: 100%;
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+        .container .cube
+        {
+            flex: 1 1 33%;
+            min-height: 40vh;
+            margin: 10px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }   
+        .todolist
+        {
+            width: 300px;
+            min-height: 50px;
+            margin: 0 auto;
+        }
+        .todolist ul
+        {
+            width: 100%;
+            min-height: 50px;
+        }
+        .todolist ul li
+        {
+            margin: 5px 0;
+            list-style: none;
+            width: 100%;
+            min-height: 30px;
+            color: white;
+        }
+        .todolist ul li:nth-child(odd)
+        {
+            background: #666;
+        }
+        .todolist ul li:nth-child(even)
+        {
+            background: #262626;
+        }
+
+    </style>
 </head>
 <body>
     <form class="js-form">
         <input placeholder="자바스크립트 테스트" style="width: 300px; background: none; border: 1px solid black; padding: 3px 10px;">
     </form>
+    <div class="container">
+        <div class="cube left">
+
+        </div>
+        <div class="cube center">
+
+        </div>
+        <div class="cube right">
+
+        </div>
+    </div>
+    <div class="todolist">
+        <form class="todo-form">
+            <input placeholder="투두리스트 테스트" type="text" name="" id="">
+        </form>
+        <ul class="todo-ul">
+
+        </ul>
+    </div>
     <script src="./thisTest.js"></script>
 </body>
 </html>
