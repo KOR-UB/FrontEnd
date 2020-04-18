@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #21fadd;
+            border-top: 3px solid black;
+        }
+        .module
+        {
+            width: 300px;
+            height: 400px;
+            background: white;
+            border: 5px solid black;
+            position: relative;
+        }
+        .module .title
+        {
+            background: black;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: white;
+            text-align: center;
+            transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+        .module .content
+        {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            transition: 0.3s ease-in-out;
+            transition-delay: 0s;
+            width: 100%;
+            height: 100%;
+            color: transparent;
+        }
+        .module .content h3
+        {
+            margin-bottom: 20px;
+        }
+        .module1:hover .title
+        {
+            transform: translateY(880%) scale(0.8);
+            background: white;
+            color: black;
+            box-sizing: content-box;
+            border: 3px solid black;
+        }
+        .module1:hover .content
+        {
+            visibility: visible;
+            color: white;
+            background: #262626;
+            transition-delay: 0.2s;
+        }
+        .module2 .title
+        {
+            transition-delay: 0.8s;
+        }
+        .module2:hover .title
+        {
+            transform: translateY(-100%);
+            transition-delay: 0s;
+        }
+        .module2:hover .content .details
+        {
+            visibility: visible;
+            background: #505050;
+            transform: translateX(-100%);
+            transition-delay: 0.6s;
+        }
+        .module2 .content .details
+        {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            height: 100%;
+            transition: 0.6s ease-in-out;
+        }
+        .module2 .content 
+        {
+            transition-delay: 0.6s;
+        }
+        .module2:hover .content
+        {
+            transform: translateX(100%);
+            visibility: visible;
+            color: white;
+            background: #262626;
+            transition-delay: 0.4s;
+        }
+        .module3 .content
+        {
+            margin-top: 40px;
+            visibility: visible;
+            color: black;
+        }
+        .module3 .content .ofbox
+        {
+            width: 100%;
+            overflow: hidden;
+        }
+        .module3 .content .ofbox h3
+        {   
+            transform: translateY(50px);
+            transition: 0.5s;
+        }
+        .module3:hover .content .ofbox h3,
+        .module3:hover .content .ofbox p
+        {
+            transform: none;
+        }
+        .module3 .content .ofbox p
+        {
+            transform: translateX(-250px);
+            transition: 0.5s;
+            transition-delay: 0.3s;
+        }
+        .module4
+        {
+            border: none;
+        }
+        .module4 .content
+        {
+            visibility: visible;
+            top: 40px;
+            opacity: 0;
+            color: black;
+            transition: 0.5s;
+            transition-delay: 0.6s;
+        }
+        .module4 .content h3
+        {
+            color: slateblue;
+        }
+        .module4 .content p
+        {
+            color: steelblue;
+        }
+        .module4:hover .content
+        {
+            opacity: 1;
+        }
+        .module4 .title{
+            background: skyblue;
+            color: rgb(15, 79, 255);
+        }
+        .module4 .title::after
+        {
+            content: "";
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 0%;
+            height: 3px;
+            background: black;
+            transition: 0.8s linear;
+        }
+        .module4 span{
+            display: block;
+            overflow: hidden;
+            transition: 0.8s linear;
+            background: black;
+        }
+        .module4 span:nth-child(1)
+        {
+            position: absolute;
+            width: 0%;
+            height: 3px;
+        }
+        .module4 span:nth-child(2)
+        {
+            position: absolute;
+            bottom: 0;
+            width: 3px;
+            height: 0%;
+        }
+        .module4 span:nth-child(3)
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0%;
+            height: 3px;
+        }
+        .module4 span:nth-child(4)
+        {
+            position: absolute;
+            right: 0;
+            width: 3px;
+            height: 0%;
+        }
+        .module4:hover span:nth-child(odd),
+        .module4:hover .title::after
+        {   
+            width: 100%;
+        }
+        .module4:hover span:nth-child(even)
+        {   
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="module module1">
+            <div class="title">
+                <h2>Title</h2>
+            </div>
+            <div class="content">
+                <h3>Sub Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="module module2">
+            <div class="title">
+                <h2>Title</h2>
+            </div>
+            <div class="content">
+                <h3>Sub Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                <div class="details">
+                    <h3>Sub Title2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="module module3">
+            <div class="title">
+                <h2>Title</h2>
+            </div>
+            <div class="content">
+                <div class="ofbox">
+                    <h3>Sub Title</h3>
+                </div>
+                <div class="ofbox">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="module module4">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="title">
+                <h2>Title</h2>
+            </div>
+            <div class="content">
+                <div class="ofbox">
+                    <h3>Sub Title</h3>
+                </div>
+                <div class="ofbox">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
