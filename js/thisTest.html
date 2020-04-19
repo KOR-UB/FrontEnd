@@ -108,5 +108,54 @@
         </ul>
     </div>
     <script src="./thisTest.js"></script>
+    <script>
+        let result = 0;
+        for(let i = 1; i < 20; i++)
+        {
+            if(i % 2 !== 0 && i % 3 !== 0)
+            {
+                result += i;
+            }
+        }
+        console.log("8번 문제 정답은 " + result);
+
+        result = 0;
+        for(let i = 1; i < 20; i++)
+        {
+            if(i % 2 == 0 || i % 3 == 0)
+            {
+                result += i;
+            }
+        }
+        console.log("9번 문제 정답은 " + result);
+        // function DiceRoll()
+        // {
+        //     const max = 6;
+        //     let dice1 = Math.floor(Math.random() * 6 + 1);
+        //     let dice2 = Math.floor(Math.random() * 6 + 1);
+        //     if(max === dice1 + dice2)
+        //     {
+        //         let arr = [dice1, dice2];
+        //         console.log(arr)
+        //     }
+        //     else if(max !== dice1 + dice2)
+        //     {
+        //         DiceRoll();
+        //     }
+        // }
+        // DiceRoll();
+        var txtresult = "";
+        for(let i=1; i <= 5; i++)
+        {
+            for(let j=1; j <= i; j++)
+            {
+                txtresult += "*"
+            }
+            txtresult += "\n"
+        }
+        console.log(txtresult)
+
+
+    </script>
 </body>
 </html>
