@@ -29,7 +29,7 @@ function todolist(e)
 
 
 
-const randbglist = ["red", "blue", "black", "skyblue", "#fff"];
+const randbglist = ["red", "blue", "black", "skyblue"];
 const objlist = [];
 
 function NEWObject(name)
@@ -72,7 +72,7 @@ function randbg(randNum)
     else if(randNum > 80 && randNum <= 100)
     {
         // body.style.background = randbglist[4];
-        createDiv.style.background = randbglist[4];
+        createDiv.style.background = randbglist[0];
         body.appendChild(createDiv);
     }   
 }
@@ -97,10 +97,6 @@ function paintinput(e)
     input.value = "";
     objlist.push = newobj;
 }
-
-
-
-
 
 // console.log(objlist);
 

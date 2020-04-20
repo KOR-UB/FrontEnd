@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #f2f2f2;
+}
+.center
+{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1b1b1b;
+    border-radius: 5px;
+}
+.center .button
+{
+    width: 350px;
+    background: #1b1b1b;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px 5px 0 0;
+}
+.button .text
+{
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+.button .icon
+{
+    font-size: 30px;
+    float: right;
+    line-height: 40px;
+    cursor: pointer;
+}
+.center .field
+{
+    height: 45px;
+    width: 350px;
+    background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+.field input
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    font-size: 18px;
+    outline: none;
+    background: none;
+    color: #202020;
+    border: 2px solid #1b1b1b;
+}
+.field input:focus + span
+{
+    transform: translate(0, -50%);
+}
+.field .add-btn
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(130%, -50%);
+    background: #1b1b1b;
+    font-size: 17px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.center ul
+{
+    list-style: none;
+    overflow: hidden;
+}
+.center ul li
+{
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    background: #262626;
+}
+.center ul li:nth-child(2n)
+{
+    background: #1b1b1b;
+}
+.center ul li:last-child
+{
+    border-radius: 0 0 5px 5px;
+}
+.center ul li:last-child span
+{
+    border-radius: 0 5px 5px 5px;
+}
+.center ul li span
+{
+    margin-right: 20px;
+    height: 45px;
+    width: 45px;
+    margin-left: -45px;
+    background: #e74c3c;
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s;
+}
+.center ul li:hover span
+{
+    margin-left: 0px;
+}

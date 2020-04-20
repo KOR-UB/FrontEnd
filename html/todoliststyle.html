@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/todoliststyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+        <div class="button">
+            <span class="text">To-Do List</span>
+            <span class="icon"><i class="fa fa-sort-down"></i></span>
+        </div>
+        <div class="field">
+            <input type="text" placeholder="Add your new to-do list">
+            <span class="add-btn">ADD</span>
+        </div>
+        <ul>
+            <li><span><i class="fa fa-trash"></i></span>Get a new laptop</li>
+            <li><span><i class="fa fa-trash"></i></span>Got to shopping</li>
+            <li><span><i class="fa fa-trash"></i></span>Read a newspaper</li>
+            <li><span><i class="fa fa-trash"></i></span>Go to college</li>
+            <li><span><i class="fa fa-trash"></i></span>Buy a new phone</li>
+        </ul>
+    </div>
+    <script>
+        const x = 15;
+        if(x > 10 &&  x < 20)
+        {
+            console.log("1번 문제" + x);
+        }
+
+        for(let i =0; i < 10; i++)
+        {
+            if(i % 2 == 0)
+            {
+                console.log("2번 문제" + i);
+            }
+        }
+        let str = "";
+        for(let i = 0; i < 10; i++)
+        {
+            if(i % 2 == 0)
+            {
+                str = str + i;
+            }
+        }
+        console.log("3번 문제" + str);
+
+        for(let i = 10; i > 0; i--)
+        {
+            if(i % 2 == 1)
+            {
+                console.log("4번 문제" + + i)
+            }
+        }
+
+        let temp = 0;
+        let num = 10;
+        while(num > 0)
+        {
+            num--;
+            if(num % 2 == 0)
+            {
+                console.log("5번 문제" + temp * 2);
+                temp++;
+            }
+        }
+        num = 10;
+        while(num > 0)
+        {
+            num--;
+            if(num % 2 == 1)
+            {
+                console.log("6번 문제" + num);
+            }
+        }
+
+        let result = 0;
+        for(let i=0; i < 10; i++)
+        {
+            result += i;
+            if(i == 9)
+            {
+                console.log("7번 문제" + result);
+            }
+        }
+    </script>
+</body>
+</html>
