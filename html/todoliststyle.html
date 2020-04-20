@@ -29,14 +29,14 @@
         const x = 15;
         if(x > 10 &&  x < 20)
         {
-            console.log("1번 문제" + x);
+            console.log("1번 문제 " + x);
         }
 
         for(let i =0; i < 10; i++)
         {
             if(i % 2 == 0)
             {
-                console.log("2번 문제" + i);
+                console.log("2번 문제 " + i);
             }
         }
         let str = "";
@@ -47,13 +47,13 @@
                 str = str + i;
             }
         }
-        console.log("3번 문제" + str);
+        console.log("3번 문제 " + str);
 
         for(let i = 10; i > 0; i--)
         {
             if(i % 2 == 1)
             {
-                console.log("4번 문제" + + i)
+                console.log("4번 문제 " + + i)
             }
         }
 
@@ -64,7 +64,7 @@
             num--;
             if(num % 2 == 0)
             {
-                console.log("5번 문제" + temp * 2);
+                console.log("5번 문제 " + temp * 2);
                 temp++;
             }
         }
@@ -74,7 +74,7 @@
             num--;
             if(num % 2 == 1)
             {
-                console.log("6번 문제" + num);
+                console.log("6번 문제 " + num);
             }
         }
 
@@ -84,9 +84,123 @@
             result += i;
             if(i == 9)
             {
-                console.log("7번 문제" + result);
+                console.log("7번 문제 " + result);
             }
         }
+        result = 0;
+        for(let i = 1; i < 20; i++)
+        {
+            if(i % 2 !== 0 && i % 3 !== 0)
+            {
+                result += i;
+            }
+        }
+        console.log("8번 문제 " + result);
+
+        result = 0;
+        for(let i = 1; i < 20; i++)
+        {
+            if(i % 2 == 0 || i % 3 == 0)
+            {
+                result += i;
+            }
+        }
+        console.log("9번 문제 " + result);
+        
+        // 10번 문제 주사위 2개를 굴려 총 합이 6이 되는 경우의 수를 모두 출력하시오.
+        // [1,5]
+        // [2,4]
+        // [3,3]
+        // [4,2]
+        // [5,1]
+        // let arr = "";
+        // const max = 6;
+        // function DiceRoll()
+        // {
+        //     let dice1 = Math.floor(Math.random() * 6 + 1);
+        //     let dice2 = Math.floor(Math.random() * 6 + 1);
+        //     arr += `[${dice1}, ${dice2}]`;
+        //     filterStr(arr, max, dice1, dice2);
+        // }
+        // function filterStr(Arr, Max, Dice1, Dice2)
+        // {
+        //     if(Max === Dice1 + Dice2)
+        //     {
+        //         console.log("10번 문제 " + Arr);
+        //     }
+        //     else if(Max !== Dice1 + Dice2)
+        //     {
+        //         DiceRoll();
+        //     }
+        // }
+        // DiceRoll();
+        for(let i = 1; i <= 6; i++)
+        {
+            for(let j = 1; j <= 6; j++)
+            {
+                result = i+j;
+                if(result === 6)
+                {
+                    console.log(`10번 문제 [${i}, ${j}]`)
+                }
+            }
+        }
+
+        var txtresult = "";
+        for(let i=1; i <= 5; i++)
+        {
+            for(let j=1; j <= i; j++)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
+        }
+        console.log("11번 문제\n" + txtresult);
+
+        function Obj(name, age){
+            this.name = name,
+            this.age = age
+        };
+        const UB = new Obj("UB", "24");
+        console.log(UB);
+        if(UB.age === "24")
+        {
+            console.log("스트링");
+        }
+        else if(UB.age === 24)
+        {
+            console.log("넘버");
+        }
+        if(UB.age == "24")
+        {
+            console.log("스트링");
+        }
+
+        yadsa = 10;
+        console.log("yadsa는" + yadsa);
+
+        console.log(a);
+        var a = 1;
+        const 테스트 = 10000;
+        console.log(테스트);
+        console.log(a);
+        a + 100;
+        console.log(a);
+
+        function sum(...rest)
+        {
+            return rest.reduce((acc, current) => acc + current, 0);
+        }
+
+        const TestArray = [1,2,3,4,5];
+        const resultArray = sum(
+            TestArray[0],
+            TestArray[1],
+            TestArray[2], 
+            TestArray[3],
+            TestArray[4]
+        );
+        console.log(resultArray);
     </script>
 </body>
 </html>
