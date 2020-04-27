@@ -84,17 +84,17 @@
 // {
 //     console.log("x와 z 불일치합니다.");
 // }
-var x = 1;
-var y = 2;
-if(x === 1 || y === 3)
-{
-    console.log("둘중 하나라도 트루라면 트루")
-}
-if (x === 1 && y === 3)
-{
-    console.log("둘중 하나라도 false라면 false");
-}
-if(x == !null)  
-{
-    console.log("x가 널이 아니라면 실행")
-}
+// var x = 1;
+// var y = 2;
+// if(x === 1 || y === 3)
+// {
+//     console.log("둘중 하나라도 트루라면 트루")
+// }
+// if (x === 1 && y === 3)
+// {
+//     console.log("둘중 하나라도 false라면 false");
+// }
+// if(x == !null)  
+// {
+//     console.log("x가 널이 아니라면 실행")
+// }

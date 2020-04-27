@@ -34,7 +34,7 @@
 
         for(let i =0; i < 10; i++)
         {
-            if(i % 2 == 0)
+            if(i % 2 === 0)
             {
                 console.log("2번 문제 " + i);
             }
@@ -42,7 +42,7 @@
         let str = "";
         for(let i = 0; i < 10; i++)
         {
-            if(i % 2 == 0)
+            if(i % 2 === 0)
             {
                 str = str + i;
             }
@@ -51,9 +51,9 @@
 
         for(let i = 10; i > 0; i--)
         {
-            if(i % 2 == 1)
+            if(i % 2 === 1)
             {
-                console.log("4번 문제 " + + i)
+                console.log("4번 문제 "  + i)
             }
         }
 
@@ -62,7 +62,7 @@
         while(num > 0)
         {
             num--;
-            if(num % 2 == 0)
+            if(num % 2 === 0)
             {
                 console.log("5번 문제 " + temp * 2);
                 temp++;
@@ -72,7 +72,7 @@
         while(num > 0)
         {
             num--;
-            if(num % 2 == 1)
+            if(num % 2 === 1)
             {
                 console.log("6번 문제 " + num);
             }
@@ -82,7 +82,7 @@
         for(let i=0; i < 10; i++)
         {
             result += i;
-            if(i == 9)
+            if(i === 9)
             {
                 console.log("7번 문제 " + result);
             }
@@ -100,7 +100,7 @@
         result = 0;
         for(let i = 1; i < 20; i++)
         {
-            if(i % 2 == 0 || i % 3 == 0)
+            if(i % 2 === 0 || i % 3 === 0)
             {
                 result += i;
             }
@@ -157,50 +157,122 @@
         }
         console.log("11번 문제\n" + txtresult);
 
-        function Obj(name, age){
-            this.name = name,
-            this.age = age
-        };
-        const UB = new Obj("UB", "24");
-        console.log(UB);
-        if(UB.age === "24")
+        txtresult = "";
+        for(let i = 4; i >= 0; i--)
         {
-            console.log("스트링");
+            for(let j = i; j <= 5; j++)
+            {
+                txtresult += " ";
+            }
+            for(let j = 0; j <= i; j++)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
         }
-        else if(UB.age === 24)
+        console.log("12번 문제\n" + txtresult);
+
+        txtresult = "";
+        for(let i=1; i <= 5; i++)
         {
-            console.log("넘버");
+            for(let j = i; j <= 5; j++)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
         }
-        if(UB.age == "24")
+        console.log("13번 문제\n" + txtresult);
+        
+        txtresult = "";
+        for(let i = 0; i <= 4; i++)
         {
-            console.log("스트링");
+            for(let j = i; j <= 5; j++)
+            {
+                txtresult += " ";
+            }
+            for(let j = 0; j <= i; j++)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
         }
+        console.log("14번 문제\n" + txtresult);
 
-        yadsa = 10;
-        console.log("yadsa는" + yadsa);
 
-        console.log(a);
-        var a = 1;
-        const 테스트 = 10000;
-        console.log(테스트);
-        console.log(a);
-        a + 100;
-        console.log(a + 100);
-
-        function sum(...rest)
-        {
-            return rest.reduce((acc, current) => acc + current, 0);
+        txtresult = "";
+        for(let i = 0; i <= 4; i++)
+        {   
+            for(let j = 4; j >= i; j--)
+            {
+                txtresult += " ";
+            }
+            for(let j = 0; j < 2*i+1; j++)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
         }
+        console.log("15번 문제\n" + txtresult);
+        
+        txtresult = "";
+        for(let i = 0; i <= 4; i++)
+        {   
+            for(let j = 0; j < i; j++)
+            {
+                txtresult += " ";
+            }
+            for(let j = 2*5-1; j>2*i; j--)
+            {
+                txtresult += "*";
+            }
+            txtresult += "\n";
+        }
+        console.log("16번 문제\n" + txtresult);
 
-        const TestArray = [1,2,3,4,5];
-        const resultArray = sum(
-            TestArray[0],
-            TestArray[1],
-            TestArray[2], 
-            TestArray[3],
-            TestArray[4]
-        );
-        console.log(resultArray);
+        // function Obj(name, age){
+        //     this.name = name,
+        //     this.age = age
+        // };
+        // const UB = new Obj("UB", "24");
+        // console.log(UB);
+        // if(UB.age === "24")
+        // {
+        //     console.log("스트링");
+        // }
+        // else if(UB.age === 24)
+        // {
+        //     console.log("넘버");
+        // }
+        // if(UB.age == "24")
+        // {
+        //     console.log("스트링");
+        // }
+
+        // yadsa = 10;
+        // console.log("yadsa는" + yadsa);
+
+        // console.log(a);
+        // var a = 1;
+        // const 테스트 = 10000;
+        // console.log(테스트);
+        // console.log(a);
+        // a + 100;
+        // console.log(a + 100);
+
+        // function sum(...rest)
+        // {
+        //     return rest.reduce((acc, current) => acc + current, 0);
+        // }
+
+        // const TestArray = [1,2,3,4,5];
+        // const resultArray = sum(
+        //     TestArray[0],
+        //     TestArray[1],
+        //     TestArray[2], 
+        //     TestArray[3],
+        //     TestArray[4]
+        // );
+        // console.log(resultArray);
     </script>
 </body>
 </html>
