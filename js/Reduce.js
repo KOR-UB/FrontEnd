@@ -98,3 +98,38 @@
 // {
 //     console.log("x가 널이 아니라면 실행")
 // }
+
+// function repeat(n, f) 
+// {
+//     for (let i = 0; i < n; i++)
+//     {
+//         f(i, 2, 3);
+//     }
+// }
+// repeat(3, console.log);
+// repeat(3, function (i)
+// {
+//     console.log(i);
+// });
+
+let change_count = 0;
+function ChangeValue()
+{
+    change_count ++;
+    switch(change_count)
+    {
+        case 1:
+        console.log(change_count);
+        break;
+        case 2:
+        console.log(change_count);
+        break;
+        case 3:
+        console.log(change_count);
+        break;
+        default:
+        change_count = 0;
+        clearInterval(change);
+    }
+}
+const change = setInterval(ChangeValue, 1000)
