@@ -23,13 +23,13 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#d18fd7"
       },
       "shape": {
-        "type": "star",
+        "type": "triangle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#ffffff"
         },
         "polygon": {
           "nb_sides": 5
@@ -85,8 +85,8 @@ particlesJS('particles-js',
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": false,
-          "mode": ["grab", "bubble", "repulse"]
+          "enable": true,
+          "mode": ["bubble"]
         },
         "onclick": {
           "enable": true,
@@ -102,7 +102,7 @@ particlesJS('particles-js',
           }
         },
         "bubble": {
-          "distance": 300,
+          "distance": 500,
           "size": 20,
           "duration": 2,
           "opacity": 8,
