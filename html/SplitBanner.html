@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Banner</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: consolas;
+        }
+        body
+        {
+            background: #000;
+            min-height: 200vh;
+        }   
+        section
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        section .side
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/norway.jpg) no-repeat;
+        }
+        section .side#side1
+        {
+            clip-path: polygon(49% 0, 81% 20%, 48% 32%, 79% 44%, 44% 70%, 79% 80%, 40% 100%, 100% 100%, 100% 0);
+        }
+        section .side#side2
+        {
+            clip-path: polygon(49% 0, 81% 20%, 48% 32%, 79% 44%, 44% 70%, 79% 80%, 40% 100%, 0 100%, 0 0);
+        }
+        .contentBx
+        {
+            width: 600px;
+            margin: 0 auto;
+            color: #fff;
+            padding-top: 100vh;
+        }
+        .contentBx h2
+        {
+            position: relative;
+            font-size: 4em;
+        }
+        .contentBx p
+        {
+            position: relative;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="side" id="side1"></div>
+        <div class="side" id="side2"></div>
+    </section>
+    <div class="contentBx">
+        <h2>Split Banner</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et nostrum a possimus perspiciatis, adipisci, ea sed laboriosam, ratione molestiae officia voluptatem voluptatum animi earum eos. Minima veniam nisi tempore odit.
+            Nobis dicta doloribus recusandae, omnis nisi aliquid, impedit itaque repellat aspernatur porro voluptatum. Tenetur esse in autem ducimus. Sapiente odit maxime doloremque blanditiis assumenda suscipit vel nesciunt quasi iusto necessitatibus?
+            Dignissimos, sed suscipit fugiat delectus nostrum sunt iste, perferendis quam repellat ducimus soluta incidunt architecto dicta facere ut cum atque natus voluptate dolore praesentium obcaecati aspernatur saepe autem! Pariatur, minus.
+            Dolore maiores reprehenderit maxime nostrum sit dolorem amet consequatur, nulla, fuga praesentium id tempora aspernatur at quas iste inventore, corporis a quos nisi repellendus! Omnis provident nemo odio quis tenetur?
+            Corporis reiciendis dolorem earum dicta nulla modi nihil atque ad. Maxime molestiae numquam, eum dicta a id tenetur! Cum qui eveniet nihil illo, reiciendis nobis omnis. Rem ipsa animi repudiandae!
+            Aperiam quasi voluptas at ipsam adipisci, nobis, consequatur tempore quaerat quisquam commodi, omnis minus voluptatem laborum dolorum assumenda nemo necessitatibus ab veritatis maxime rerum possimus quis alias eaque veniam? Asperiores?
+        </p>
+    </div>
+    <script>
+        var side1 = document.getElementById("side1");
+        var side2 = document.getElementById("side2");
+        window.addEventListener("scroll", function () {
+            side1.style.left = window.pageYOffset + "px";
+            side2.style.left = -window.pageYOffset + "px";
+        })
+
+    </script>
+</body>
+</html>
