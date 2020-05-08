@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *
-        {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        section
-        {
+
+        section {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -20,17 +20,18 @@
             align-items: center;
             background: #21fadd;
             border-top: 3px solid black;
+            overflow: hidden;
         }
-        .module
-        {
+
+        .module {
             width: 300px;
             height: 400px;
             background: white;
             border: 5px solid black;
             position: relative;
         }
-        .module .title
-        {
+
+        .module .title {
             background: black;
             width: 100%;
             height: 40px;
@@ -39,8 +40,8 @@
             text-align: center;
             transition: 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         }
-        .module .content
-        {
+
+        .module .content {
             visibility: hidden;
             position: absolute;
             top: 0;
@@ -52,43 +53,43 @@
             height: 100%;
             color: transparent;
         }
-        .module .content h3
-        {
+
+        .module .content h3 {
             margin-bottom: 20px;
         }
-        .module1:hover .title
-        {
+
+        .module1:hover .title {
             transform: translateY(880%) scale(0.8);
             background: white;
             color: black;
             box-sizing: content-box;
             border: 3px solid black;
         }
-        .module1:hover .content
-        {
+
+        .module1:hover .content {
             visibility: visible;
             color: white;
             background: #262626;
             transition-delay: 0.2s;
         }
-        .module2 .title
-        {
+
+        .module2 .title {
             transition-delay: 0.8s;
         }
-        .module2:hover .title
-        {
+
+        .module2:hover .title {
             transform: translateY(-100%);
             transition-delay: 0s;
         }
-        .module2:hover .content .details
-        {
+
+        .module2:hover .content .details {
             visibility: visible;
             background: #505050;
             transform: translateX(-100%);
             transition-delay: 0.6s;
         }
-        .module2 .content .details
-        {
+
+        .module2 .content .details {
             visibility: hidden;
             position: absolute;
             top: 0;
@@ -97,51 +98,51 @@
             height: 100%;
             transition: 0.6s ease-in-out;
         }
-        .module2 .content 
-        {
+
+        .module2 .content {
             transition-delay: 0.6s;
         }
-        .module2:hover .content
-        {
+
+        .module2:hover .content {
             transform: translateX(100%);
             visibility: visible;
             color: white;
             background: #262626;
             transition-delay: 0.4s;
         }
-        .module3 .content
-        {
+
+        .module3 .content {
             margin-top: 40px;
             visibility: visible;
             color: black;
         }
-        .module3 .content .ofbox
-        {
+
+        .module3 .content .ofbox {
             width: 100%;
             overflow: hidden;
         }
-        .module3 .content .ofbox h3
-        {   
+
+        .module3 .content .ofbox h3 {
             transform: translateY(50px);
             transition: 0.5s;
         }
+
         .module3:hover .content .ofbox h3,
-        .module3:hover .content .ofbox p
-        {
+        .module3:hover .content .ofbox p {
             transform: none;
         }
-        .module3 .content .ofbox p
-        {
+
+        .module3 .content .ofbox p {
             transform: translateX(-250px);
             transition: 0.5s;
             transition-delay: 0.3s;
         }
-        .module4
-        {
+
+        .module4 {
             border: none;
         }
-        .module4 .content
-        {
+
+        .module4 .content {
             visibility: visible;
             top: 40px;
             opacity: 0;
@@ -149,24 +150,25 @@
             transition: 0.5s;
             transition-delay: 0.6s;
         }
-        .module4 .content h3
-        {
+
+        .module4 .content h3 {
             color: slateblue;
         }
-        .module4 .content p
-        {
+
+        .module4 .content p {
             color: steelblue;
         }
-        .module4:hover .content
-        {
+
+        .module4:hover .content {
             opacity: 1;
         }
-        .module4 .title{
+
+        .module4 .title {
             background: skyblue;
             color: rgb(15, 79, 255);
         }
-        .module4 .title::after
-        {
+
+        .module4 .title::after {
             content: "";
             position: absolute;
             top: 40px;
@@ -176,85 +178,153 @@
             background: black;
             transition: 0.8s linear;
         }
-        .module4 span{
+
+        .module4 span {
             display: block;
             overflow: hidden;
             transition: 0.8s linear;
             background: black;
         }
-        .module4 span:nth-child(1)
-        {
+
+        .module4 span:nth-child(1) {
             position: absolute;
             width: 0%;
             height: 3px;
         }
-        .module4 span:nth-child(2)
-        {
+
+        .module4 span:nth-child(2) {
             position: absolute;
             bottom: 0;
             width: 3px;
             height: 0%;
         }
-        .module4 span:nth-child(3)
-        {
+
+        .module4 span:nth-child(3) {
             position: absolute;
             right: 0;
             bottom: 0;
             width: 0%;
             height: 3px;
         }
-        .module4 span:nth-child(4)
-        {
+
+        .module4 span:nth-child(4) {
             position: absolute;
             right: 0;
             width: 3px;
             height: 0%;
         }
+
         .module4:hover span:nth-child(odd),
-        .module4:hover .title::after
-        {   
+        .module4:hover .title::after {
             width: 100%;
         }
-        .module4:hover span:nth-child(even)
-        {   
+
+        .module4:hover span:nth-child(even) {
             height: 100%;
         }
-        .module5
-        {
+
+        .module5 {
             margin: 0 20px;
             transform: scale(0.5);
             transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .module5:hover
-        {
+
+        .module5:hover {
             transform: scale(1);
         }
-        .module5 .content
-        {
+
+        .module5 .content {
             margin-top: 40px;
             transform-origin: right top;
             transform: scale(0);
         }
-        .module5:hover .content
-        {
+
+        .module5:hover .content {
             visibility: visible;
             color: black;
             transform: scale(1);
         }
+
         @keyframes ripanim {
-            0%
-            {
-            
-            }
-            100%
-            {
+            0% {}
+
+            100% {
                 width: 1000px;
                 height: 1000px;
             }
         }
+        h6
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, rgb(212, 39, 160) 10%, rgb(0, 217, 255) 80%, transparent) !important;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: toucheffect 1s linear infinite;
+        }
+        @keyframes toucheffect
+        {
+            0%
+            {
+                width: 0px;
+                height: 0px;
+                opacity: 0.5;
+            }
+            100%
+            {
+                width: 5000px;
+                height: 5000px;
+                opacity: 0;
+            }
+        }
+        header 
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: #38daa7;
+            padding: 0px 200px;
+        }
+        header .menu
+        {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .menu li a 
+        {
+            position: relative;
+            font-size: 2em;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.5s;
+        }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1 class="logo">Master CSS & JS</h1>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </header>
     <section>
         <div class="module module1">
             <div class="title">
@@ -262,7 +332,9 @@
             </div>
             <div class="content">
                 <h3>Sub Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a
+                    illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                    Debitis, voluptatum.</p>
             </div>
         </div>
     </section>
@@ -273,10 +345,14 @@
             </div>
             <div class="content">
                 <h3>Sub Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a
+                    illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                    Debitis, voluptatum.</p>
                 <div class="details">
                     <h3>Sub Title2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -291,7 +367,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -310,7 +388,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -329,7 +409,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -346,7 +428,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -363,7 +447,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -380,7 +466,9 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
@@ -397,38 +485,45 @@
                     <h3>Sub Title</h3>
                 </div>
                 <div class="ofbox">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis, a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde! Debitis, voluptatum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quas nulla eum iste blanditiis,
+                        a illum quia cumque, molestias, aliquid laboriosam distinctio minima nam nostrum iure quis unde!
+                        Debitis, voluptatum.</p>
                 </div>
             </div>
         </div>
     </section>
     <script>
-    // const Allmodule = document.querySelectorAll(".module");
-    // Array.from(Allmodule).forEach(Allmodule => Allmodule.addEventListener("click",function (e) {
-    //     if(Allmodule.style.backgroundColor !== "violet") {
-    //         Allmodule.style.backgroundColor = "violet"
-    //     }
-    //     else {
-    //         Allmodule.style.backgroundColor = "#fff"
-    //     }
-    // }));
-    // const sum = function (...rest) {
-    //     return rest.reduce((arr, cur) => arr + cur, 0)
-    // } 
-    // console.log(sum(1, 2, 3, 4));
-    // function Person(name) {
-    //     this.name = name;
-    // }
-    // Person.prototype.sayHi = function() {
-    //     console.log(`hi~ my name is ${this.name}`);
-    // }
-    // const me = new Person('Lee');
-    // me.sayHi();
-    const person = function () {
-        name= "Lee"
-    };
-    console.dir(person);
-    
+        function ripple(e) {
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
+
+            let ripples = document.createElement("h6");
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+            console.log(this);
+            setTimeout(() => {
+                ripples.remove()
+            }, 1000);
+        }
+        const module = document.querySelectorAll('.module');
+        module.forEach(mod => {
+            mod.addEventListener('click', ripple);
+        })
+        const menu = document.querySelectorAll(".menu li a");
+        menu.forEach(menu => {
+            menu.addEventListener("mouseenter", function () {
+                menu.style.borderBottom = 5 + "px solid black";
+            });
+            
+            menu.addEventListener("mouseenter", ripple);
+            menu.addEventListener("mouseleave", function() {
+                menu.style.borderBottom = 0;
+                menu.style.transform = "none";
+            });
+        });
+        
     </script>
 </body>
+
 </html>
