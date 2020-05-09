@@ -9,6 +9,14 @@
     
 </body>
 <script>
-    
+    function Box(size) {
+        this.size = size;
+        this.getTest = function () {
+            return this.size * 0.5;
+        }
+    }
+    const box1 = new Box(5);
+
+    console.dir(box1.getTest());
 </script>
 </html>
