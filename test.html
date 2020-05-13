@@ -30,52 +30,6 @@
         // }());
         // document.querySelector(".increase").addEventListener("click", Counter.increase);
         // document.querySelector(".decrease").addEventListener("click", Counter.decrease); 
-
-        // const Closer = (function()
-        // {
-        //     let result = 0;
-        //     function sum(arr)
-        //     {
-        //         if(!arr)
-        //         {
-        //             throw new TypeError("에러가 발생했습니다.")
-        //         }
-        //         for (let i = 0; i < arr.length; i++) {
-        //             result += arr[i];
-        //         } 
-        //         console.log(result);
-        //     }
-        //     sum();
-        //     sum([]);
-        //     sum([1, 2, 3]);
-        //     sum([1, 2, 3, 4, 5])
-        // }());
-
-        // 주어진 배열에 주어진 값이 요소로 존재하는지 확인하여 존재하는 경우 해당 인덱스를 반환하고 존재하지 않는 경우 -1을 반환하는 함수를 구현하라. 단 어떠한 빌트인 함수도 하용하지 않고
-        //for문을 사용하여 구현하여야 한다.
-        function linearSearch(array, target)
-        {
-            for (let i = 0; i < array.length; i++) {
-                if(array[i] === target)
-                {
-                    return array[i] -1;
-                }
-                if(i === array.length -1)
-                {
-                    if(array[i] !== target)
-                    {
-                        return -1;
-                    }
-                }
-            }
-        }
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 1)); //0
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 3)); //2
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 5)); //4
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 6)); //5
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], -1)); //-1
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 0)); //-1
-        console.log(linearSearch([1, 2, 3, 4, 5, 6,], 7)); //-1
     </script>
 </body>
 </html>

@@ -84,7 +84,14 @@
             </div>
         </div>
     </section>
-    <script src="./Reduce.js"></script>
-
+    <!-- <script src="./Reduce.js"></script> -->
+    <script>
+        document.querySelector("body").addEventListener("click", function() {
+            console.log(this)
+            setTimeout(function() {
+                console.log(this);    
+            }.bind(this),1000)
+        })
+    </script>
 </body>
 </html>
