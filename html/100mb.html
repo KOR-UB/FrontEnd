@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-size: 12px;
+    }
+    .banner {
+      position: relative;
+      background: url(https://www.100mb.kr/mimg/heading04.jpg) no-repeat center center;
+      height: 383px;
+      width: 99.9%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .banner .call-group {
+      margin-left: 500px;
+    }
+
+    .banner .call-group .contentBx {
+      width: 84%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .banner .call-group img:nth-child(1) {
+      display: inline-block;
+      padding: 40px 0px 20px 0px;
+    }
+
+    .banner .call-group img:nth-child(2) {
+      padding: 15px 0px 0px 20px;
+    }
+
+    .banner ul {
+      position: absolute;
+      top: 0;
+      right: 0;
+      list-style: none;
+    }
+
+    .banner ul li {
+      background: url(https://www.100mb.kr/mimg/blind.png);
+    }
+
+    .banner ul li a {
+      position: relative;
+      display: block;
+      width: 121px;
+      height: 121px;
+      background: url(https://www.100mb.kr/mimg/flt_btn.png) no-repeat;
+      color: #fff;
+      margin-bottom: 5px;
+      opacity: 0.7;
+    }
+
+    .banner ul li a:hover {
+      opacity: 1;
+    }
+
+    .banner ul li:nth-child(2) a {
+      background-position: 0 -121px;
+    }
+
+    .banner ul li:nth-child(3) a {
+      background-position: 0 -242px;
+    }
+
+    .banner ul li a span {
+      position: absolute;
+      display: block;
+      text-align: center;
+      bottom: 20px;
+      width: 100%;
+    }
+
+    .banner .callBtn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #8ab329;
+      color: #fff;
+      border: 1px solid #7a8c54;
+      border-radius: 4px;
+      font-size: 17px;
+      font-family: Malgun Gothic;
+      box-shadow: inset 1px 1px 1px #9ac23a;
+      letter-spacing: -1px;
+    }
+
+    .banner .callBtn i {
+      background: url(https://www.100mb.kr/mimg/cta_btn3.png) no-repeat 0px -74px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 1px;
+      vertical-align: middle;
+    }
+
+    .dialog {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      animation: fade 0.7s linear forwards;
+      opacity: 1;
+    }
+    @keyframes fade {
+      0%
+      {
+        opacity: 0;
+      }
+      100%
+      {
+        opacity: 1;
+      }
+    }
+    .dialog .modal {
+      width: 100%;
+      max-width: 400px;
+      min-height: 303px;
+      border: 1px solid #aaa;
+      box-shadow: 2px 2px 2px #000;
+      border-radius: 7px;
+      background: white;
+      padding: 15px 25px;
+      position: relative;
+    }
+
+    .dialog .modal .tel-group input[type="tel"] {
+      width: 73%;
+      padding: 12px 0px;
+      font-size: 16px;
+      border: 1px solid #aaa;
+      box-shadow: inset 1px 1px 1px #f0f0f0;
+      border-radius: 2px;
+      text-indent: 10px;
+    }
+
+    .dialog .dialog-close {
+      position: absolute;
+      border: 1px solid #aaa;
+      background: rgb(43, 43, 43);
+      top: 0;
+      right: 0;
+      margin: -15px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+    }
+
+    .dialog .dialog-close::before,
+    .dialog .dialog-close::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 10px;
+      background: white;
+      transform: rotate(45deg);
+    }
+
+    .dialog .dialog-close::after {
+      transform: rotate(-45deg);
+    }
+
+    .dialog .modal .tel-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dialog .modal h2 {
+      font-size: 19px;
+      color: #666;
+      padding: 10px 5px;
+    }
+
+    .dialog .modal .tel-group input[type="submit"] {
+      width: 25%;
+      height: 100%;
+      font-size: 16px;
+      border-radius: 2px;
+      padding: 11px 0px;
+      text-align: center;
+      border: 1px solid #7aa31a;
+      background-color: #8ab329;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .dialog .modal .checkBx 
+    {
+      position: relative;
+      margin-top: 3px;
+    }
+    .dialog .modal .checkBx .check
+    {
+      position: absolute;
+      width: 27px;
+      height: 27px;
+      top: 5px;
+      left: 5px;
+      cursor: pointer;
+      z-index: 10;
+      background: url(https://www.100mb.kr/mimg/checkbox.png) 0px 0px no-repeat;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+    }
+    .dialog .modal .checkBx .check.on
+    {
+      background-position: 0px -27px;
+    }
+    .dialog .modal .checkBx strong
+    {
+      display: inline-block;
+      margin-left: 40px;
+      font-size: 14px;
+      line-height: 140%;
+      padding-top: 10px;
+      font-weight: normal;
+      vertical-align: middle;
+    }
+    .dialog .modal dl
+    {
+      font-size: 0.9em;
+      margin-top: 15px;
+      padding: 5px;
+      background: #f0f0f0 url(https://www.100mb.kr/mimg/pattern3.png);
+    }
+    .dialog .modal dl dt
+    {
+      margin-bottom: 10px;
+    }
+    .dialog .modal dl dd
+    {
+      background: url(https://www.100mb.kr/mimg/left_icon.gif) no-repeat 0px 4px;
+      text-indent: 10px;
+      color: #777;
+    }
+    @media (max-width: 1300px) 
+    {
+      .listBtn
+      {
+        display: none;
+      }
+    }
+    @media (max-width: 1000px) 
+    {
+      .contentBx img
+      {
+        display: none;
+      }
+      .call-group 
+      {
+        margin-left: 400px;
+        padding: 30% 40% 0 0;
+      }
+      .call-group img
+      {
+        min-width: 400px;
+        width: 100%;
+      }
+      .banner
+      {
+        width: auto;
+        height: 0px;
+        padding-bottom: 39%;
+        background-size: cover;
+      }
+    }
+    @media (max-width: 640px) 
+    {
+      .contentBx .callBtn
+      {
+        display: none;
+      }
+      .banner .call-group 
+      {
+        margin-left: 350px;
+        padding: 40% 60% 0 0;
+      }
+      .call-group img
+      {
+        min-width: 200px;
+        width: 100%;
+      }
+      .banner
+      {
+        padding-bottom: 51%;
+        background-position: 46% center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dialog" style="display: none;">
+    <div class="modal">
+      <h2>부담없는 전화상담</h2>
+      <div class="tel-group">
+        <input type="tel" placeholder="휴대전화">
+        <input type="submit" value="신청">
+      </div>
+      <div class="checkBx">
+        <button class="check"></button>
+        <strong>개인정보취급방침 동의</strong>
+      </div>
+      <dl>
+        <dt>부담없이 남겨주세요, 잘 모르셔도 전문상담원이 알아서 이끌어드립니다^ㅇ^ 백메가는 개인정보를 경솔하게 다루지 않으며 SSL보안서버를 통해 외부로 개인정보가 유출되는 일이 없습니다.</dt>
+        <dd>수집하는 개인정보 항목 : <span>전화번호</span></dd>
+        <dd>수집 및 이용목적 : <span>유/무선상품 서비스 상담</span></dd>
+        <dd>보유 및 이용기간 : <span>D+7일후 식별불가 암호화 파쇄</span></dd>
+      </dl>
+      <button class="dialog-close"></button>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="call-group">
+      <div>
+        <img src="https://www.100mb.kr/mimg/heading011.png" alt="가장 정직하게 인터넷을 안내하고 있습니다">
+      </div>
+      <div class="contentBx">
+        <button class="callBtn"><i></i>빠른 전화 상담</button>
+        <img src="https://www.100mb.kr/mimg/head_tel2.png" alt="1544-5823">
+      </div>
+    </div>
+    <ul class="listBtn">
+      <li><a href="#" class="dialog-open"><span>빠른 전화 상담</span></a></li>
+      <li><a href="https://www.100mb.kr/bbs/board.php?bo_table=customer"><span>문의 게시판</span></a></li>
+      <li><a href="https://www.100mb.kr/bbs/write.php?bo_table=reservation"><span>신청서 작성</span></a></li>
+    </ul>
+  </div>
+  <script>
+    const Dialog = (function () {
+      const dialog = document.querySelector(".dialog")
+      const dialogOpen = document.querySelector(".dialog-open");
+      const callBtn = document.querySelector(".callBtn");
+      const dialogClose = dialog.querySelector(".dialog-close");
+      const check = document.querySelector(".check");
+      function showDialog() {
+        if(dialog.style.display === "none") 
+        {
+          dialog.style.display = "flex";
+        }
+        else
+        {
+          dialog.style.display = "none";
+        } 
+      }
+      callBtn.addEventListener("click",showDialog)
+      dialogOpen.addEventListener("click", showDialog);
+      dialogClose.addEventListener("click", showDialog);
+      check.addEventListener("click", function () {
+        check.classList.toggle("on");
+      })
+    }());
+   
+  </script>
+</body>
+
+</html>
