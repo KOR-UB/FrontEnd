@@ -382,6 +382,7 @@
         }
         else
         {
+          if(check.classList.toggle("on") === true) check.classList.toggle("on");
           dialog.style.display = "none";
         } 
       }
@@ -390,9 +391,6 @@
       dialogClose.addEventListener("click", showDialog);
       check.addEventListener("click", function () {
         check.classList.toggle("on");
-        setTimeout(() => {
-          console.log(this);
-        },1000)
       });
     }());
    
