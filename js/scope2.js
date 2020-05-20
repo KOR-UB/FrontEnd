@@ -34,3 +34,30 @@
 // const person = class {};
 
 // const person = class MyClass {};
+// 수퍼 클래스
+class Base {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    return `Hi! ${this.name}`;
+  }
+  sayHi2 = function () {
+    test = function () {
+      console.log("테스트");
+    }
+    return `Hi! ${this.name}`;
+  }
+}
+
+// 서브 클래스
+class Derived extends Base {
+  sayHi() {
+    // super.sayHi는 수퍼 클래스의 프로토타입 메소드를 가리킨다.
+    return `${super.sayHi2}. how are you doing?`;
+  }
+}
+
+const derived = new Derived('Lee');
+console.log(derived.test); // Hi! Lee. how are you doing?
