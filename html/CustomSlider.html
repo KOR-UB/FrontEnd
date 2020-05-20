@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Slider</title>
+  <link rel="stylesheet" href="../CSS/UiSlider.css">
+  <script src="../js/UiSliderClass.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const silderDomNode = document.querySelector(".UiSlider");
+      const slider = new UiSlider(silderDomNode);
+      slider.init();
+    });
+  </script>
+</head>
+<body>
+  <section class="demo">
+    <h1>Slider</h1>
+    <div class="UiSlider">
+      <div class="UiSlider__rail" style="width: 200px;">
+        <div class="UiSlider__thumb" tabindex="0" role="slider" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100"
+          aria-valuetext="50%"></div>
+      </div>
+      <div class="UiSlider__value">50</div>
+    </div>
+  </section>
+</body>
+
+</html>
