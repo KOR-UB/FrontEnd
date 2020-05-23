@@ -44,7 +44,22 @@ class UiSlider {
   }
   _bindEvents() {
     const {thumbNode, railNode} = this;
-    console.log(thumbNode, railNode);
-    thumbNode.addEventListener("ketdown", handleThumbkeyDown);
+    thumbNode.addEventListener("keydown", handleThumbkeyDown);
+    thumbNode.addEventListener("pointerdown", handlePointerDown);
+    thumbNode.addEventListener("focus", handleThumbFocus);
+    thumbNode.addEventListener("blue", handleThumbBlur);
+  }
+  handleThumbkeyDown() {
+
+  }
+  handlePointerDown()
+  {
+
+  }
+  handleThumbFocus() {
+
+  }
+  handleThumbBlur() {
+    
   }
 }
