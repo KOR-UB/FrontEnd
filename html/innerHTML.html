@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body
+    {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    .container
+    {
+      width: 400px;
+      height: 400px;
+      border: 3px solid black;
+      display: grid;
+      place-items: center;
+    }
+    .container .box
+    {
+      width: 50%;
+      height: 50%;
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    안녕하세요
+    <div class="box"></div>
+  </div>
+  <script>
+    const $container = document.querySelector(".container");
+    // $container.innerHTML = "안녕하세요";
+    // $container.textContent = "안녕하세요";
+    // $container.innerHTML = "안녕하세요 <div class='box'></div>";
+    // $container.textContent = "안녕하세요 <div class='box'></div>";
+  </script>
+</body>
+</html>
