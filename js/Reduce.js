@@ -1,4 +1,4 @@
-const onTwoThree = [1,2,3];
+// const onTwoThree = [1,2,3];
 
 const randText = document.querySelector(".randText");
 const randbtn = document.querySelector(".randbtn");
@@ -40,12 +40,12 @@ function randomText()
     }
 }
 var test = setInterval(randomText, 100)
-const result = onTwoThree.map((v) =>
-{
-    console.log(v);
-    test(v, v*2)
-    return v;
-});
+// const result = onTwoThree.map((v) =>
+// {
+//     console.log(v);
+//     test(v, v*2)
+//     return v;
+// });
 function test(a, b)
 {
     console.log(a+b);

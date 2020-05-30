@@ -73,9 +73,7 @@ header .logo
 .cursor2.hover,
 .cursor3.hover
 {
-    width: 1000px;
-    height: 1000px;
-    transform: scale(5) translate(-10%, -10%);
+    transform: scale(10);
     border: none;
     mix-blend-mode: difference;
 }

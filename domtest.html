@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body
+    {
+      height: 100vh;
+      overflow: hidden;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="form1" runat="server">
+    <input type='file' id="imgInp" />
+    <img id="blah" src="#" alt="your image" />
+ </form>
+ <!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script> -->
+  <script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        
+        reader.onload = function (e) {
+          console.dir(e);
+          // $('#blah').attr('src', e.target.result);
+          document.querySelector('body').style.backgroundImage = `url(${e.target.result})`;
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    document.getElementById("imgInp").addEventListener('change',function () {
+      readURL(this);
+    });
+  </script>
+</body>
+
+</html>
