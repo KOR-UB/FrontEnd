@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+</head>
+
+<body>
+  <p class="today"></p>
+  <p class="date"></p>
+  <p class="time"></p>
+  <form method="get" action="" class="displayhours">
+    <label for="allhours"><input type="radio" id="allhours" name="displayhours" checked>24시간 출력</label>
+    <label for="halfhours"><input type="radio" id="halfhours" name="displayhours">12시간 출력</label>
+  </form>
+  <script>
+    // (function printNow() {
+    //   const Today = new Date();
+    //   document.querySelector('.today').innerHTML = Today;
+    //   const year = Today.getFullYear();
+    //   const month = Today.getMonth();
+    //   const date = Today.getDate();
+    //   const day = Today.getDay();
+    //   const days = ['일', '월', '화', '수', '목', '금', '토'];
+    //   function changeTypeDay(daynum) {
+    //     return days[daynum];
+    //   }
+    //   // default 날짜 출력
+    //   document.querySelector('.date').innerHTML = `${year}년 ${month}월 ${date}일 ${changeTypeDay(day)}요일`;
+    //   let hour = Today.getHours();
+    //   const min = Today.getMinutes();
+    //   const sec = Today.getSeconds();
+    //   const ampm = hour >= 12 ? 'PM' : '';
+    //   // default 시간 출력
+    //   const $hour = document.querySelector('.time');
+    //   $hour.innerHTML = `${hour}시 ${min}분 ${sec}초`;
+    //   // 24시간 출력
+    //   document.getElementById('allhours').onclick = e => {
+    //     hour = Today.getHours();
+    //     $hour.innerHTML = `${hour}시 ${min}분 ${sec}초`;
+    //   };
+    //   // 12시간 출력
+    //   document.getElementById('halfhours').onclick = () => {
+    //     hour = hour > 12 ? hour - 12 : hour;
+    //     $hour.innerHTML = `${ampm} ${hour}시 ${min}분 ${sec}초`;
+    //   };
+    //   setTimeout(printNow, 1000);
+    // }());
+  </script>
+  <script>
+    const $node = document.querySelector('div');
+    const $ul = document.querySelector("ul")
+
+    const obj = {}
+    const obj2 = {}
+
+    const array = [1, 2, 3]
+    const array2 = [4, 6, 7]
+
+
+    const Clock = (function () {
+      (function printNow() {
+        const Today = new Date();
+        document.querySelector('.today').innerHTML = Today;
+        const year = Today.getFullYear();
+        const month = Today.getMonth();
+        const date = Today.getDate();
+        const day = Today.getDay();
+        const days = ['일', '월', '화', '수', '목', '금', '토'];
+
+        function changeTypeDay(daynum) {
+          return days[daynum];
+        }
+        // default 날짜 출력
+        document.querySelector('.date').innerHTML = `${year}년 ${month}월 ${date}일 ${changeTypeDay(day)}요일`;
+        let hour = Today.getHours();
+        const min = Today.getMinutes();
+        const sec = Today.getSeconds();
+        const millsec = Today.getMilliseconds();
+        const ampm = hour >= 12 ? 'PM' : '';
+        // default 시간 출력
+        const $hour = document.querySelector('.time');
+        // console.log(document.getElementById('halfhours').checked);  // true
+        if (document.getElementById('allhours').checked) {
+          hour = Today.getHours();
+          $hour.innerHTML = `1초당 시간 변경: ${hour}시 ${min}분 ${sec}초 ${millsec} `;
+          // printNow 함수를 끝내는 동시에 setTimeout으로 타임 딜레이 없이 다시 호출
+          return setTimeout(printNow, 1000);
+        }
+        // 12시간 출력
+        hour = hour > 12 ? hour - 12 : hour;
+        $hour.innerHTML = `딜레이 없이 시간 변경: ${ampm} ${hour}시 ${min}분 ${sec}초 ${millsec}`;
+        return setTimeout(printNow, 0);
+      }());
+    }());
+  </script>
+</body>
+
+</html>

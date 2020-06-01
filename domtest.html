@@ -13,7 +13,7 @@
       box-sizing: border-box;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center bottom;
+      background-position: center;
     }
   </style>
 </head>
@@ -22,7 +22,7 @@
   <form id="form1" runat="server">
     <input type='file' id="imgInp" />
     <img id="blah" src="#" alt="your image" />
- </form>
+  </form>
  <!-- <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -34,7 +34,6 @@
         
         reader.onload = function (e) {
           console.dir(e);
-          // $('#blah').attr('src', e.target.result);
           document.querySelector('body').style.backgroundImage = `url(${e.target.result})`;
         }
 
