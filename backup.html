@@ -31,12 +31,17 @@
       margin: 0 20px;
       padding: 20px;
       font-size: 15px;
-      background: rgb(88, 96, 99);
       display: flex;
       justify-content: center;
       align-items: center;
       flex-flow: column;
+      transition: 0.3s ease-in-out;
       color: #fff;
+      mix-blend-mode: difference;
+    }
+    .weather_content:hover
+    {
+      transform: scale(1.5);
     }
 
     .weather_icon {
@@ -50,7 +55,8 @@
     main {
       width: 100%;
       min-height: 100vh;
-      background: #f1aa16;
+      background: #ff0000;
+      mix-blend-mode: difference;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -61,7 +67,6 @@
     {
       width: 100%;
       margin-bottom: 10px;
-      border: 1px solid black;
     }
     .open_toggle
     {
@@ -72,6 +77,8 @@
     .js_clock
     {
       font-size: 5em;
+      color: #fff;
+      mix-blend-mode: difference;
     }
     .js_clock.one
     {
@@ -85,21 +92,39 @@
     {
       font-family: 'Cutive Mono', monospace;
     }
+    #cursor
+    {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 500px;
+      height: 500px;
+      transform: translate(-50%, -50%);
+      background: black;
+      border-radius: 50%;
+      /* mix-blend-mode: luminosity; */
+      pointer-events: none;
+    }
     @media(max-width: 1000px)
     {
       .weather_content {
         width: 100%;
         margin: 0;
-    }
+      }
+      .js_clock
+      {
+        font-size: 3em;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
+    <div id="cursor"></div>
     <button class="open_toggle">OPEN</button>
     <div class="clearfix" style="width: 100%; height: 60px;"></div>
-    <section id="clock" style="background: red;">
+    <section id="clock">
       <h2 class="js_clock"></h2>
       <h2 class="js_clock one"></h2>
       <h2 class="js_clock two"></h2>
@@ -135,9 +160,8 @@
       </div>
     </section>
     <section>
-      <h2 class="js_city">
-        
-      </h2>
+      <h2 class="js_temp"></h2>
+      <h2 class="js_city"></h2>
     </section>
   </main>
 
@@ -152,11 +176,22 @@
        const h = hoursCheck ? (date.getHours() - 12) : date.getHours();
        const m = date.getMinutes();
        const s = date.getSeconds();
+       if(m === 0 && s === 0) 
+       {
+         
+       }
        clock.textContent = `${h < 10 ? `0${h}` : h}:${m < 10 ? `0${m}` : m}:${s < 10 ? `0${s}` : s}`;
     },1000);
     });
     $btn.addEventListener('click', () => {
       hoursCheck = hoursCheck ? false : true;
+    });
+  </script>
+  <script>
+    const $cursor = document.getElementById("cursor");
+    window.addEventListener("mousemove", e => {   
+      $cursor.style.top = e.clientY + "px";
+      $cursor.style.left = e.clientX + "px";
     });
   </script>
 </body>
