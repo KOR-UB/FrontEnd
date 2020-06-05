@@ -44,6 +44,16 @@
     document.getElementById("imgInp").addEventListener('change',function () {
       readURL(this);
     });
+    const body = document.querySelector("style");
+
+    body.onload = e => {
+      console.dir(e)
+    }
+    const date = new Date();
+
+    date.onload = function (e) {
+      console.dir(e);
+    }
   </script>
 </body>
 
