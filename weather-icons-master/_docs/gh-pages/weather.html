@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <script src="weatherAPI.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Cutive+Mono&family=Inconsolata:wght@800&family=Roboto+Mono:wght@700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/weather-icons-wind.css">
+  <link rel="stylesheet" href="css/weather-icons.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .weather_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .weather_content {
+      margin: 0 20px;
+      padding: 20px;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      transition: 0.3s ease-in-out;
+      color: rgb(0, 0, 0);
+    }
+
+    .weather_content:hover {
+      transform: scale(1.5);
+    }
+
+    .weather_icon {
+      font-size: 3em;
+    }
+
+    .weather_text {
+      font-size: 2em;
+    }
+
+    main {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .open_toggle {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .js_clock {
+      font-size: 5em;
+      color: #000;
+    }
+
+    @media(max-width: 1000px) {
+      .weather_content {
+        width: 100%;
+        margin: 0;
+      }
+
+      .js_clock {
+        font-size: 3em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <button class="open_toggle">OPEN</button>
+    <div class="clearfix" style="width: 100%; height: 60px;"></div>
+    <section id="clock">
+      <h2 class="js_clock"></h2>
+    </section>
+    <section id="weather">
+      <div class="weather_container">
+        <div class="weather_content">
+          <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
+          <p class="weather_text"></p>
+        </div>
+        <div class="weather_content">
+          <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
+          <p class="weather_text"></p>
+        </div>
+        <div class="weather_content">
+          <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
+          <p class="weather_text"></p>
+        </div>
+        <div class="weather_content">
+          <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
+          <p class="weather_text"></p>
+        </div>
+        <div class="weather_content">
+          <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
+          <p class="weather_text"></p>
+        </div>
+      </div>
+    </section>
+    <select class="city_select">
+      <optgroup label="도">
+        <option>경기도</option>
+        <option>강원도</option>
+        <option>충청북도</option>
+        <option>충청남도</option>
+        <option>경상북도</option>
+        <option>경상남도</option>
+        <option>전라북도</option>
+        <option>전라남도</option>
+        <option>제주도</option>
+      </optgroup>
+      <optgroup label="시">
+        <option>서울</option>
+        <option>부산</option>
+        <option>대구</option>
+        <option>인천</option>
+        <option>광주</option>
+        <option>대전</option>
+        <option>울산</option>
+      </optgroup>
+    </select>
+    <button class="city_now">현재 위치</button>
+    <section>
+      <h2 class="js_temp"></h2>
+      <h2 class="js_city"></h2>
+    </section>
+  </main>
+  <script src="appWeather.js"></script>
+  <script>
+    
+    // function sleep(ms) {
+    //   return new Promise(resolve => setTimeout(resolve, ms));
+    // }
+    // async function process() {
+    //   console.log("안녕하세요");
+    //   await sleep(1000);
+    //   console.log("반갑습니다");
+    // }
+    // process();
+
+    
+  </script>
+</body>
+
+</html
