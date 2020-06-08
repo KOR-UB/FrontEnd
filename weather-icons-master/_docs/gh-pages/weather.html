@@ -7,7 +7,6 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-  <script src="weatherAPI.js" defer></script>
   <link
     href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Cutive+Mono&family=Inconsolata:wght@800&family=Roboto+Mono:wght@700&family=Share+Tech+Mono&display=swap"
     rel="stylesheet">
@@ -38,20 +37,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-flow: column;
+      flex-wrap: wrap;
       transition: 0.3s ease-in-out;
       color: rgb(0, 0, 0);
     }
-
-    .weather_content:hover {
-      transform: scale(1.5);
-    }
-
     .weather_icon {
+      width: 100%;
       font-size: 3em;
     }
 
-    .weather_text {
+    .weather_week {
+      width: 100%;
       font-size: 2em;
     }
 
@@ -63,6 +59,9 @@
       align-items: center;
       flex-wrap: wrap;
       text-align: center;
+    }
+    .weather_content h2{
+      width: 100%;
     }
 
     section {
@@ -80,7 +79,11 @@
       font-size: 5em;
       color: #000;
     }
-
+    i
+    {
+      width: 100%;
+      font-size: 3em;
+    }
     @media(max-width: 1000px) {
       .weather_content {
         width: 100%;
@@ -96,39 +99,39 @@
 
 <body>
   <main>
-    <button class="open_toggle">OPEN</button>
+    <!-- <button class="open_toggle">OPEN</button> -->
     <div class="clearfix" style="width: 100%; height: 60px;"></div>
     <section id="clock">
       <h2 class="js_clock"></h2>
     </section>
     <section id="weather">
-      <div class="weather_container">
-        <div class="weather_content">
-          <h2><i class="weather_icon"></i></h2>
-          <p class="weather_main"></p>
-          <p class="weather_text"></p>
-        </div>
-        <div class="weather_content">
-          <h2><i class="weather_icon"></i></h2>
-          <p class="weather_main"></p>
-          <p class="weather_text"></p>
-        </div>
-        <div class="weather_content">
-          <h2><i class="weather_icon"></i></h2>
-          <p class="weather_main"></p>
-          <p class="weather_text"></p>
-        </div>
-        <div class="weather_content">
-          <h2><i class="weather_icon"></i></h2>
-          <p class="weather_main"></p>
-          <p class="weather_text"></p>
-        </div>
-        <div class="weather_content">
-          <h2><i class="weather_icon"></i></h2>
-          <p class="weather_main"></p>
-          <p class="weather_text"></p>
-        </div>
-      </div>
+      <ul class="weather_container">
+        <li class="weather_content">
+          <i class="weather_icon"></i>
+          <p class="weather_temp"></p>
+          <p class="weather_week"></p>
+        </li>
+        <li class="weather_content">
+          <i class="weather_icon"></i>
+          <p class="weather_temp"></p>
+          <p class="weather_week"></p>
+        </li>
+        <li class="weather_content">
+          <i class="weather_icon"></i>
+          <p class="weather_temp"></p>
+          <p class="weather_week"></p>
+        </li>
+        <li class="weather_content">
+          <i class="weather_icon"></i>
+          <p class="weather_temp"></p>
+          <p class="weather_week"></p>
+        </li>
+        <li class="weather_content">
+          <i class="weather_icon"></i>
+          <p class="weather_temp"></p>
+          <p class="weather_week"></p>
+        </li>
+      </ul>
     </section>
     <select class="city_select">
       <optgroup label="도">
@@ -151,8 +154,8 @@
         <option>대전</option>
         <option>울산</option>
       </optgroup>
-      <button class="city_now">현재 위치</button>
     </select>
+    <button class="city_now">현재 위치</button>
     <section>
       <h2 class="js_temp"></h2>
       <h2 class="js_city"></h2>

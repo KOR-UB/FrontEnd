@@ -1,6 +1,7 @@
-const weatherMain = document.querySelectorAll(".weather_main");
+const weatherContent = document.querySelectorAll(".weather_content");
 const weatherIcon = document.querySelectorAll(".weather_icon");
-const weatherText = document.querySelectorAll(".weather_text");
+const weatherTemp = document.querySelectorAll(".weather_temp");
+const weatherWeek = document.querySelectorAll(".weather_week");
 
 const API_KEY = "64bb4412769a73988b668782663bd5f7";
 const COORDS = `coords`;
@@ -13,21 +14,19 @@ const $city = document.querySelector('.js_city');
 const $clock = document.querySelector('.js_clock');
 const $cityNowBtn = document.querySelector(".city_now");
 
-
 function getKoreaCityList() {
   fetch('cityKR.list.json').then(function(response){
     return response.json();
   }).then(function(cityList){
     const $select = document.querySelector(".city_select");
-    console.log($select.firstElementChild);
-    cityList.sort((a, b) => {
-      return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-    });
-    cityList.forEach(city => {
-      const $option = document.createElement("option");
-      $option.textContent = `${city.name}`
-      $select.firstElementChild.appendChild($option);
-    })
+    // cityList.sort((a, b) => {
+    //   return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+    // });
+    // cityList.forEach(city => {
+    //   const $option = document.createElement("option");
+    //   $option.textContent = `${city.name}`
+    //   $select.firstElementChild.appendChild($option);
+    // })
     $select.addEventListener("change", (e) => {
       const cityObj = cityList.filter(city => city.name === e.target.value);
       const { coord } = cityObj[0];
@@ -64,7 +63,7 @@ function getWeather(lat, lng) {
     }).then(function (weatherJson) {
       console.dir(weatherJson);
       const { daily, hourly } = weatherJson;
-      weatherMain.forEach((main, i) => {
+      weatherContent.forEach((_, i) => {
         switch (daily[i].weather[0].main) {
           case "Thunderstorm":
             weatherIcon[i].className = 'wi wi-lightning';
@@ -96,11 +95,10 @@ function getWeather(lat, lng) {
             break;
           default:
             weatherIcon[i].className = 'wi wi-refresh';
-            // weather.daily[i].weather[0].main = "";
         }
-        main.textContent = `${daily[i].temp.min}°C / ${daily[i].temp.max}°C`;
-        weatherText[i].textContent = week[(today + i) === 7 ? 0 : (today + i) === 8 ? 1 : (today + i) === 9 ? 2 : (today + i) === 10 ? 3 : today + i];
-        weatherText[0].textContent = "ToDay";
+        weatherTemp[i].textContent = `${daily[i].temp.min}°C / ${daily[i].temp.max}°C`;
+        weatherWeek[i].textContent = week[(today + i) === 7 ? 0 : (today + i) === 8 ? 1 : (today + i) === 9 ? 2 : (today + i) === 10 ? 3 : today + i];
+        weatherWeek[0].textContent = "ToDay";
         const temperature = hourly[0].temp;
         $temp.textContent = `${temperature}°C`;
       });
@@ -120,7 +118,7 @@ function handleGeoError() {
 function askForCoords() {
   navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
-$cityNowBtn.addEventListener("click", (e) => {
+$cityNowBtn.addEventListener("click", () => {
   askForCoords();
 });
 function init() {
