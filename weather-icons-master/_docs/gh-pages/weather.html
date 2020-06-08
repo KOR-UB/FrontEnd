@@ -91,22 +91,6 @@
         font-size: 3em;
       }
     }
-    select
-    {
-      border-radius: 0;
-    }
-    select option
-    {
-      display: inline-block;
-      padding: 30px;
-    }
-    .city_now
-    {
-      border: 1px solid 0;
-      background: none;
-      border-radius: 0;
-      margin: 20px;
-    }
   </style>
 </head>
 
@@ -121,22 +105,27 @@
       <div class="weather_container">
         <div class="weather_content">
           <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
           <p class="weather_text"></p>
         </div>
         <div class="weather_content">
           <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
           <p class="weather_text"></p>
         </div>
         <div class="weather_content">
           <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
           <p class="weather_text"></p>
         </div>
         <div class="weather_content">
           <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
           <p class="weather_text"></p>
         </div>
         <div class="weather_content">
           <h2><i class="weather_icon"></i></h2>
+          <p class="weather_main"></p>
           <p class="weather_text"></p>
         </div>
       </div>
@@ -162,18 +151,26 @@
         <option>대전</option>
         <option>울산</option>
       </optgroup>
-      <optgroup label="지역">
-        
-      </optgroup>
+      <button class="city_now">현재 위치</button>
     </select>
-    <button class="city_now">현재 위치</button>
     <section>
       <h2 class="js_temp"></h2>
       <h2 class="js_city"></h2>
     </section>
   </main>
-  <script src="appWeather2.js"></script>
+  <script src="appWeather.js"></script>
   <script>
+    
+    // function sleep(ms) {
+    //   return new Promise(resolve => setTimeout(resolve, ms));
+    // }
+    // async function process() {
+    //   console.log("안녕하세요");
+    //   await sleep(1000);
+    //   console.log("반갑습니다");
+    // }
+    // process();
+
     
   </script>
 </body>
