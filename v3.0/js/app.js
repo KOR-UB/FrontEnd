@@ -79,9 +79,6 @@ class Body {
     e.target.value = ""
     this.paintTodo(toDoObj);
   }
-  _allToggle() {
-
-  }
   _idGenerator() {
     return todos.length ? Math.max( ...todos.map(todo => todo.id)) + 1 : 1;
   }
@@ -120,6 +117,10 @@ class Body {
   handleToggle(e) {
     const { navNode, todosNode, completeAllNode } = this;
     if(!e.target.matches(".nav > li")) return
+    // if(!e.target.matches(".nav > li:not(.active)"));
+    // [...navNode.children].forEach(item => {
+    //   item.classList.toggle("active", item === target);
+    // });
     const $active = navNode.querySelector(".active");
     if($active === e.target) return;
     $active.classList.remove("active");
@@ -192,8 +193,8 @@ class Body {
   SaveTodos() {
     const { completeTodosNode, activeTodosNode } = this;
     localStorage.setItem(TODOS_LS, JSON.stringify(todos));
-    completeTodosNode.textContent = todos.filter(todo => todo.complete === true).length;
-    activeTodosNode.textContent = todos.filter(todo => todo.complete === false).length;
+    completeTodosNode.textContent = todos.filter(todo => todo.complete ).length;
+    activeTodosNode.textContent = todos.filter(todo => !todo.complete).length;
   }
   changeToggle() {
     const { navNode, todosNode } = this;
