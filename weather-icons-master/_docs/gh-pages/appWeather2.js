@@ -2,7 +2,6 @@ const weatherIcon = document.querySelectorAll(".weather_icon");
 const weatherText = document.querySelectorAll(".weather_text");
 
 const API_KEY = "64bb4412769a73988b668782663bd5f7";
-const COORDS = `coords`;
 
 const week = ["일", "월", "화", "수", "목", "금", "토"];
 const date = new Date();
