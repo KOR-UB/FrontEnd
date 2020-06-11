@@ -26,9 +26,15 @@
     a {
       position: relative;
       text-decoration: none;
+      transition: 0.2s;
       color: black;
       margin: 0 30px;
       font-size: 2.5em;
+      padding: 8px;
+    }
+    a:hover {
+      border: 4px solid black;
+      border-bottom: none;
     }
     #marker {
       position: absolute;
@@ -39,6 +45,28 @@
       background: #000;
       transition: 0.5s;
       border-radius: 4px;
+    }
+    h6 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      animation: effect 1s linear;
+      border-radius: 20%;
+      border: 1px solid black;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      /* background: skyblue; */
+    }
+    @keyframes effect {
+      0% {
+        width: 0px;
+        height: 0px;
+      }
+      100% {
+        width: 2000px;
+        height: 2000px;
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -55,15 +83,24 @@
   <script>
     const $marker = document.getElementById("marker");
     const $nav = document.querySelector("nav");
+    const $body = document.querySelector("body");
+
 
     function indicator(e) {
-      $marker.style.left = e.offsetLeft + "px";
-      $marker.style.width = e.offsetWidth + "px";
+      $marker.style.left = e.target.offsetLeft + "px";
+      $marker.style.width = e.target.offsetWidth + "px";
+      const $effect = document.createElement("h6");
+      $effect.style.left = e.clientX + "px";
+      $effect.style.top = e.clientY + "px";
+      $body.appendChild($effect);
+      setTimeout(() => {
+        $effect.remove();
+      }, 1000);
     }
 
-    $nav.addEventListener("click", e => {
+    $nav.addEventListener("mouseover", e => {
       if(!e.target.matches("nav > a")) return
-      indicator(e.target)
+      indicator(e)
     });
   </script>
 </body>
