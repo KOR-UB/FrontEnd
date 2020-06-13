@@ -46,6 +46,18 @@
       display: block;
       max-width: 300px;
     }
+    .box2 {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding: 100px;
+      background: #000;
+      color: #fff;
+    }
+    .box2 h2 {
+      font-size: 3em;
+      background: #000;
+    }
   </style>
 </head>
 
@@ -100,6 +112,7 @@
           pin: true
         }
       })
+      .from(".box2", { opacity: 0 })
       .from(".text4", {
         y: innerHeight * 1
       })
