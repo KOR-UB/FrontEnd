@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #88B04B;
+    }
+    header {
+      width: 100%;
+      height: 72px;
+      background: #2C3E50;
+    }
+    main {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .sort {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .sort button {
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      background: #95a5a6;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .sort button:hover {
+      background: #7e8a8b;
+    }
+    .sort button:focus {
+      background-color: #809395;
+      border-color: #798d8f;
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(165,179,179,0.5);
+      box-shadow: 0 0 0 0.2rem rgba(165,179,179,0.5);
+      outline: none;
+    }
+    .sort .popular {
+      background: #2C3E50;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .sort .popular:hover {
+      background: #141c24;
+    }
+    .form-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .web-list {
+      margin-top: 20px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .web-list li {
+      margin-right: 15px;
+    }
+    .form-container .save-cookie button {
+      background: #2C3E50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    .form-container .search-form {
+      margin-left: 30px;
+    }
+    .form-container .search-form input {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      outline: none;
+    }
+    .form-container .search-form .search-btn {
+      cursor: pointer;
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #95a5a6;
+    }
+    .form-container .search-form .search-btn:hover {
+      background: #7e8a8b;
+    }
+    .form-container .search-form .search-btn:focus {
+      background-color: #809395;
+      border-color: #798d8f;
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(165,179,179,0.5);
+      box-shadow: 0 0 0 0.2rem rgba(165,179,179,0.5);
+      outline: none;
+    }
+    .ddanzi {
+      color: #ff0000;
+    }
+    .clien {
+      color: #558000;
+    }
+    .etoland {
+      color: #008000;
+    }
+    .ppomppu {
+      color: #4b0082;
+    }
+    .todayhumor{
+      color: #0000ff;
+    }
+    .utdae {
+      color: #ff1100;
+    }
+    .bobae {
+      color: #ff8c55;
+    }
+    .theqoo {
+      color: #aa8000;
+    }
+    .slrclub {
+      color: #008055;
+    }
+    .ruliweb {
+      color: #bb0055;
+    }
+    .main-container {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .main-container .table-header {
+      padding: 15px 0;
+      border-top: 1px solid rgb(233, 231, 231);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 2px solid rgb(228, 228, 228);
+    }
+    .main-container p {
+      width: 111px;
+    }
+    .main-container p:first-child {
+      text-align: left;
+    }
+    .main-container p:nth-child(2) {
+      width: 777px;
+    }
+    .main-container .main-content {
+      list-style: none;
+    }
+    .main-container .main-content li div {
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid rgb(233, 231, 231);
+    }
+    .heart {
+      text-align:center;
+      color:red;
+      font-size:26px;
+      padding:0px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    
+  </header>
+  <main>
+    <div class="sort">
+      <button class="recent">최근순</button>
+      <button class="popular">인기순</button>
+    </div>
+    <div class="form-container">
+      <ul class="web-list">
+        <li>
+          <input type="checkbox" id="ddanzi">
+          <label for="ddanzi" class="ddanzi">딴지</label>
+        </li>
+        <li>
+          <input type="checkbox" id="clien">
+          <label for="clien" class="clien">클리앙</label>
+        </li>
+        <li>
+          <input type="checkbox" id="etoland">
+          <label for="etoland" class="etoland">이토</label>
+        </li>
+        <li>
+          <input type="checkbox" id="ppomppu">
+          <label for="ppomppu" class="ppomppu">뿜뿌</label>
+        </li>
+        <li>
+          <input type="checkbox" id="todayhumor">
+          <label for="todayhumor" class="todayhumor">오유</label>
+        </li>
+        <li>
+          <input type="checkbox" id="utdae">
+          <label for="utdae" class="utdae">웃대</label>
+        </li>
+        <li>
+          <input type="checkbox" id="bobae">
+          <label for="bobae" class="bobae">보배</label>
+        </li>
+        <li>
+          <input type="checkbox" id="theqoo">
+          <label for="theqoo" class="theqoo">더쿠</label>
+        </li>
+        <li>
+          <input type="checkbox" id="slrclub">
+          <label for="slrclub" class="slrclub">slrclub</label>
+        </li>
+        <li>
+          <input type="checkbox" id="ruliweb">
+          <label for="ruliweb" class="ruliweb">루리웹</label>
+        </li>
+      </ul>
+      <div class="save-cookie">
+        <button>저장</button>
+        <button>쿠키삭제</button>
+      </div>
+      <form action="" method="" class="search-form">
+        <input type="text" placeholder="검색어를 입력하세요">
+        <button class="search-btn">Search</button>
+      </form>
+    </div>
+    <div class="main-container">
+      <div class="table-header">
+        <p>조회</p>
+        <p>제목</p>
+        <p>출처</p>
+        <p>좋아요</p>
+      </div>
+      <ul class="main-content">
+        <li class="first-item">
+          <div>
+            <p>1</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="ppomppu">뿜뿌</p>
+            <p class="heart">♥</p>
+          </div>
+        </li>
+        <li class="first-item">
+          <div>
+            <p>2</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="ddanzi">딴지</p>
+            <p class="heart">♡</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
