@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,11 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       height: 100vh;
     }
+
     .chat_container {
       width: 100%;
       height: 90vh;
@@ -21,10 +24,12 @@
       align-items: center;
       flex-wrap: wrap;
     }
+
     .chat_container input {
       width: 100%;
       height: 10vh;
     }
+
     .chat_content {
       background: #11451546;
       padding: 20px;
@@ -33,25 +38,15 @@
     }
   </style>
 </head>
+
 <body>
   <div class="chat_container">
     <div class="chat_content">
-      <p>하이</p>
     </div>
     <input type="text">
   </div>
-  <script>
-    const $input =  document.querySelector("input");
-    $input.addEventListener("keyup", e => {
-      if(e.keyCode !== 13) return;
-      console.log($input.value);
-      $input.value = $input.value.trim();
-      pushDM($input.value);
-      $input.value = "";
-    })
-    function pushDM(value) {
-      document.createElement("div");
-    }
+  <script src="./main.js">
   </script>
 </body>
+
 </html>
