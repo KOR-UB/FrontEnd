@@ -5,8 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GSAP</title>
   <link rel="stylesheet" href="GASP_style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+  <script src="./js/hover.js"></script>
+  <style>
+    .movie {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 20px;
+    }
+    .movie img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <section>
@@ -18,6 +37,14 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
+    <div class="movie">
+      <img src="./img/Img1.jpg" alt="">
+      <img src="./img/Img11.jpg" alt="">
+    </div>
+    <div class="movie">
+      <img src="./img/Img2.jpg" alt="">
+      <img src="./img/Img5.jpg" alt="">
+    </div>
   </section>
   <section>
     
@@ -40,6 +67,20 @@
     tl.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.125});
     tl.addLabel("circleOutro", "+=1")
     tl.to(".circle", {duration: 0.5, opacity: 0, x: 300, ease: "power3.out"}, "circleOutro");
+  </script>
+  <script>
+        Array.from(document.querySelectorAll('.movie')).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll('img'));
+        console.log(imgs);
+        
+        new hoverEffect({
+          parent: e,
+          intensity: 0.3,
+          image1: imgs[0].getAttribute('src'),
+          image2: imgs[1].getAttribute('src'),
+          displacementImage: `${imgs[0].src}`
+        })
+      })
   </script>
 </body>
 </html>
