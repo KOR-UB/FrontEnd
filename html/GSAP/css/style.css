@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 body{
-  min-height: 100vh;
-  /* background: #000; */
+  background: rgb(37, 51, 70);
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 header {
   position: fixed;
@@ -14,9 +15,9 @@ header {
   left: 0;
   width: 100%;
   padding: 19px 10px;
-  color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
+  font-family: 'Open Sans', sans-serif;
 }
 .header-container{
   width: 1280px;
@@ -42,82 +43,75 @@ nav a {
   text-decoration: none;
   color: #fff;
   margin: 0 10px;
-  font-size: 0.9em;
+  font-size: 1.3em;
   padding: 8px;
   font-weight: bold;
 }
 nav a::before {
   content: "";
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: 0;
+  left: 0px;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #fff;
   transition: 0.15s cubic-bezier(1.000, 0.000, 1.000, 1.650);
   transform: scale3d(0, 1, 1);
 }
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 14px;
-  right: -10px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgb(221, 221, 221);
-}
 nav a:hover::before {
   transform: scale3d(1, 1, 1);
 }
-.banner {
-  width: 100%;
-  height: 70vh;
-  background: url(https://dable.io/wp-content/uploads/2018/03/main2_ko.jpg) no-repeat;
-  background-position: center;
-  background-size: cover;
+.skill-container {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.skill-container h2 {
   color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.skill-container h2::before {
+  content: "";
+  border-bottom: solid #fff;
+  border-width: .05em;
+  height: 0.1em;
+  margin-right: 0.7em;
+  width: 30px;
+}
+.skill-container h2::after {
+  content: "";
+  border-bottom: solid #fff;
+  border-width: .05em;
+  height: 0.1em;
+  margin-left: 0.7em;
+  flex: 1;
+}
+.skill-container .skill-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-container figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: column;
 }
-.banner .banner-content {
-  margin-left: -26%;
+ .skill-container figure img{
+  width: 100px;
+  height: 100px;
 }
-.banner h2 {
-  font-size: 3.6em;
-  line-height: 0.9em;
-  width: 100%;
-}
-.banner p {
-  width: 100%;
-  font-size: 1.2em;
-  margin: 25px 0 30px 0;
-  line-height: 1.5em;
-}
-.banner button {
-  border: none;
-  background: none;
-  width: 150px;
-  height: 41px;
-  padding: 10px 15px;
-  border-radius: 30px;
-  margin: 0px 10px;
-  color: #fff;
-  border: 1px solid #fff;
-}
-.banner .banner-detailsbtn {
-  background: rgba(0, 113, 206, 0.75);
-  border: none;
-}
-.banner button:hover {
-  background: #fff;
-  color: #000;
-}
-.swiper-slide img {
-  margin: 0 20px;
+.skill-container figure figcaption {
+  margin-top: 8px;
+  font-size: 1.1em;
+  text-align: center;
 }
 main {
+  padding-top: 80px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
