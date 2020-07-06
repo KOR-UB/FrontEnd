@@ -1,83 +1,118 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YounYuBi Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YounYuBi Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="header-container">
-      <h1 class="logo"></h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Resume</a>
-        <a href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="skill-container">
-      <h2 class="skill-title">Skill</h2>
-      <div class="skill-content">
-        <figure>
-          <img src="./img/t/HTML5_Badge.svg" alt="HTML5 logo">
-          <figcaption>HTML5</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/css.svg" alt="CSS3 logo">
-          <figcaption>CSS3</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/js.svg" alt="JavaScript logo">
-          <figcaption>JavaScript</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/Sass_Logo_Color.svg" alt="Sass logo">
-          <figcaption>Sass</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/node.svg" alt="node logo">
-          <figcaption>node.js</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/React-icon.svg" alt="React logo">
-          <figcaption>React</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/webpack.png" alt="WebPack logo">
-          <figcaption>WebPack</figcaption>
-        </figure>
-        <figure>
-          <img src="./img/t/babel.png" alt="babel logo">
-          <figcaption>Babel</figcaption>
-        </figure>
+  <body>
+    <header>
+      <div class="header-container">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About Me</a>
+          <a href="#">Resume</a>
+          <a href="#">Contact</a>
+        </nav>
       </div>
-    </section>
+    </header>
+    <main>
+      <section class="skill-container">
+        <h2 class="skill-title">Skill</h2>
+        <div class="skill-content">
+          <figure>
+            <img src="./img/t/HTML5_Badge.svg" alt="HTML5 logo" />
+            <figcaption>HTML5</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/css.svg" alt="CSS3 logo" />
+            <figcaption>CSS3</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/js.svg" alt="JavaScript logo" />
+            <figcaption>JavaScript</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/Sass_Logo_Color.svg" alt="Sass logo" />
+            <figcaption>Sass</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/node.svg" alt="node logo" />
+            <figcaption>node.js</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/React-icon.svg" alt="React logo" />
+            <figcaption>React</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/webpack.png" alt="WebPack logo" />
+            <figcaption>WebPack</figcaption>
+          </figure>
+          <figure>
+            <img src="./img/t/babel.png" alt="babel logo" />
+            <figcaption>Babel</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="sec2">
+        <div class="box">
+          <img src="./img/Img2.jpg" alt="img" />
+          <img src="./img/Img3.jpg" alt="img2" />
+        </div>
+        <div class="contentBx">
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur maiores dignissimos molestias itaque! Voluptate, enim
+            adipisci? Adipisci vitae perspiciatis libero veritatis soluta deserunt labore quibusdam necessitatibus facere odit. Id.
+          </div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur maiores dignissimos molestias itaque! Voluptate, enim
+            adipisci? Adipisci vitae perspiciatis libero veritatis soluta deserunt labore quibusdam necessitatibus facere odit. Id.
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="./js/hover.js"></script>
+    <script>
+      const tl = gsap.timeline({
+        yoyo: true,
+      });
+      tl.from("header", {
+        duration: 1,
+        opacity: 0,
+        scale: 0.3,
+        ease: "power3.out",
+      });
 
-  </main>
-  <script>
-    const tl = gsap.timeline({
-      yoyo: true
-    });
-    tl.from("header", {
-      duration: 1,
-      opacity: 0,
-      scale: 0.3,
-      ease: "power3.out"
-    });
-  </script>
-</body>
+      Array.from(document.querySelectorAll(".box")).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll("img"));
+        console.log(imgs);
 
+        new hoverEffect({
+          parent: e,
+          intensity: 0.3,
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: `${imgs[0].src}`,
+        });
+      });
+    </script>
+  </body>
 </html>
