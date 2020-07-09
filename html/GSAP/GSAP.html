@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GSAP</title>
-  <link rel="stylesheet" href="GASP_style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-  <script src="./js/hover.js"></script>
-  <style>
-    .movie {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin: 20px;
-    }
-    .movie img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <section>
-    <img class="logo" src="../../img/cooking.png">
-    <img class="heart" src="../../img/heart.svg">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="movie">
-      <img src="./img/Img1.jpg" alt="">
-      <img src="./img/Img11.jpg" alt="">
-    </div>
-    <div class="movie">
-      <img src="./img/Img2.jpg" alt="">
-      <img src="./img/Img5.jpg" alt="">
-    </div>
-  </section>
-  <section>
-    
-  </section>
-  <section>
-    
-  </section>
-  <script>
-    // gsap.to(".logo", {duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid white", ease: "bounce"});
-    // gsap.set(".logo, .heart", {transformOrigin: "50% 50%"});
-    // gsap.to(".logo, .heart", {duration: 20, rotation: 360});
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP</title>
+    <link rel="stylesheet" href="GASP_style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <script src="./js/hover.js"></script>
+    <style>
+      .movie {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+      }
+      .movie img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img class="logo" src="../../img/cooking.png" />
+      <img class="heart" src="../../img/heart.svg" />
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="movie">
+        <img src="./img/Img1.jpg" alt="" />
+        <img src="./img/Img11.jpg" alt="" />
+      </div>
+      <div class="movie">
+        <img src="./img/Img2.jpg" alt="" />
+        <img src="./img/Img5.jpg" alt="" />
+      </div>
+    </section>
+    <section>
+      <div class="project-container">
+        <a href="index.html" class="pj-link">
+          <img src=".//img/Img20.jpg" alt="" />
+          <div>
+            <h2>Title</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident dolorum harum soluta.</span>
+          </div>
+        </a>
+        <a href="ScrollTrigger.html" class="pj-link">
+          <img src=".//img/Img21.jpg" alt="" />
+          <div>
+            <h2>Title</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident dolorum harum soluta.</span>
+          </div>
+        </a>
+      </div>
+    </section>
+    <script>
+      // gsap.to(".logo", {duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid white", ease: "bounce"});
+      // gsap.set(".logo, .heart", {transformOrigin: "50% 50%"});
+      // gsap.to(".logo, .heart", {duration: 20, rotation: 360});
 
-    // const myObject = {rotation: 0};
-    // gsap.to(myObject, {duration: 20, rotation: 360, onUpdate: function() {
-    //   // console.log(myObject.rotation);
-    // }})
-    const tl = gsap.timeline({repeat: 2, yoyo: true});
-    tl.from(".logo", {duration: 2, opacity: 0, scale: 0.3, ease: "bounce"});
-    tl.to(".logo", {duration: 1, rotation: 360});
-    tl.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.125});
-    tl.addLabel("circleOutro", "+=1")
-    tl.to(".circle", {duration: 0.5, opacity: 0, x: 300, ease: "power3.out"}, "circleOutro");
-  </script>
-  <script>
-        Array.from(document.querySelectorAll('.movie')).forEach((e) => {
-        const imgs = Array.from(e.querySelectorAll('img'));
+      // const myObject = {rotation: 0};
+      // gsap.to(myObject, {duration: 20, rotation: 360, onUpdate: function() {
+      //   // console.log(myObject.rotation);
+      // }})
+      const tl = gsap.timeline({repeat: 2, yoyo: true});
+      tl.from(".logo", {duration: 2, opacity: 0, scale: 0.3, ease: "bounce"});
+      tl.to(".logo", {duration: 1, rotation: 360});
+      tl.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.125});
+      tl.addLabel("circleOutro", "+=1");
+      tl.to(".circle", {duration: 0.5, opacity: 0, x: 300, ease: "power3.out"}, "circleOutro");
+    </script>
+    <script>
+      Array.from(document.querySelectorAll(".movie")).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll("img"));
         console.log(imgs);
-        
+
         new hoverEffect({
           parent: e,
           intensity: 0.3,
-          image1: imgs[0].getAttribute('src'),
-          image2: imgs[1].getAttribute('src'),
-          displacementImage: `${imgs[0].src}`
-        })
-      })
-  </script>
-</body>
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: `${imgs[0].src}`,
+        });
+      });
+    </script>
+  </body>
 </html>

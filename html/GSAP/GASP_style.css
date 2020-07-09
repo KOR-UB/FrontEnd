@@ -27,3 +27,60 @@ section:nth-child(even) {
   background: #fff;
   margin: 0 40px;
 }
+.project-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-container a {
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  opacity: 0.99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+  color: #fff;
+}
+.project-container a::before {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition-property: bottom, opacity;
+  transition-duration: 0.3;
+}
+.project-container a div {
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  bottom: -100px;
+  transition-property: bottom, opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  z-index: 3;
+}
+.project-container a:hover::before {
+  top: 50%;
+  transition-delay: 0.15s;
+  opacity: 1;
+}
+.project-container a:hover div {
+  opacity: 1;
+  bottom: 0px;
+  transition-delay: 0.25s;
+}
+.project-container a img {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
