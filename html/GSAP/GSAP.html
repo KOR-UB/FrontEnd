@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GSAP</title>
     <link rel="stylesheet" href="GASP_style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script> -->
     <script src="./js/hover.js"></script>
     <style>
       .movie {
@@ -25,11 +25,21 @@
         object-fit: cover;
         display: none;
       }
+      section {
+        flex-wrap: wrap;
+        max-width: 600px;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        margin: 20px;
+        background: skyblue;
+      }
     </style>
   </head>
   <body>
     <section>
-      <img class="logo" src="../../img/cooking.png" />
+      <!-- <img class="logo" src="../../img/cooking.png" />
       <img class="heart" src="../../img/heart.svg" />
       <div class="circle"></div>
       <div class="circle"></div>
@@ -44,10 +54,84 @@
       <div class="movie">
         <img src="./img/Img2.jpg" alt="" />
         <img src="./img/Img5.jpg" alt="" />
-      </div>
+      </div> -->
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <script>
+        gsap.to(".box", 1, {
+          scale: "random(0.1, 5)",
+          y: "random(-200, 200)",
+          opacity: 0,
+          yoyo: true,
+          repeat: -1,
+          ease: "bounce",
+          delay: 1,
+          stagger: {
+            amount: 1.5,
+            grid: "auto",
+            from: "center",
+          },
+          onStart: testStart,
+          onComplete: testEnd,
+          onUpdate: testUpdate,
+        });
+        function testStart(p) {
+          document.body.style.backgroundColor = "black";
+        }
+        function testEnd() {
+          document.body.style.backgroundColor = "#fff";
+        }
+        function testUpdate() {}
+      </script>
     </section>
     <section>
-      <div class="project-container">
+      <!-- <div class="project-container">
         <a href="index.html" class="pj-link">
           <img src=".//img/Img20.jpg" alt="" />
           <div>
@@ -62,10 +146,10 @@
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident dolorum harum soluta.</span>
           </div>
         </a>
-      </div>
+      </div> -->
     </section>
     <section>
-      <iframe src="index.html" frameborder="0" scrolling="no"></iframe>
+      <!-- <iframe src="index.html" frameborder="0" scrolling="no"></iframe> -->
     </section>
     <script>
       // gsap.to(".logo", {duration: 2, x: 300, backgroundColor: "#560563", borderRadius: "20%", border: "5px solid white", ease: "bounce"});
