@@ -15,14 +15,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #000;
+        flex-flow: column;
+        /* background: #000; */
       }
       .box {
         position: relative;
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 70px;
         transform-style: preserve-3d;
-        animation: animate 20s linear infinite;
+        animation: animate 5s linear infinite;
+      }
+      body:hover .box {
+        animation: none;
       }
       @keyframes animate {
         0% {
@@ -33,6 +38,7 @@
         }
       }
       .box span {
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
         position: absolute;
         top: 0;
         left: 0;
@@ -41,7 +47,6 @@
         transform-origin: center;
         transform-style: preserve-3d;
         transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-        -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
       }
       .box span img {
         position: absolute;
@@ -55,14 +60,34 @@
   </head>
   <body>
     <div class="box">
-      <span style="--i: 1;"><img src="../img/brand1.jpg" alt="" /></span>
-      <span style="--i: 2;"><img src="../img/brand2.jpg" alt="" /></span>
-      <span style="--i: 3;"><img src="../img/brand3.jpg" alt="" /></span>
-      <span style="--i: 4;"><img src="../img/brand4.jpg" alt="" /></span>
-      <span style="--i: 5;"><img src="../img/brand1.jpg" alt="" /></span>
-      <span style="--i: 6;"><img src="../img/brand2.jpg" alt="" /></span>
-      <span style="--i: 7;"><img src="../img/brand3.jpg" alt="" /></span>
-      <span style="--i: 8;"><img src="../img/brand4.jpg" alt="" /></span>
+      <span style="--i: 1;"></span>
+      <span style="--i: 2;"></span>
+      <span style="--i: 3;"></span>
+      <span style="--i: 4;"></span>
+      <span style="--i: 5;"></span>
+      <span style="--i: 6;"></span>
+      <span style="--i: 7;"></span>
+      <span style="--i: 8;"></span>
+    </div>
+    <div class="box">
+      <span style="--i: 1;"></span>
+      <span style="--i: 2;"></span>
+      <span style="--i: 3;"></span>
+      <span style="--i: 4;"></span>
+      <span style="--i: 5;"></span>
+      <span style="--i: 6;"></span>
+      <span style="--i: 7;"></span>
+      <span style="--i: 8;"></span>
+    </div>
+    <div class="box">
+      <span style="--i: 1;"></span>
+      <span style="--i: 2;"></span>
+      <span style="--i: 3;"></span>
+      <span style="--i: 4;"></span>
+      <span style="--i: 5;"></span>
+      <span style="--i: 6;"></span>
+      <span style="--i: 7;"></span>
+      <span style="--i: 8;"></span>
     </div>
   </body>
 </html>
