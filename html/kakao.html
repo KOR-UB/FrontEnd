@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kakao</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       header {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 30px;
+        height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,6 +23,8 @@
         border-bottom: 1px solid #000;
       }
       .header-container {
+        width: 100%;
+        padding: 0 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -59,5 +66,16 @@
     </header>
     <main></main>
     <footer></footer>
+    <script>
+      const _acc = (a, b) => {
+        return a + b;
+      };
+      const arr = [1, _acc(5, 4), 3];
+
+      const result = arr.reduce((acc, cur) => {
+        return acc + cur;
+      }, 0);
+      console.log(result);
+    </script>
   </body>
 </html>
