@@ -1,178 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *
-        {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        body
-        {
-            font-size: 16px;
-            background: black;
-        }
-        header
-        {
-            width: 100%;
-            height: 60px;
-            padding: 0 100px;
-            background: rgb(255, 255, 255);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        header .logo
-        {
-            letter-spacing: 6px;
-        }
-        header ul
-        {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        header ul li
-        {
-            position: relative;
-            padding: 10px 30px;
-        }
-        header ul li a
-        {
-            box-shadow: 0px -5px 5px 0px black;
-            border-radius: 50px;
-            padding: 6px 15px;
-            color: black;
-            border-bottom: 5px solid rgb(133, 133, 133);
-            text-decoration: none;
-        }
-        section
-        {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        section:nth-child(2)
-        {
-            background: url(../img/norway.jpg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        section:nth-child(3)
-        {
-            background: url(../img/3.jpg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: cover;
-        }
-        section:nth-child(4)
-        {
-            background: url(../img/2.jpg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: cover;
-        }
-        section:nth-child(5)
-        {
-            background: url(../img/1.jpg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: cover;
-        }
-        section:nth-child(6)
-        {
-            background: url(../img/austria.jpg);
-            background-repeat: no-repeat;
-            background-position: center bottom;
-            background-size: cover;
-        }
-        .container
-        {
-            width: 1000px;
-            height: 500px;
-            background: rgba(255, 255, 255, 0.555);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0px 300px;
-        }
-        .container button
-        {           
-            cursor: pointer;
-            border: none;
-            border-radius: 30px;
-            padding: 10px 30px;
-            background: white;
-        }
-        /* section:nth-child(odd)
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-size: 16px;
+        background: black;
+      }
+      header {
+        width: 100%;
+        height: 60px;
+        padding: 0 100px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      header .logo {
+        letter-spacing: 6px;
+      }
+      header ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header ul li {
+        position: relative;
+        padding: 10px 30px;
+      }
+      header ul li a {
+        box-shadow: 0px -5px 5px 0px black;
+        border-radius: 50px;
+        padding: 6px 15px;
+        color: black;
+        border-bottom: 5px solid rgb(133, 133, 133);
+        text-decoration: none;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section:nth-child(2) {
+        background: url(../img/norway.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      section:nth-child(3) {
+        background: url(../img/3.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+      }
+      section:nth-child(4) {
+        background: url(../img/2.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+      }
+      section:nth-child(5) {
+        background: url(../img/1.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+      }
+      section:nth-child(6) {
+        background: url(../img/austria.jpg);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+      }
+      .container {
+        width: 1000px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.555);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 300px;
+      }
+      .container button {
+        cursor: pointer;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 30px;
+        background: white;
+      }
+      /* section:nth-child(odd)
         {
             background: white;
         } */
-        /* section:nth-child(odd) .container
+      /* section:nth-child(odd) .container
         {
             background: black;
         } */
-        section:nth-child(odd) .container button
-        {
- 
-
-        }
+      section:nth-child(odd) .container button {
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="logo">L.O.G.O</h1>
-        <ul>
-            <li><a href="#event">이벤트</a></li>
-            <li><a href="#about">어바웃</a></li>
-            <li><a href="#team">소개</a></li>
-            <li><a href="#asd">이것 저것</a></li>
-            <li><a href="#lorem">내용</a></li>
-        </ul>
+      <h1 class="logo">L.O.G.O</h1>
+      <ul>
+        <li><a href="#event">이벤트</a></li>
+        <li><a href="#about">어바웃</a></li>
+        <li><a href="#team">소개</a></li>
+        <li><a href="#asd">이것 저것</a></li>
+        <li><a href="#lorem">내용</a></li>
+      </ul>
     </header>
     <section id="event">
-        <div class="container">
-            <a href="#lorem"><button>&lt;</button></a>
-            <a href="#about"><button>&gt;</button></a>
-        </div>
+      <div class="container">
+        <a href="#lorem"><button>&lt;</button></a>
+        <a href="#about"><button>&gt;</button></a>
+      </div>
     </section>
     <section id="about">
-        <div class="container">
-            <a href="#event"><button>&lt;</button></a>
-            <a href="#team"><button>&gt;</button></a>
-        </div>
+      <div class="container">
+        <a href="#event"><button>&lt;</button></a>
+        <a href="#team"><button>&gt;</button></a>
+      </div>
     </section>
     <section id="team">
-        <div class="container">
-            <a href="#about"><button>&lt;</button></a>
-            <a href="#asd"><button>&gt;</button></a>
-        </div>
+      <div class="container">
+        <a href="#about"><button>&lt;</button></a>
+        <a href="#asd"><button>&gt;</button></a>
+      </div>
     </section>
     <section id="asd">
-        <div class="container">
-            <a href="#team"><button>&lt;</button></a>
-            <a href="#lorem"><button>&gt;</button></a>
-        </div>
+      <div class="container">
+        <a href="#team"><button>&lt;</button></a>
+        <a href="#lorem"><button>&gt;</button></a>
+      </div>
     </section>
     <section id="lorem">
-        <div class="container">
-            <a href="#asd"><button>&lt;</button></a>
-            <a href="#"><button>&gt;</button></a>
-        </div>
+      <div class="container">
+        <a href="#asd"><button>&lt;</button></a>
+        <a href="#"><button>&gt;</button></a>
+      </div>
     </section>
-</body>
+  </body>
 </html>

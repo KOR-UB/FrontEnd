@@ -20,7 +20,8 @@
         justify-content: center;
         align-items: center;
         padding: 15px;
-        border-bottom: 1px solid #000;
+        background: #fff;
+        z-index: 1000000000000;
       }
       .header-container {
         width: 100%;
@@ -39,6 +40,53 @@
         color: #000;
         margin: 0 10px;
         text-decoration: none;
+      }
+      main {
+        width: 100%;
+        min-height: 100vh;
+      }
+      main section {
+        width: 100%;
+        height: 100vh;
+      }
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .banner h2 {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        z-index: 1000;
+        color: #fff;
+        font-size: 3em;
+      }
+      .banner video {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+      .container {
+        padding: 20px;
+        background: #fff;
+      }
+      .container .card {
+      }
+      .container .card video {
+        border-radius: 20px;
+        left: 0;
+        bottom: 0;
+        right: auto;
+        top: auto;
+        width: 100%;
       }
     </style>
   </head>
@@ -59,23 +107,41 @@
           </ul>
         </nav>
         <ul class="lang-toggle">
-          <li><a href="#">KR</a></li>
+          <li><a href="#">KOR</a></li>
           <li><a href="#">ENG</a></li>
         </ul>
       </div>
     </header>
-    <main></main>
+    <main>
+      <section class="banner">
+        <div class="video">
+          <h2>기술과 사람으로<br />더 나은 세상을 만드는<br />카카오입니다.</h2>
+          <video
+            src="https://t1.kakaocdn.net/kakaocorp/main/kakao10/img/corp_pc.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+      </section>
+      <section class="container">
+        <div class="card">
+          <div class="video-box">
+            <video
+              src="https://t1.kakaocdn.net/kakaocorp/main/kakao10/img/li-1a.mp4"
+              autoplay
+              muted
+              loop
+            ></video>
+          </div>
+          <div class="content-box">
+            <p>카카오스러운 관점으로<br />세상을 바라봅니다.</p>
+            <a href="#">카카오스러움이란</a>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
-    <script>
-      const _acc = (a, b) => {
-        return a + b;
-      };
-      const arr = [1, _acc(5, 4), 3];
-
-      const result = arr.reduce((acc, cur) => {
-        return acc + cur;
-      }, 0);
-      console.log(result);
-    </script>
+    <script></script>
   </body>
 </html>
