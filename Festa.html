@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap-1012 {
+        width: 1012px;
+        margin: 0 auto;
+      }
+      header {
+        width: 100%;
+        height: 68px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+      }
+      button {
+        all: unset;
+      }
+      h1 {
+        font-size: 2.4em;
+      }
+      .banner {
+        width: 100%;
+        height: 400px;
+        background: url(./img/FestaBanner.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .login {
+        border: 1px solid rgb(132, 132, 132);
+        padding: 3px 6px;
+        color: rgb(132, 132, 132);
+        border-radius: 5px;
+        margin-left: 20px;
+      }
+      section {
+        margin-top: 24px;
+        position: relative;
+      }
+      .all-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px 20px;
+        margin-top: 6px;
+        color: rgb(85, 166, 252);
+        border: 1px solid rgb(85, 166, 252);
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      section h2 {
+        width: 100%;
+        font-size: 2.4em;
+      }
+      section ul {
+        list-style: none;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      section ul li {
+        width: 233.5px;
+        margin-bottom: 26px;
+        box-shadow: rgba(194, 194, 194, 0.5) 0px 2px 4px 0px;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      section ul li img {
+        width: 233.5px;
+        height: 130px;
+      }
+      .text-box {
+        padding: 14px;
+      }
+      .text-box h3 {
+        margin: 2px 0;
+        font-size: 1.1em;
+      }
+      .auth {
+        display: block;
+        font-size: 0.83em;
+        padding: 6px 0 14px 0;
+        border-bottom: 1px solid rgb(148, 148, 148);
+      }
+      .price {
+        display: block;
+        padding: 0 14px 14px;
+        font-size: 0.75em;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-1012">
+      <header>
+        <button>이벤트 주최하기</button>
+        <h1>Festa!</h1>
+        <div>
+          <button>Help Desk</button>
+          <button class="login">가입 혹은 로그인</button>
+        </div>
+      </header>
+      <main>
+        <div class="banner">
+          <div class="banner-text">
+            <p>we</p>
+            <p>care</p>
+            <p>about everyone</p>
+            <p>#black lives matter</p>
+          </div>
+        </div>
+        <section>
+          <h2>New</h2>
+          <ul>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Events</h2>
+          <button class="all-toggle">모든 이벤트</button>
+          <ul>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+            <li class="main-card">
+              <a href="#">
+                <div class="card-content">
+                  <img src="img/FestaCardSample.png" alt="" />
+                  <div class="text-box">
+                    <time
+                      title="2020년 08월 26일 오후 6:30"
+                      datetime="2020-08-26T09:30:00.000Z"
+                      >2020년 08월 26일 오후 6:30</time
+                    >
+                    <h3>[방구석 LIVE] 당근마켓 서버 개발/SRE 채용 오픈세션</h3>
+                    <a href="#" class="auth">당근마켓</a>
+                  </div>
+                  <a class="price" href="#">무료</a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

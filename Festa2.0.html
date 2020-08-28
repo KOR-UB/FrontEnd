@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: grid;
+        place-items: center;
+      }
+      .modal {
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+        height: 600px;
+        background: #fff;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.08) 0 4px 16px 0px,
+          rgba(0, 0, 0, 0.24) 0 24px 96px 0;
+        text-align: center;
+        line-height: 1.7;
+      }
+      .modal h1 {
+        margin-top: 85px;
+        font-size: 40px;
+      }
+      .modal p {
+        width: 400px;
+        margin: 0 auto;
+      }
+      .content-text {
+        font-size: 1.04em;
+        font-weight: bold;
+        color: #565a60;
+      }
+      .login-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0;
+      }
+      .login-group button {
+        all: unset;
+        position: relative;
+        font-weight: bold;
+        box-sizing: border-box;
+        width: 180px;
+        height: 64px;
+        border-radius: 100px;
+        margin: 0 8px;
+        border: 1px solid transparent;
+        box-shadow: rgba(23, 25, 29, 0.12) 0 6px 22px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding-left: 20px;
+      }
+      .login-group button::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .login-group button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      }
+      .login-group button:nth-child(1) {
+        background: #fff;
+        color: #646568;
+      }
+      .login-group button:nth-child(1)::before {
+        background: url(./img/ico-google.png);
+        background-size: cover;
+      }
+      .login-group button:nth-child(2)::before {
+        background: url(./img/ico-fb.png);
+        background-size: cover;
+      }
+      .login-group button:nth-child(3)::before {
+        background: url(./img/ico-naver.png);
+        background-size: cover;
+      }
+      .login-group button:nth-child(2) {
+        background: #4a68ad;
+        color: #fff;
+      }
+      .login-group button:nth-child(3) {
+        background: #1ec800;
+        color: #fff;
+      }
+      .info {
+        font-size: 0.7em;
+        font-weight: bold;
+        color: #9e9fa2;
+      }
+      .info a {
+        color: #9e9fa2;
+      }
+      @keyframes Wave {
+        to {
+          left: -800px;
+        }
+      }
+      @keyframes surfer {
+        to {
+          transform: translateY(7%);
+        }
+      }
+      @keyframes paper {
+        to {
+          transform: translateY(5%);
+        }
+      }
+      .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1600px;
+        height: 160px;
+        background: url(./img/wave.svg);
+        background-size: 1600px 160px;
+      }
+      .wave.wave1 {
+        animation: Wave 4s linear infinite reverse;
+        z-index: 2;
+        opacity: 1;
+        animation-delay: 0s;
+        bottom: 0;
+      }
+      .wave.wave2 {
+        animation: Wave 7s linear infinite;
+        z-index: 999;
+        opacity: 0.5;
+        animation-delay: -5s;
+        bottom: 0px;
+        z-index: 1;
+      }
+      .surfer {
+        animation: surfer 2s ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 0.3s;
+        position: absolute;
+        right: 60px;
+        bottom: 30px;
+        width: 210px;
+        height: 102px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./img/img-wave-surfer.png);
+        z-index: 3;
+      }
+      .paper {
+        animation: paper 1.5s ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 0.3s;
+        position: absolute;
+        right: -10px;
+        bottom: -20px;
+        width: 391px;
+        height: 206px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(./img/img-wave-papers.png);
+        z-index: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal-overlay">
+      <div class="modal">
+        <h1>시작하기</h1>
+        <p class="content-text">
+          매일 300개 채널에서 큐레이션 되는 디자인 콘텐츠를 가장 간편하게
+          받아보실 수 있어요.
+        </p>
+        <div class="login-group">
+          <button>Google</button>
+          <button>Facebook</button>
+          <button>Naver</button>
+        </div>
+        <p class="info">
+          로그인은
+          <a href="https://www.surfit.io/terms/privacy">개인 정보 보호 정책</a>
+          및 <a href="https://www.surfit.io/terms/service">서비스 약관</a>에
+          동의하는 것을 의미하며,<br />
+          서비스 이용을 위해 이메일과 이름, 프로필 이미지를 수집합니다.
+        </p>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="surfer"></div>
+        <div class="paper"></div>
+      </div>
+    </div>
+  </body>
+</html>
