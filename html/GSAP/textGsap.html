@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3c40c6;
+        overflow: hidden;
+      }
+      .container {
+        color: #3c40c6;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        font-size: 3vw;
+        line-height: 1.3;
+        visibility: hidden;
+      }
+      .container .line {
+        margin: 0 auto 1.5vw;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+      .container .line .inner {
+        display: inline-block;
+        padding: 0 1.5vw;
+      }
+      @keyframes anim {
+        0%,
+        100% {
+        }
+        50% {
+          color: red;
+        }
+      }
+      .letter {
+        animation: anim 1.5s linear infinite;
+        animation-delay: calc(0.5s * var(--i));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="line">
+        <div class="inner">awesome</div>
+      </div>
+      <div class="line">
+        <div class="inner">text effect animations</div>
+      </div>
+      <div class="line">
+        <div class="inner">animated with GSAP</div>
+      </div>
+    </div>
+    <script>
+      const a = "abcdefg";
+      console.log(a.replace(/\S/g, "<span class='letter'>$&</span>"));
+      const container = document.querySelector(".container");
+      const lines = container.querySelectorAll(".line");
+
+      const init = () => {
+        container.style.visibility = "visible";
+
+        lines.forEach((line, idx) => {
+          let inner = line.querySelector(".inner");
+          let w = inner.clientWidth;
+          let h = inner.clientHeight;
+
+          inner.innerHTML = inner.textContent.replace(
+            /\S/g,
+            `<span class='letter' style='--i: ${idx + 1};'>$&</span>`
+          );
+          let letter = inner.querySelectorAll(".letter");
+          let timeline = gsap.timeline({ paused: true });
+
+          gsap.set(line, {
+            width: h,
+            opacity: 0,
+            y: "150%",
+            rotate: 90,
+            scale: 0.2,
+          });
+          gsap.set(letter, {
+            color: "#fff",
+          });
+
+          timeline.to(line, {
+            opacity: 1,
+            duration: 0.1,
+          });
+          timeline.to(line, {
+            y: "0%",
+            rotate: 0,
+            scale: 1,
+            duration: 0.3,
+          });
+          timeline.to(line, {
+            width: w,
+            duration: 0.5,
+            ease: "power3.inOut",
+          });
+          timeline.to(
+            letter,
+            {
+              color: "#3c40c6",
+              stagger: {
+                amount: 0.3,
+                from: 0,
+              },
+              duration: 0.3,
+              ease: "power2.inOut",
+            },
+            0.5
+          );
+
+          setTimeout(() => {
+            timeline.play();
+          }, 500 * idx);
+        });
+      };
+
+      window.addEventListener("load", init);
+      window.addEventListener("resize", init);
+    </script>
+  </body>
+</html>
