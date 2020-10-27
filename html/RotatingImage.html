@@ -24,19 +24,19 @@
         height: 100px;
         margin-bottom: 70px;
         transform-style: preserve-3d;
-        animation: animate 5s linear infinite;
+        /* animation: animate 5s linear infinite; */
       }
       body:hover .box {
         animation: none;
       }
-      @keyframes animate {
+      /* @keyframes animate {
         0% {
           transform: perspective(1000px) rotateY(0deg);
         }
         100% {
           transform: perspective(1000px) rotateY(360deg);
         }
-      }
+      } */
       .box span {
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
         position: absolute;
@@ -89,5 +89,13 @@
       <span style="--i: 7;"></span>
       <span style="--i: 8;"></span>
     </div>
+    <script>
+      let box = document.querySelector(".box");
+      window.onmousemove = function(e) {
+        let x = e.clientX / 3;
+        box.style.transform = "perspective(1000px) rotateY(" + x + "deg)";
+
+      }
+    </script>
   </body>
 </html>

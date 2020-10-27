@@ -39,7 +39,7 @@
   </head>
   <body>
     <section>
-      <!-- <img class="logo" src="../../img/cooking.png" />
+      <img class="logo" src="../../img/cooking.png" />
       <img class="heart" src="../../img/heart.svg" />
       <div class="circle"></div>
       <div class="circle"></div>
@@ -54,7 +54,8 @@
       <div class="movie">
         <img src="./img/Img2.jpg" alt="" />
         <img src="./img/Img5.jpg" alt="" />
-      </div> -->
+      </div>
+      <!-- <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
@@ -101,33 +102,32 @@
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
+      <div class="box"></div> -->
       <script>
-        gsap.to(".box", 1, {
-          scale: "random(0.1, 5)",
-          y: "random(-200, 200)",
-          opacity: 0,
-          yoyo: true,
-          repeat: -1,
-          ease: "bounce",
-          delay: 1,
-          stagger: {
-            amount: 1.5,
-            grid: "auto",
-            from: "center",
-          },
-          onStart: testStart,
-          onComplete: testEnd,
-          onUpdate: testUpdate,
-        });
-        function testStart(p) {
-          document.body.style.backgroundColor = "black";
-        }
-        function testEnd() {
-          document.body.style.backgroundColor = "#fff";
-        }
-        function testUpdate() {}
+        // gsap.to(".box", 1, {
+        //   scale: "random(0.1, 5)",
+        //   y: "random(-200, 200)",
+        //   opacity: 0,
+        //   yoyo: true,
+        //   repeat: -1,
+        //   ease: "bounce",
+        //   delay: 1,
+        //   stagger: {
+        //     amount: 1.5,
+        //     grid: "auto",
+        //     from: "center",
+        //   },
+        //   onStart: testStart,
+        //   onComplete: testEnd,
+        //   onUpdate: testUpdate,
+        // });
+        // function testStart(p) {
+        //   document.body.style.backgroundColor = "black";
+        // }
+        // function testEnd() {
+        //   document.body.style.backgroundColor = "#fff";
+        // }
+        // function testUpdate() {}
       </script>
     </section>
     <section>
@@ -165,21 +165,21 @@
       tl.to(".logo", {duration: 1, rotation: 360});
       tl.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.125});
       tl.addLabel("circleOutro", "+=1");
-      tl.to(".circle", {duration: 0.5, opacity: 0, x: 300, ease: "power3.out"}, "circleOutro");
+      tl.to(".circle", {duration: 0.5, opacity: 0, y: 300, ease: "power3.out"}, "circleOutro");
     </script>
     <script>
-      Array.from(document.querySelectorAll(".movie")).forEach((e) => {
-        const imgs = Array.from(e.querySelectorAll("img"));
-        console.log(imgs);
+      // Array.from(document.querySelectorAll(".movie")).forEach((e) => {
+      //   const imgs = Array.from(e.querySelectorAll("img"));
+      //   console.log(imgs);
 
-        new hoverEffect({
-          parent: e,
-          intensity: 0.3,
-          image1: imgs[0].getAttribute("src"),
-          image2: imgs[1].getAttribute("src"),
-          displacementImage: `${imgs[0].src}`,
-        });
-      });
+      //   new hoverEffect({
+      //     parent: e,
+      //     intensity: 0.3,
+      //     image1: imgs[0].getAttribute("src"),
+      //     image2: imgs[1].getAttribute("src"),
+      //     displacementImage: `${imgs[0].src}`,
+      //   });
+      // });
     </script>
   </body>
 </html>
