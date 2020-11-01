@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="./visual.js"></script>
+  <script src="./particle.js"></script>
+  <script src="./text.js">
+  </script>
+  <script>
+    class App {
+      constructor() {
+        this.setWebgl();
+
+
+        WebFont.load({
+          google: {
+            families: ["Hind: 700"]
+          },
+          fontactive: () => {
+            this.visual = new Visual();
+
+            window.addEventListener("resize", this.resize.bind(this), false);
+            this.resize();
+
+            requestAnimationFrame(this.animate.bind(this));
+            // this.text = new Text();
+            // this.text.setText("A", 2, document.body.clientWidth, document.body.clientHeight);
+          }
+        });
+      }
+      setWebgl() {
+        this.renderer = new PIXI.Renderer({
+          width: document.body.clientWidth, 
+          height: document.body.clientHeight,
+          antialias: true,
+          transparent: false,
+          resolution: (window.devicePixelRatio > 1) ? 2 : 1,
+          autoDensity: true,
+          powerPreference: "high-performance",
+          backgroundColor: 0xffffff,
+        });
+        document.body.appendChild(this.renderer.view);
+
+        this.stage = new PIXI.Container();
+
+        const blurFfilter = new PIXI.filters.BlurFilter();
+
+        blurFfilter.blur = 10;
+        blurFfilter.autoFit = true;
+
+        const frageSource = `
+          precision mediump float;
+          varying vec2 vTextureCoord;
+          uniform sampler2D uSampler;
+          uniform float threshold;
+          uniform float mr;
+          uniform float mg;
+          uniform float mb;
+          void main(void) {
+            vec4 color = texture2D(uSampler, vTextureCoord);
+            vec3 mcolor = vec3(mr, mg, mb);
+            if(color.a > threshold) {
+              gl_FragColor = vec4(mcolor, 1.0);
+            } else {
+              gl_FragColor = vec4(vec3(0.0), 0.0);
+            }
+          }
+        `;
+        const uniformData = {
+          threshold: 0.5,
+          mr: 244.0 / 255.0,
+          mg: 193.0 / 255.0,
+          mb: 41.0 / 255.0,
+        }
+        const thresholdFilter = new PIXI.Filter(null, frageSource, uniformData);
+        this.stage.filters = [blurFfilter, thresholdFilter];
+        this.stage.filterArea = this.renderer.screen;
+      }
+      resize() {
+        this.stageWidth = document.body.clientWidth,
+        this.stageHeight = document.body.clientHeight,
+
+        this.renderer.resize(this.stageWidth, this.stageHeight);
+        this.visual.show(this.stageWidth, this.stageHeight, this.stage);
+      }
+      animate(t) {
+        requestAnimationFrame(this.animate.bind(this));
+        this.visual.animate();
+
+        this.renderer.render(this.stage)
+      }
+    }
+    window.onload = () => {
+      new App();
+    }
+  </script>
+</body>
+</html>
