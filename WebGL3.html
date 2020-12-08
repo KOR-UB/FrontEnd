@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 0;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+    ul {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      display: flex;
+      transform: translate(-50%, 0);
+    }
+    ul li {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin:  0 10px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    ul li.selected {
+      border: 4px solid #fff;
+    }
+    ul li img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>
+      <img src="./img/austria.jpg" alt="">
+    </li>
+    <li>
+      <img src="./img/italy.jpg" alt="">
+    </li>
+    <li>
+      <img src="./img/norway.jpg" alt="">
+    </li>
+
+  </ul>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    const TOTAL = 5;
+    const visual_TOTAL = 10;
+
+    async function setColor(url) {
+      return new Promise(resolve => {
+        const image = new Image();
+        image.src = url;
+        image.onload = () => {
+          const tmpCanvas = document.createElement("canvas");
+          tmpCanvas.width = image.width;
+          tmpCanvas.height = image.height;
+          const tmpCtx = tmpCanvas.getContext("2d");
+
+          tmpCtx.drawImage(
+            image,
+            0, 0,
+            image.width,image.height
+          );
+          resolve({
+            colorCtx: tmpCtx,
+            width: image.width,
+            height: image.height,
+          });
+        }
+      })
+    }
+
+    class Visual {
+      constructor(pos, colorCtx, width, height) {
+        this.colorCtx = colorCtx;
+        this.width = width;
+        this.height = height;
+        this.pos = pos;
+      }
+      animate(ctx) {
+        for (let i = 0; i < visual_TOTAL; i++) {
+          const myPos = this.pos[Math.round(Math.random() * (this.pos.length - 1))];
+          new Particle(myPos, this.getColor(), ctx);
+        }
+      }
+      getColor() {
+        const x = Math.round(Math.random() * (this.width - 1));
+        const y = Math.round(Math.random() * (this.height - 1));
+        const data = this.colorCtx.getImageData(x,y,4,4).data;
+        return `rgb(${data[0]}, ${data[1]}, ${data[2]})`;
+      }
+    }
+
+    class Particle {
+      constructor(pos, color, ctx) {
+        this.color = color;
+
+        const ranMax = 20;
+        this.points = [{
+          x: pos.x,
+          y: pos.y,
+        }];
+        for (let i = 1; i < TOTAL; i++) {
+          const prev = this.points[i - 1];
+          this.points.push(this.setRandom(prev, ranMax));
+        }
+
+        this.draw(ctx);
+      }
+      draw(ctx) {
+        ctx.beginPath();
+        ctx.lineWidth = 0.3;
+        ctx.strokeStyle = this.color;
+        ctx.moveTo(this.points[0].x, this.points[0].y);
+
+        for(let i = 1; i < this.points.length; i++) {
+          const prev = this.points[i - 1];
+          const cur = this.points[i];
+          const cx = (prev.x + cur.x) / 2;
+          const cy = (prev.y + cur.y) / 2;
+          ctx.quadraticCurveTo(prev.x, prev.y, cx, cy);
+        }
+        ctx.stroke();
+      }
+      setRandom(pos, gap) {
+        return {
+          x: pos.x + Math.random() * (gap + gap) - gap,
+          y: pos.y + Math.random() * (gap + gap) - gap,
+        }
+      }
+    }
+
+    class Text {
+      constructor() {
+        this.canvas = document.createElement("canvas");
+        // document.body.appendChild(this.canvas)
+
+        this.ctx = this.canvas.getContext("2d");
+      }
+      setText(str, density, stageWidth, stageHeight) {
+        this.canvas.width = stageWidth;
+        this.canvas.height = stageHeight;
+
+       const myText = str;
+       const fontWidth = 700;
+       const fontSize = 800;
+       const fontName = "Hind";
+
+       this.ctx.clearRect(0,0,stageWidth,stageHeight);
+       this.ctx.font = `${fontWidth} ${fontSize}px ${fontName}`;
+       this.ctx.fillStyle = `rgba(0,0,0,0.3)`; 
+       this.ctx.textBaseline = "middle";
+       const fontPos = this.ctx.measureText(myText);
+       this.ctx.fillText(myText,(stageWidth - fontPos.width) / 2, fontPos.actualBoundingBoxAscent + fontPos
+       .actualBoundingBoxDescent + ((stageHeight - fontSize) / 2));
+       return this.dotPos(density, stageWidth, stageHeight);
+      }
+      dotPos(density, stageWidth, stageHeight) {
+        const imageData = this.ctx.getImageData(0, 0, stageWidth, stageHeight).data;
+
+        const particles = [];
+        let i = 0;
+        let width = 0;
+        let pixel;
+
+        for(let height = 0; height < stageHeight; height += density) {
+          ++i;
+          const slide = (i % 2) == 0;
+          width = 0;
+          if(slide == 1) {
+            width += 6;
+          }
+          for (width; width < stageWidth; width += density) {
+            pixel = imageData[((width + (height * stageWidth)) * 4) - 1];
+            if(pixel != 0 && width > 0 && width <  stageWidth && height > 0 && height < stageHeight) {
+              particles.push({
+                x: width,
+                y: height,
+              });
+            }
+          }
+        }
+        return particles;
+      }
+      
+    }
+    ///App
+    class App {
+      constructor() {
+        this.canvas = document.createElement("canvas");
+        document.body.appendChild(this.canvas);
+        this.ctx = this.canvas.getContext("2d");
+
+        this.pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
+
+        this.thumbs = [];
+
+        // this.setWebgl();
+
+
+        WebFont.load({
+          google: {
+            families: ["Hind: 700"]
+          },
+          fontactive: () => {
+            const ul = document.getElementsByTagName("ul")[0];
+            const lis = ul.getElementsByTagName("li");
+            for (let i = 0; i < lis.length; i++) {
+              const item = lis[i];
+              const img = item.getElementsByTagName("img")[0];
+              item.addEventListener("click", e => {
+                this.show(i);
+              }, false);
+
+              this.thumbs[i] = {
+                item,
+                img: img.src
+              };
+            }
+            this.text = new Text();
+            window.addEventListener("resize", this.resize.bind(this), false);
+            this.resize();
+
+            requestAnimationFrame(this.animate.bind(this));
+          }
+        });
+      }
+      setWebgl() {
+  
+
+      }
+      async show(index) {
+        for (let i = 0; i < this.thumbs.length; i++) {
+          const item = this.thumbs[i].item;
+          if(i == index) {
+            item.classList.add("selected");
+          } else {
+            item.classList.remove("selected");
+          }
+        }
+        const img = this.thumbs[index].img;
+
+        await setColor(img).then(obj => {
+          this.Visual = new Visual(this.pos, obj.colorCtx, obj.width, obj.height);
+        })
+      }
+      resize() {
+        this.stageWidth = document.body.clientWidth;
+        this.stageHeight = document.body.clientHeight;
+
+        this.canvas.width = this.stageWidth * this.pixelRatio;
+        this.canvas.height = this.stageHeight * this.pixelRatio;
+        this.ctx.scale(this.pixelRatio, this.pixelRatio);
+
+        this.pos = this.text.setText("M", 6, this.stageWidth, this.stageHeight);
+      }
+      animate(t) {
+        requestAnimationFrame(this.animate.bind(this));
+
+        if(this.Visual) {
+          this.Visual.animate(this.ctx);
+        }
+      }
+    }
+    window.onload = () => {
+      new App();
+    }
+  </script>
+</body>
+
+</html>
