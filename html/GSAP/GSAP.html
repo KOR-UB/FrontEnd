@@ -55,7 +55,8 @@
         <img src="./img/Img2.jpg" alt="" />
         <img src="./img/Img5.jpg" alt="" />
       </div>
-      <!-- <div class="box"></div>
+ 
+   
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
@@ -102,32 +103,34 @@
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
-      <div class="box"></div> -->
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
       <script>
-        // gsap.to(".box", 1, {
-        //   scale: "random(0.1, 5)",
-        //   y: "random(-200, 200)",
-        //   opacity: 0,
-        //   yoyo: true,
-        //   repeat: -1,
-        //   ease: "bounce",
-        //   delay: 1,
-        //   stagger: {
-        //     amount: 1.5,
-        //     grid: "auto",
-        //     from: "center",
-        //   },
-        //   onStart: testStart,
-        //   onComplete: testEnd,
-        //   onUpdate: testUpdate,
-        // });
-        // function testStart(p) {
-        //   document.body.style.backgroundColor = "black";
-        // }
-        // function testEnd() {
-        //   document.body.style.backgroundColor = "#fff";
-        // }
-        // function testUpdate() {}
+        gsap.to(".box", 1, {
+          scale: "random(0.1, 5)",
+          y: "random(-200, 200)",
+          opacity: 0,
+          yoyo: true,
+          repeat: -1,
+          ease: "bounce",
+          delay: 1,
+          stagger: {
+            amount: 1.5,
+            grid: "auto",
+            from: "center",
+          },
+          onStart: testStart,
+          onComplete: testEnd,
+          onUpdate: testUpdate,
+        });
+        function testStart(p) {
+          document.body.style.backgroundColor = "black";
+        }
+        function testEnd() {
+          document.body.style.backgroundColor = "#fff";
+        }
+        function testUpdate() {}
       </script>
     </section>
     <section>

@@ -17,7 +17,7 @@
     <div class="cursor2" id="cursor2"></div>
     <div class="cursor3" id="cursor3"></div>
     <script>
-        const inbody = document.getElementsByTagName('body')[0];
+        const inbody = document.body;
         inbody.addEventListener('mousemove', function(n)
         {
             t.style.top = n.clientY + 'px',
@@ -30,7 +30,10 @@
         var t = document.getElementById('cursor'),
         e = document.getElementById('cursor2'),
         i = document.getElementById('cursor3');
-
+            for (var r = document.querySelectorAll('.hover-target'),
+                a = r.length - 1; a >= 0; a--) {
+                o(r[a])
+            }
         function n(t)
         {
             e.classList.add('hover'), i.classList.add('hover');
@@ -40,11 +43,7 @@
             e.classList.remove('hover'), i.classList.remove('hover');
         }
         s();
-        for (var r = document.querySelectorAll('.hover-target'),
-        a = r.length -1; a>=0; a--)
-        {
-            o(r[a])
-        }
+
         function o(t)
         {
             t.addEventListener('mouseover', n);

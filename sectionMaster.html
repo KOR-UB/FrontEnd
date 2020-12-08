@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+    }
+    .img-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-box {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: #e99c7edc;
+      -webkit-clip-path: polygon(0 0, 15% 0, 50% 100%, 0% 100%);
+      clip-path: polygon(0 0, 15% 0, 50% 100%, 0% 100%);
+      }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="img-box">
+    <img src="https://picsum.photos/1920/1080?random=100" alt="random">
+    </div>
+    
+    <div class="content-box">
+      
+    </div>
+  </section>
+</body>
+</html>
