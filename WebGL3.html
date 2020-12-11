@@ -164,8 +164,8 @@
         this.canvas.height = stageHeight;
 
        const myText = str;
-       const fontWidth = 700;
-       const fontSize = 800;
+       const fontWidth = 200;
+       const fontSize = 300;
        const fontName = "Hind";
 
        this.ctx.clearRect(0,0,stageWidth,stageHeight);
@@ -274,7 +274,7 @@
         this.canvas.height = this.stageHeight * this.pixelRatio;
         this.ctx.scale(this.pixelRatio, this.pixelRatio);
 
-        this.pos = this.text.setText("M", 6, this.stageWidth, this.stageHeight);
+        this.pos = this.text.setText("SUPERGATE", 6, this.stageWidth, this.stageHeight);
       }
       animate(t) {
         requestAnimationFrame(this.animate.bind(this));
