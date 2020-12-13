@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      const PI2 = Math.PI * 2;
+      class Polygon {
+        constructor(x, y, radius, sides) {
+          this.x = x;
+          this.y = y;
+          this.radius = radius;
+          this.sides = sides;
+          this.rotate = 0;
+        }
+        animate(ctx) {
+          ctx.save();
+          ctx.fillStyle = "#000";
+          ctx.beginPath();
+
+          const angle = PI2 / this.sides;
+
+          ctx.translate(this.x, this.y);
+
+          for(let i = 0; i < this.sides; i++) {
+            const x = this.radius * Math.cos(angle * i);
+            const y = this.radius * Math.sin(angle * i);
+
+            (i == 0) ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          }
+          ctx.fill();
+          ctx.closePath();
+          ctx.restore();
+        }
+      }
+      class App {
+        constructor() {
+          this.polygon = new Polygon(window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / 3, 7)
+          this.canvas = document.createElement("canvas");
+          this.canvas.width = window.innerWidth;
+          this.canvas.height =  window.innerHeight;
+          this.ctx =  this.canvas.getContext("2d");
+          document.body.appendChild(this.canvas);
+
+          window.requestAnimationFrame(this.init.bind(this));
+        }
+        init() {
+          this.polygon.animate(this.ctx);
+        }
+      }
+      window.onload = () => {
+        new App();
+      }
+      
+    </script>
+</body>
+</html>
