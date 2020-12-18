@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script type="text/javascript" src="dat.gui.min.js"></script> -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.js"></script>
+  <script>
+    const gui = new dat.GUI();
+
+    const nodeStyle = {
+      w: 0,
+      h: 0,
+      margin: 0,
+      padding: 0,
+      backgroundColor: {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 1
+      },
+      color: {
+        r: 0,
+        g: 0,
+        b: 0,
+        a: 1
+      },
+      fontSize: 1,
+    }
+
+    const backgroundColor = {
+      r: 0,
+      g: 0,
+      b: 0,
+      a: 1,
+    };
+
+    const backgroundFolder = gui.addFolder("backgroundFolder");
+    backgroundFolder.add(backgroundColor, "r", 0, 255);
+    backgroundFolder.add(backgroundColor, "g", 0, 255);
+    backgroundFolder.add(backgroundColor, "b", 0, 255);
+    backgroundFolder.add(backgroundColor, "a", 0, 1);
+    backgroundFolder.open();
+
+    const boxFolder = gui.addFolder("nodeFolder");
+      boxFolder.add(nodeStyle, "w", 0, innerWidth);
+      boxFolder.add(nodeStyle, "h", 0, innerHeight);
+      boxFolder.add(nodeStyle, "margin", 0, 255);
+      boxFolder.add(nodeStyle, "padding", 0, 255);
+      boxFolder.add(nodeStyle.backgroundColor, "r", 0, 255);
+      boxFolder.add(nodeStyle.backgroundColor, "g", 0, 255);
+      boxFolder.add(nodeStyle.backgroundColor, "b", 0, 255);
+      boxFolder.add(nodeStyle.backgroundColor, "a", 0, 1);
+      boxFolder.add(nodeStyle.color, "r", 0, 255);
+      boxFolder.add(nodeStyle.color, "g", 0, 255);
+      boxFolder.add(nodeStyle.color, "b", 0, 255);
+      boxFolder.add(nodeStyle.color, "a", 0, 1);
+      // boxFolder.add(nodeStyle, "fontSize", 0, 30);
+    
+      boxFolder.open();
+    const box = document.querySelector("#box");
+    function animate() {
+      requestAnimationFrame(animate)
+      document.body.style.backgroundColor = `rgba(${backgroundColor.r},${backgroundColor.g},${backgroundColor.b},${backgroundColor.a})`;
+      box.style.width = `${nodeStyle.w}px`;
+      box.style.height = `${nodeStyle.h}px`;
+      box.style.margin = `${nodeStyle.margin}px`;
+      box.style.padding = `${nodeStyle.padding}px`;
+      box.style.backgroundColor = `rgba(${nodeStyle.backgroundColor.r},${nodeStyle.backgroundColor.g},${nodeStyle.backgroundColor.b},${nodeStyle.backgroundColor.a})`;
+      box.style.color = `rgba(${nodeStyle.color.r},${nodeStyle.color.g},${nodeStyle.color.b},${nodeStyle.color.a})`;
+      
+    }
+    animate();
+  </script>
+
+</body>
+
+</html>
